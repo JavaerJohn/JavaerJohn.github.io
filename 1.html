@@ -48,26 +48,6 @@
    </script>
 
 
-    <script>(function (i, s, o, g, r, a, m) {
-        i['DaoVoiceObject'] = r;
-        i[r] = i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          };
-        i[r].l = 1 * new Date();
-        a = s.createElement(o);
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        a.charset = 'utf-8';
-        m.parentNode.insertBefore(a, m);
-      })(window, document, 'script', ('https:' === document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/xxx.js", 'daovoice');
-      daovoice('init', {
-        app_id: "xxx",
-      });
-      daovoice('update');
-    </script>
-  
   
     
         <script>
@@ -298,7 +278,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -837,7 +817,6 @@ hexo d</code></pre><p>现在访问我们的网站就可以看到主题已经更�
         
     </div> -->
 
-
     <div class="reprint" id="reprint-statement">
         
         <div class="reprint__author">
@@ -985,7 +964,7 @@ hexo d</code></pre><p>现在访问我们的网站就可以看到主题已经更�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="VMware 安装 CentOS 8.1 完整教程 ">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="VMware 安装 CentOS 8.1 完整教程 ">
                         
                         <span class="card-title">VMware 安装 CentOS 8.1 完整教程 </span>
                     </div>
@@ -1038,7 +1017,7 @@ hexo d</code></pre><p>现在访问我们的网站就可以看到主题已经更�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Github + Hexo 搭建个人博客超详细教程">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Github + Hexo 搭建个人博客超详细教程">
                         
                         <span class="card-title">Github + Hexo 搭建个人博客超详细教程</span>
                     </div>
@@ -1090,43 +1069,6 @@ hexo d</code></pre><p>现在访问我们的网站就可以看到主题已经更�
 </article>
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: John's Blog<br />'
-            + '作者: John同学<br />'
-            + '链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
-    });
-</script>
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
