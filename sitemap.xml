@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mrjohnzh.github.io.git/1.html</loc>
+    
+    <lastmod>2021-12-05T10:11:55.505Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mrjohnzh.github.io.git/contact/index.html</loc>
     
     <lastmod>2021-11-08T05:45:48.731Z</lastmod>
@@ -23,13 +30,6 @@
   </url>
   
   <url>
-    <loc>https://mrjohnzh.github.io.git/friends/index.html</loc>
-    
-    <lastmod>2021-10-27T03:03:23.287Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://mrjohnzh.github.io.git/categories/index.html</loc>
     
     <lastmod>2021-10-27T03:03:23.287Z</lastmod>
@@ -37,9 +37,9 @@
   </url>
   
   <url>
-    <loc>https://mrjohnzh.github.io.git/1.html</loc>
+    <loc>https://mrjohnzh.github.io.git/friends/index.html</loc>
     
-    <lastmod>2021-10-27T03:03:23.286Z</lastmod>
+    <lastmod>2021-10-27T03:03:23.287Z</lastmod>
     
   </url>
   

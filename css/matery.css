@@ -819,8 +819,8 @@ header .go-back i {
 }
 
 .recommend .title {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
@@ -957,6 +957,7 @@ article .card {
 
 article .card-image {
     background-color: #222;
+    border-radius: 8px;
 }
 
 article .card-image img {
