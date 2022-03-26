@@ -311,7 +311,8 @@ mark {
 
 /* 整体背景颜色，包括导航，移动导航，页脚，选项卡等。*/
 .bg-color {
-    background-image: linear-gradient(to right, #8CACD2 100%, #8CACD2 100%);
+    /* background-image: linear-gradient(to right, #8CACD2 100%, #8CACD2 100%); */
+    background-image: linear-gradient(to right, #8CD2AE 100%, #8CD2AE 100%);
     opacity: 1;
 }
 
@@ -353,7 +354,8 @@ nav {
 /* 将导航栏改为不透明 */
 header .nav-transparent {
     /* background-color: transparent !important; */
-    background-color: #8CACD2;
+    /* background-color: #8CACD2; */
+    background-color: #8CD2AE;
     background-image: none;
     box-shadow: none;
 }
@@ -651,12 +653,16 @@ header .go-back i {
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.4em;
-    color: rgb(1, 1, 1);
-    font-family: KaiTi;
+    color: rgb(159, 68, 94);
+    font-family: "Times New Roman", serif;
 }
 
 .bg-cover .post-title {
     font-size: 1.9rem;
+    font-weight: 300;
+    line-height: 1.4em;
+    color: #B83131;
+    font-family: "Times New Roman", serif;
 }
 
 /* @-webkit-keyframes rainbow {
@@ -1722,7 +1728,7 @@ table tr:nth-child(2n), thead {
 #aboutme .introduction {
     margin: 1.5rem auto 3rem;
     max-width: 600px;
-    color: #999;
+    color: #34495E;
 }
 
 .post-charts,
