@@ -4,16 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux学习（五）：用户组, 每天进步一点点！">
+    <meta name="keywords" content="Nginx 快速入门, 每天进步一点点！">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="1. 基本介绍Linux 中每个用户都必须属于一个组，不能独立于组之外。在 Linux 中每个文件有所有者、所在组、其他组的概念。
-2. 文件所有者
-ls -ahl：查看文件或目录的所有者。
+    <meta name="description" content="
 
-
-chown 用户名 文件名：修改文件的所有者">
+1. 基本介绍Nginx 是一个高性能的 HTTP 和反向代理 Web 服务器，同时它提供了 IMAP、POP3 以及 SMTP 等服务，因此也可作为电子邮件代理服务器。Nginx 占用内存少，并发能力强，目前已被许多国内产商所使用。
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@ chown 用户名 文件名：修改文件的所有者">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux学习（五）：用户组 | JohnLearning</title>
+    <title>Nginx 快速入门 | JohnLearning</title>
 
     <!-- <link rel="icon" href="#">  --> 
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/mrjohnzh/Common@1.2/imgs/favicon.png">
@@ -249,14 +247,14 @@ chown 用户名 文件名：修改文件的所有者">
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')"> -->
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')"> -->
 <div class="bg-cover pd-header post-cover">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="center-align post-title">
-                        Linux学习（五）：用户组
+                        Nginx 快速入门
                     </div>
                 </div>
             </div>
@@ -367,12 +365,12 @@ chown 用户名 文件名：修改文件的所有者">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Linux/" target="_blank">
-                            <span class="chip bg-color">Linux</span>
+                        <a href="/tags/Nginx/" target="_blank">
+                            <span class="chip bg-color">Nginx</span>
                         </a>
                         
-                        <a href="/tags/用户组/" target="_blank">
-                            <span class="chip bg-color">用户组</span>
+                        <a href="/tags/计网/" target="_blank">
+                            <span class="chip bg-color">计网</span>
                         </a>
                         
                     </div>
@@ -383,8 +381,8 @@ chown 用户名 文件名：修改文件的所有者">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Linux/" class="post-category" target="_blank">
-                            Linux
+                        <a href="/categories/计算机网络/" class="post-category" target="_blank">
+                            计算机网络
                         </a>
                         
                     </div>
@@ -395,7 +393,7 @@ chown 用户名 文件名：修改文件的所有者">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-10
+                    2022-03-27
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -409,14 +407,14 @@ chown 用户名 文件名：修改文件的所有者">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    238
+                    3.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    13 分
                 </div>
                 
                 
@@ -432,32 +430,253 @@ chown 用户名 文件名：修改文件的所有者">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-基本介绍"><a href="#1-基本介绍" class="headerlink" title="1. 基本介绍"></a>1. 基本介绍</h2><p>Linux 中每个用户都必须属于一个组，不能独立于组之外。在 Linux 中每个文件有所有者、所在组、其他组的概念。</p>
-<h2 id="2-文件所有者"><a href="#2-文件所有者" class="headerlink" title="2. 文件所有者"></a>2. 文件所有者</h2><ul>
-<li>ls -ahl：查看文件或目录的所有者。</li>
-</ul>
+                <!-- # Nginx 快速入门 -->
+
+<h2 id="1-基本介绍"><a href="#1-基本介绍" class="headerlink" title="1. 基本介绍"></a>1. 基本介绍</h2><p>Nginx 是一个高性能的 HTTP 和反向代理 Web 服务器，同时它提供了 IMAP、POP3 以及 SMTP 等服务，因此也可作为电子邮件代理服务器。Nginx 占用内存少，并发能力强，目前已被许多国内产商所使用。</p>
+<h2 id="2-为什么使用-Nginx"><a href="#2-为什么使用-Nginx" class="headerlink" title="2. 为什么使用 Nginx"></a>2. 为什么使用 Nginx</h2><p>网站建设初期，由于用户数比较少，并发量比较低，一台服务器基本能够满足我们的需求，通过部署 Tomcat 就能将数据信息返回给用户。</p>
+<img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E5%8D%95%E7%94%A8%E6%88%B7.png" width="70%">
+
+
+<p>慢慢的，随着用户数不断增大，较高的并发量使得服务器上处理请求的线程和数据库承受着巨大压力，这将导致请求的响应时间被不断拉长，大量服务超时，最终服务器的可用连接数被耗尽，不再接收新的请求。</p>
+<img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E5%A4%9A%E7%94%A8%E6%88%B7.png" width="70%">
+
+
+<p>一个可行的解决办法是做水平扩展，增加多台服务器，这样不同用户的请求可以由不同的服务器受理，从而大大减小了每台服务器的压力。值得注意的是，分布式系统中各个服务器之间可能并不共享用户的 Session 信息，所以需要一个中间层服务器将一个用户的不同请求路由到同一台服务器上。不仅如此，该中间层服务器还需要使得各个服务器接收的请求量保持均衡，以获得最佳体验。</p>
+<img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E4%B8%AD%E9%97%B4%E5%B1%82%E6%9C%8D%E5%8A%A1%E5%99%A8.png" width="70%">
+
+<p>基于上述考虑，我们可以使用 Nginx 进行转发和处理请求。Nginx 首先接收用户的请求，然后根据用户的身份以及服务器的性能将请求路由到对应的服务器节点上，该过程对用户来说是无感知的，用户并不知道具体是哪台服务器在处理请求。</p>
+<img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/Nginx.png" width="70%">
+
+<h2 id="3-Nginx-主要功能"><a href="#3-Nginx-主要功能" class="headerlink" title="3. Nginx 主要功能"></a>3. Nginx 主要功能</h2><p>Nginx 可以作为反向代理和负载均衡服务器，还可以作为 HTTP 服务器实现 Web 服务的动静分离。</p>
+<h3 id="3-1-正向代理"><a href="#3-1-正向代理" class="headerlink" title="3.1 正向代理"></a>3.1 正向代理</h3><p>正向代理类似于一个跳板机，代理客户端访问外部资源。比如国内用户直接访问 Google 时请求会被阻塞，但是挂上 VPN 后就可以正常访问了。这里的 VPN 实际上就是正向代理服务器，用户的请求首先发送给代理服务器，代理服务器能够访问 Google，之后代理服务器接收到 Google 的响应并将该响应返回给用户。对于 Google 服务器来说，它只知道代理服务器发送了多个请求，而并不知道这些请求具体来自于哪些用户。</p>
+<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8.png
+" width="70%"></p>
+<p>正向代理的用途：</p>
+<ol>
+<li><p>访问原先无法访问的资源。</p>
+</li>
+<li><p>用做缓存，加快资源的访问。</p>
+</li>
+<li><p>对客户端做鉴权。</p>
+</li>
+<li><p>实现匿名访问，对后端服务器隐藏真实的 IP。</p>
+</li>
+</ol>
+<h3 id="3-2-反向代理"><a href="#3-2-反向代理" class="headerlink" title="3.2 反向代理"></a>3.2 反向代理</h3><p>反向代理指的是指利用代理服务器接受用户的请求，代理服务器将请求转发给某一个内网服务器，并将得到的响应返回给对应的客户端，此时整个后端服务对外就表现为一个代理服务器。比如访问 Baidu，Baidu 的服务实际上是部署在多台机器上的，但是我们每次访问的都是同一个地址 www.<span></span>baidu<span></span>.com，这里的 www.<span></span>baidu.<span></span>com 其实就是反向代理服务器。对客户端来说，它只知道请求都是发送给了代理服务器，而并不知道具体是哪一个真实服务器在处理请求，后续无论动态扩容多少台服务器，客户端也总是访问 www.<span></span>baidu.<span></span>com。</p>
+<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8.png
+" width="70%"></p>
+<p>反向代理的用途：</p>
+<ol>
+<li><p>隐藏后端服务器集群的 IP，保证内网安全。通常反向代理服务器的 IP 会作为公网地址供用户访问，而代理服务器和后端服务器使用内网进行通信。</p>
+</li>
+<li><p>负载均衡，利用反向代理服务器可以优化各个后端服务器的负载。</p>
+</li>
+</ol>
+<p><strong>正向代理和反向代理小结</strong></p>
 <ul>
-<li>chown 用户名 文件名：修改文件的所有者。</li>
+<li><p>正向代理代理的对象是客户端，它隐藏了真实的客户端，服务端不知道真正的客户端是谁。</p>
+</li>
+<li><p>反向代理代理的对象是服务端，它隐藏了真实的服务端，客户端不知道具体是哪台服务器做出的回应。</p>
+</li>
 </ul>
-<h2 id="3-文件所在组"><a href="#3-文件所在组" class="headerlink" title="3. 文件所在组"></a>3. 文件所在组</h2><ul>
-<li>cat /etc/group：查看有哪些组。</li>
-</ul>
+<h3 id="3-4-负载均衡"><a href="#3-4-负载均衡" class="headerlink" title="3.4 负载均衡"></a>3.4 负载均衡</h3><p>高并发场景下，如天猫双十一当天，某个服务的瞬时访问量及其庞大，此时即使将服务器升级到现有的顶级物理配置，也可能无法满足需求。这个时候可以拓展服务器的数量，将数据流量分摊到多个服务器上，减轻每台服务器的压力，这种应用就称为负载均衡。Nginx 支持的负载均衡策略分为内置策略和扩展策略，其中内置策略就是轮询，扩展策略需要借助第三方插件来实现。</p>
+<p>内置策略有：</p>
+<ol>
+<li><p>轮询：将请求依次分发到不同的后端服务器，如果某个服务器宕机，Nginx 可自动将其剔除。</p>
+</li>
+<li><p>加权轮询：为每台服务器都分配一个权重值，权重值越高的机器被分配请求量也越大，加权轮询多用于后端服务器性能不均的情况。</p>
+</li>
+<li><p>ip_hash：对客户端请求的 IP 进行 Hash 运算，然后根据 Hash 结果将请求分发给对应的服务器。这种方法能够确保同一客户端的不同请求总是由相同的服务器处理，从而解决了 Session 不共享的问题。</p>
+</li>
+<li><p>最少连接分配 least_conn：将请求转发给连接数较少的后端服务器，轮询方案是将请求平均分配给各个服务器，使它们的负载大致相同。然而，某些请求处理起来可能非常耗时，这可能导致其所在后端的负载显著提高，此时使用 least_conn 就可以达到更好的负载均衡效果。</p>
+</li>
+</ol>
+<p>扩展策略有：</p>
+<ol>
+<li><p>fair：按照服务器端的响应时间来分配请求，响应时间短的优先分配。</p>
+</li>
+<li><p>url_hash：对访问的 URL 进行 Hash 运算，然后根据 Hash 的结果来分配请求，这样同一个 URL 总会定向到同一个后端服务器。此种方式适用于后端服务器作为缓存时的情况，因为缓存的命中率比较高。 </p>
+</li>
+</ol>
+<h3 id="3-5-动静分离"><a href="#3-5-动静分离" class="headerlink" title="3.5 动静分离"></a>3.5 动静分离</h3><p>由于 Nginx 可以根据配置对不同的请求做不同的转发，因此可用来实现动静分离。动静分离指的是将动态请求（需要后台处理的请求）和静态请求（不需要后台处理的请求，如请求 css、html、js、图片等静态资源）分离开，然后将静态请求对应的静态资源直接放在 Nginx 上做缓存，或者放在指定的服务器上，而动态请求仍由相应的后端服务器处理，这样可以使整个服务器系统的性能、效率更高。</p>
+<h2 id="4-Nginx-配置"><a href="#4-Nginx-配置" class="headerlink" title="4. Nginx 配置"></a>4. Nginx 配置</h2><p><strong>基础配置文件</strong></p>
+<p>nginx.conf 是 Nginx 的基础配置文件，其默认内容如下：</p>
+<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/nginx.conf.png
+" width="70%"></p>
+<p>该配置文件总共包含三个部分：全局块、events 块、http 块。</p>
+<ol>
+<li><p>全局块：从配置文件开始到 events 块之间的内容为全局块，全局块中设置了一些影响 Nginx 服务器整体运行性能的配置指令，包括配置运行 Nginx 的用户（组），允许生成的 worker process 数，进程 PID 存放路径、日志的级别和存放路径等。例如上述配置文件中，<code>worker_processes 1;</code> 表示 Nginx 并发处理的进程数，该值越大，可支持的并发处理量也越多。</p>
+</li>
+<li><p>events 块：<code>events{}</code> 括号所包含的内容为 events 块，events 块涉及的指令主要影响 Nginx 服务器和用户之间的网络连接，如 <code>worker_connections  1024;</code> 表示每个 worker process 支持的最大连接数为 1024。events 块中的配置对 Nginx 的性能影响较大，实际中应灵活配置。</p>
+</li>
+<li><p>http 块：<code>https{}</code> 括号所包含的内容为 http 块，http 块中主要用来设置反向代理、缓存、日志定义以及第三方模块的配置。http 块包含 http 全局块和 server 块。</p>
+</li>
+</ol>
 <ul>
-<li>groupadd 组名：创建一个组。</li>
-</ul>
+<li><p>http 全局块：http 全局块配置的指令包括文件引入、mime-type 定义、日志自定义、连接超时时间、单连接请求数上限等。</p>
+</li>
+<li><p>server 块：server 块与虚拟主机联系紧密，每个 http 块可以包含多个 server 块，而每个server 块就相当于一个虚拟主机。server 块也分为全局 server 块和 location 块。</p>
 <ul>
-<li>useradd -g 组名 用户名：创建一个用户，并将该用户放到指定组内。当某个用户创建了一个文件后，该文件的所在组就是该用户所在的组。</li>
+<li><p>全局 server 块：主要配置虚拟主机的名称或 IP 地址、监听的端口号等。</p>
+</li>
+<li><p>location 块：主要配置请求的路由，各种页面的处理情况以及数据的缓存等。当请求的路径满足 location 块中设定的路径匹配规则时，程序就会进入 location 块执行相应的操作，如请求跳转等。下图中，Nginx 会监听主机 <code>localhost</code> 的 <code>80</code> 端口（由 server_name 和 listen 配置），当访问 <code>localhost:80</code> 时，会自动跳转到 <code>127.0.0.1:8080</code>。</p>
+</li>
 </ul>
-<ul>
-<li>chgrp 组名 文件名：修改文件所在的组。</li>
+</li>
 </ul>
-<h2 id="4-其他组"><a href="#4-其他组" class="headerlink" title="4. 其他组"></a>4. 其他组</h2><p>除文件的所有者和所在组的用户外，系统的其它用户都是文件的其它组。</p>
-<ul>
-<li>usermod -g 组名 用户名：修改用户所在组。</li>
-</ul>
-<ul>
-<li>usermod -d 目录名 用户名：修改用户登录的初始目录。</li>
-</ul>
+<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/Server.png
+" width="50%"></p>
+<p><strong>location 匹配规则</strong></p>
+<p>location 块中 <code>location</code> 关键词后跟的是一个字符串或正则表达式，其基本语法为 <code>location [=|~|~*|^~] uri {……}</code>。如果请求的 URI 匹配该正则表达式，那么就进入 location 块。</p>
+<p><code>无任何修饰符</code>表示前缀匹配，当请求的 URI 的开头与 location 后的 URI 匹配时，则进入 location 块：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+　　server_name baidu.com<span class="token punctuation">;</span>
+　　location /hello <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo 虽然 /helloo 与 /hello 匹配, 但最终访问的仍然是 http://真实服务器IP:端口/helloo</span>
+
+<span class="token comment" spellcheck="true">#如下请求不匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hell</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>=</code> 表示精确匹配：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    server_name baidu.com
+　　location <span class="token operator">=</span> /hello <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
+
+<span class="token comment" spellcheck="true">#如下请求均不匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>~</code> 表示区分大小写的前缀匹配:</p>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    server_name baidu.com<span class="token punctuation">;</span>
+　　location ~ /hello <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo</span>
+
+<span class="token comment" spellcheck="true">#如下请求均不匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/Hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hellO</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    server_name baidu.com<span class="token punctuation">;</span>
+　　location ~ ^/hello$ <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
+
+<span class="token comment" spellcheck="true">#如下请求均不匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/Hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hellO</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>~*</code> 表示不区分大小写的前缀匹配:</p>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    server_name baidu.com<span class="token punctuation">;</span>
+    location ~* /hello <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/HELLO </span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#所以无修饰符的前缀匹配与不区分大小的写前缀匹配有什么区别？</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>^~</code> 的匹配规则与无修饰符的情况相似，不同的是，匹配成功之后，会停止搜索后面的正则表达式。</p>
+<p><strong>以上匹配规则均是在 Linux 操作系统下测试得出，可能 Windows 和 Mac OS 系统下请求的 URL 仍然是大小写不敏感的。另外，如有错误欢迎批评指正！</strong></p>
+<p>Nginx 做请求转发时，如果请求的 URI 与多个 location 块中定义的 URI 匹配，那么应该如何做跳转呢？Nginx 中规定了匹配的优先级：</p>
+<ol>
+<li><p>带有 “=” 的精确匹配。</p>
+</li>
+<li><p>无修饰符的精确匹配。</p>
+</li>
+<li><p>带有 “^~” 修饰符的前缀匹配。</p>
+</li>
+<li><p>按照正则表达式在配置文件中定义的顺序进行匹配。</p>
+</li>
+<li><p>带有 “~“ 或  “~*” 修饰符的前缀匹配。</p>
+</li>
+<li><p>无修饰符的前缀匹配。</p>
+</li>
+<li><p>通用匹配 “/“。</p>
+</li>
+</ol>
+<h2 id="5-Nginx-常用命令"><a href="#5-Nginx-常用命令" class="headerlink" title="5. Nginx 常用命令"></a>5. Nginx 常用命令</h2><p>Nginx 的启动、停止、更新配置文件后的重新加载命令如下：</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> /usr/local/nginx/sbin/  <span class="token comment" spellcheck="true">#Linux 下 Nginx 的默认安装目录</span>
+./nginx  <span class="token comment" spellcheck="true">#启动</span>
+./nginx -s stop  <span class="token comment" spellcheck="true">#停止</span>
+./nginx -s quit  <span class="token comment" spellcheck="true">#安全退出</span>
+./nginx -s reload  <span class="token comment" spellcheck="true">#重新加载配置文件, Nginx 启动后如果修改了配置文件, 可执行该命令重新加载</span>
+<span class="token function">ps</span> aux<span class="token operator">|</span><span class="token function">grep</span> nginx  <span class="token comment" spellcheck="true">#查看 Nginx 进程</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="5-Nginx-简单使用"><a href="#5-Nginx-简单使用" class="headerlink" title="5. Nginx 简单使用"></a>5. Nginx 简单使用</h2><p><strong>设计思路</strong></p>
+<p>首先在 Windows 主机中安装 Nginx，然后使用 VirtualBox 或 VMware 启动两台虚拟机，并将后端服务部署在这两台虚拟机中。此时，部署 Nginx 的 Windows 主机负责接收请求，而两台 Linux 虚拟机则充当后端服务器，当有请求到达时，Nginx 服务器根据配置将该请求路由到真实的服务器（虚拟机）中。</p>
+<p><strong>后端服务</strong></p>
+<p>写一个简单的 “Hello World” 项目： </p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Controller</span>
+<span class="token annotation punctuation">@RequestMapping</span>
+<span class="token annotation punctuation">@Log</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>path <span class="token operator">=</span> <span class="token string">"/hello"</span><span class="token punctuation">,</span> method <span class="token operator">=</span> RequestMethod<span class="token punctuation">.</span>GET<span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ResponseBody</span>
+    <span class="token keyword">public</span> String <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"I'm fine, thank you."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token keyword">return</span> <span class="token string">"Hello, world!"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>将该项目打成 jar 包，分别部署在两台虚拟机中。正常情况下该服务会返回 “Hello, world!” 字符串，并打印日志 “I’m fine, thank you.”，为了更好地区分请求由哪台虚拟机处理，我们将其中一个服务中打印的日志修改为 “And you?”。</p>
+<p><strong>Nginx 配置</strong></p>
+<p>接着打开 Nginx 的配置文件 nginx.conf，配置反向代理和负载均衡策略：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">upstream nginxTest <span class="token punctuation">{</span>
+    server 192.168.3.118:8080 weight<span class="token operator">=</span>1<span class="token punctuation">;</span>
+    server 192.168.3.124:8080 weight<span class="token operator">=</span>1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+server <span class="token punctuation">{</span>
+    listen       80<span class="token punctuation">;</span>
+    server_name  localhost<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">#charset koi8-r;</span>
+
+    <span class="token comment" spellcheck="true">#access_log  logs/host.access.log  main;</span>
+
+    location / <span class="token punctuation">{</span>
+        root   html<span class="token punctuation">;</span>
+        index  index.html index.htm<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    location /hello <span class="token punctuation">{</span>
+        proxy_pass http://nginxTest<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">#路由到 http://192.128.3.xxx:8080/hello</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>upstream 块中定义的是负载均衡服务器的列表，weight 表示每个 server 的权重。</p>
+<p><strong>测试</strong></p>
+<p>在 Windows 主机的浏览器中访问 localhost:80/hello，得到响应 “Hello, world!”，多次访问后可以发现，两台 Linux 虚拟机均打印出了相应的日志：</p>
+<p>主机 1：<br><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/Centos.png" width="70%"></p>
+<p>主机 2：<br><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/Ubuntu.png" width="70%"></p>
+<p>这说明请求会被随机分配给两台主机，因为我们在配置文件中为它们设置了相同的权重。</p>
+<p><strong>注意事项</strong></p>
+<p>上述操作中，需要确保 Windows 主机与两台虚拟机可以相互 Ping 通。当然也可以使用一台主机（Windows 或 Linux）来完成测试，只需要在主机上启动多个后端服务并分别设置不同的服务端口，之后在 nginx.cof 中配置相关的路由规则。</p>
 
             </div>
             <hr />
@@ -576,9 +795,9 @@ chown 用户名 文件名：修改文件的所有者">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Linux学习（五）：用户组》
+                    《Nginx 快速入门》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/linux-xue-xi-wu-yong-hu-zu.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/nginx-ru-men.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 John同学
             </a> 采用
@@ -759,13 +978,13 @@ chown 用户名 文件名：修改文件的所有者">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/nginx-ru-men.html">
+                <a href="/nginx-de-fu-zai-jun-heng-ce-lue.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Nginx 快速入门">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Nginx 的负载均衡策略">
                         
-                        <span class="card-title">Nginx 快速入门</span>
+                        <span class="card-title">Nginx 的负载均衡策略</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -776,7 +995,7 @@ chown 用户名 文件名：修改文件的所有者">
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-27
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-28
                         </span>
                         <span class="publish-author">
                             
@@ -812,13 +1031,13 @@ chown 用户名 文件名：修改文件的所有者">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/1.html">
+                <a href="/linux-xue-xi-wu-yong-hu-zu.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="后端知识点总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Linux学习（五）：用户组">
                         
-                        <span class="card-title">后端知识点总结</span>
+                        <span class="card-title">Linux学习（五）：用户组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -829,14 +1048,14 @@ chown 用户名 文件名：修改文件的所有者">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-02-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/后端/" class="post-category" target="_blank">
-                                    后端
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
                                 </a>
                             
                             
@@ -846,16 +1065,12 @@ chown 用户名 文件名：修改文件的所有者">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/计网/" target="_blank">
-                        <span class="chip bg-color">计网</span>
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
-                    <a href="/tags/操作系统/" target="_blank">
-                        <span class="chip bg-color">操作系统</span>
-                    </a>
-                    
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/用户组/" target="_blank">
+                        <span class="chip bg-color">用户组</span>
                     </a>
                     
                 </div>

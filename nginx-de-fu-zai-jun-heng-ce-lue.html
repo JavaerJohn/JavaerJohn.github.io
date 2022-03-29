@@ -4,16 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux学习（五）：用户组, 每天进步一点点！">
+    <meta name="keywords" content="Nginx 的负载均衡策略, 每天进步一点点！">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="1. 基本介绍Linux 中每个用户都必须属于一个组，不能独立于组之外。在 Linux 中每个文件有所有者、所在组、其他组的概念。
-2. 文件所有者
-ls -ahl：查看文件或目录的所有者。
+    <meta name="description" content="
 
-
-chown 用户名 文件名：修改文件的所有者">
+https://www.cnblogs.com/1214804270hacker/p/9325150.html
+1. 基本介绍高并发场景下，如天猫双十一当天，某个服务的瞬时访问量及其庞大，此时即使将服务器升级到现有的顶级物理配置，也可能">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@ chown 用户名 文件名：修改文件的所有者">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux学习（五）：用户组 | JohnLearning</title>
+    <title>Nginx 的负载均衡策略 | JohnLearning</title>
 
     <!-- <link rel="icon" href="#">  --> 
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/mrjohnzh/Common@1.2/imgs/favicon.png">
@@ -249,14 +247,14 @@ chown 用户名 文件名：修改文件的所有者">
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')"> -->
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')"> -->
 <div class="bg-cover pd-header post-cover">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="center-align post-title">
-                        Linux学习（五）：用户组
+                        Nginx 的负载均衡策略
                     </div>
                 </div>
             </div>
@@ -367,12 +365,12 @@ chown 用户名 文件名：修改文件的所有者">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Linux/" target="_blank">
-                            <span class="chip bg-color">Linux</span>
+                        <a href="/tags/Nginx/" target="_blank">
+                            <span class="chip bg-color">Nginx</span>
                         </a>
                         
-                        <a href="/tags/用户组/" target="_blank">
-                            <span class="chip bg-color">用户组</span>
+                        <a href="/tags/计网/" target="_blank">
+                            <span class="chip bg-color">计网</span>
                         </a>
                         
                     </div>
@@ -383,8 +381,8 @@ chown 用户名 文件名：修改文件的所有者">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Linux/" class="post-category" target="_blank">
-                            Linux
+                        <a href="/categories/计算机网络/" class="post-category" target="_blank">
+                            计算机网络
                         </a>
                         
                     </div>
@@ -395,7 +393,7 @@ chown 用户名 文件名：修改文件的所有者">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-10
+                    2022-03-28
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -409,7 +407,7 @@ chown 用户名 文件名：修改文件的所有者">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    238
+                    543
                 </div>
                 
 
@@ -432,32 +430,18 @@ chown 用户名 文件名：修改文件的所有者">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-基本介绍"><a href="#1-基本介绍" class="headerlink" title="1. 基本介绍"></a>1. 基本介绍</h2><p>Linux 中每个用户都必须属于一个组，不能独立于组之外。在 Linux 中每个文件有所有者、所在组、其他组的概念。</p>
-<h2 id="2-文件所有者"><a href="#2-文件所有者" class="headerlink" title="2. 文件所有者"></a>2. 文件所有者</h2><ul>
-<li>ls -ahl：查看文件或目录的所有者。</li>
-</ul>
-<ul>
-<li>chown 用户名 文件名：修改文件的所有者。</li>
-</ul>
-<h2 id="3-文件所在组"><a href="#3-文件所在组" class="headerlink" title="3. 文件所在组"></a>3. 文件所在组</h2><ul>
-<li>cat /etc/group：查看有哪些组。</li>
-</ul>
-<ul>
-<li>groupadd 组名：创建一个组。</li>
-</ul>
-<ul>
-<li>useradd -g 组名 用户名：创建一个用户，并将该用户放到指定组内。当某个用户创建了一个文件后，该文件的所在组就是该用户所在的组。</li>
-</ul>
-<ul>
-<li>chgrp 组名 文件名：修改文件所在的组。</li>
-</ul>
-<h2 id="4-其他组"><a href="#4-其他组" class="headerlink" title="4. 其他组"></a>4. 其他组</h2><p>除文件的所有者和所在组的用户外，系统的其它用户都是文件的其它组。</p>
-<ul>
-<li>usermod -g 组名 用户名：修改用户所在组。</li>
-</ul>
-<ul>
-<li>usermod -d 目录名 用户名：修改用户登录的初始目录。</li>
-</ul>
+                <!-- # Nginx 的负载均衡策略 -->
+
+<p><a href="https://www.cnblogs.com/1214804270hacker/p/9325150.html" target="_blank" rel="noopener">https://www.cnblogs.com/1214804270hacker/p/9325150.html</a></p>
+<h2 id="1-基本介绍"><a href="#1-基本介绍" class="headerlink" title="1. 基本介绍"></a>1. 基本介绍</h2><p>高并发场景下，如天猫双十一当天，某个服务的瞬时访问量及其庞大，此时即使将服务器升级到现有的顶级物理配置，也可能无法满足需求。这个时候可以拓展服务器的数量，将数据流量分摊到多个服务器上，减轻每台服务器的压力，这种应用就称为负载均衡。</p>
+<p>Nginx 支持的负载均衡策略分为内置策略和扩展策略：</p>
+<h2 id="2-内置策略"><a href="#2-内置策略" class="headerlink" title="2. 内置策略"></a>2. 内置策略</h2><h3 id="2-1-轮询"><a href="#2-1-轮询" class="headerlink" title="2.1 轮询"></a>2.1 轮询</h3><p>将请求依次分发到不同的后端服务器，如果某个服务器宕机，Nginx 可自动将其剔除。</p>
+<h3 id="2-2-加权轮询"><a href="#2-2-加权轮询" class="headerlink" title="2.2 加权轮询"></a>2.2 加权轮询</h3><p>为每台服务器都分配一个权重值，权重值越高的机器被分配请求量也越大，加权轮询多用于后端服务器性能不均的情况。</p>
+<h3 id="2-3-ip-hash"><a href="#2-3-ip-hash" class="headerlink" title="2.3 ip_hash"></a>2.3 ip_hash</h3><p>对客户端请求的 IP 进行 Hash 运算，然后根据 Hash 结果将请求分发给对应的服务器。这中方法能够确保同一客户端的不同请求总是由相同的服务器处理，从而解决了 Session 不共享的问题。</p>
+<h3 id="2-4-最少连接分配"><a href="#2-4-最少连接分配" class="headerlink" title="2.4 最少连接分配"></a>2.4 最少连接分配</h3><p>将请求转发给连接数较少的后端服务器，轮询方案是将请求平均分配给各个服务器，使它们的负载大致相同。然而，处理某些请求可能非常耗时，这将导致其所在的后端负载较高。这种情况下，使用 least_conn 就可以达到更好的负载均衡效果。</p>
+<h2 id="3-扩展策略"><a href="#3-扩展策略" class="headerlink" title="3. 扩展策略"></a>3. 扩展策略</h2><p>扩展策略的实现需要安装第三方插件。</p>
+<h3 id="3-1-fair"><a href="#3-1-fair" class="headerlink" title="3.1 fair"></a>3.1 fair</h3><p>按照服务器端的响应时间来分配请求，响应时间短的优先分配。</p>
+<h3 id="3-2-url-hash"><a href="#3-2-url-hash" class="headerlink" title="3.2 url_hash"></a>3.2 url_hash</h3><p>对访问的 URL 进行 Hash 运算，然后根据 Hash 的结果来分配请求，这样同一个 URL 总会定向到同一个后端服务器。此种范式适用于后端服务器作为缓存时的情况，因为缓存的命中率比较高。 </p>
 
             </div>
             <hr />
@@ -576,9 +560,9 @@ chown 用户名 文件名：修改文件的所有者">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Linux学习（五）：用户组》
+                    《Nginx 的负载均衡策略》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/linux-xue-xi-wu-yong-hu-zu.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/nginx-de-fu-zai-jun-heng-ce-lue.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 John同学
             </a> 采用
@@ -755,17 +739,18 @@ chown 用户名 文件名：修改文件的所有者">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/nginx-ru-men.html">
+                <a href="/nginx-de-fu-zai-jun-heng-ce-lue.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Nginx 快速入门">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Nginx 的负载均衡策略">
                         
-                        <span class="card-title">Nginx 快速入门</span>
+                        <span class="card-title">Nginx 的负载均衡策略</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -775,9 +760,9 @@ chown 用户名 文件名：修改文件的所有者">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -790,6 +775,7 @@ chown 用户名 文件名：修改文件的所有者">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -812,31 +798,31 @@ chown 用户名 文件名：修改文件的所有者">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/1.html">
+                <a href="/nginx-ru-men.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="后端知识点总结">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Nginx 快速入门">
                         
-                        <span class="card-title">后端知识点总结</span>
+                        <span class="card-title">Nginx 快速入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            搭建博客帮助自己复习。
+                            快速了解 Nginx 的使用。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/后端/" class="post-category" target="_blank">
-                                    后端
+                            <a href="/categories/计算机网络/" class="post-category" target="_blank">
+                                    计算机网络
                                 </a>
                             
                             
@@ -846,16 +832,12 @@ chown 用户名 文件名：修改文件的所有者">
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/Nginx/" target="_blank">
+                        <span class="chip bg-color">Nginx</span>
+                    </a>
+                    
                     <a href="/tags/计网/" target="_blank">
                         <span class="chip bg-color">计网</span>
-                    </a>
-                    
-                    <a href="/tags/操作系统/" target="_blank">
-                        <span class="chip bg-color">操作系统</span>
-                    </a>
-                    
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>

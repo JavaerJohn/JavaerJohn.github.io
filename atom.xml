@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://mrjohnzh.github.io.git/"/>
-  <updated>2022-03-25T03:37:46.942Z</updated>
+  <updated>2022-03-27T13:01:23.431Z</updated>
   <id>https://mrjohnzh.github.io.git/</id>
   
   <author>
@@ -17,11 +17,71 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Nginx 的负载均衡策略</title>
+    <link href="https://mrjohnzh.github.io.git/nginx-de-fu-zai-jun-heng-ce-lue.html"/>
+    <id>https://mrjohnzh.github.io.git/nginx-de-fu-zai-jun-heng-ce-lue.html</id>
+    <published>2022-03-28T04:13:29.000Z</published>
+    <updated>2022-03-27T13:01:23.431Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- # Nginx 的负载均衡策略 --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/1214804270hacker/p/9325150.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="计算机网络" scheme="https://mrjohnzh.github.io.git/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="Nginx" scheme="https://mrjohnzh.github.io.git/tags/Nginx/"/>
+    
+      <category term="计网" scheme="https://mrjohnzh.github.io.git/tags/%E8%AE%A1%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx 快速入门</title>
+    <link href="https://mrjohnzh.github.io.git/nginx-ru-men.html"/>
+    <id>https://mrjohnzh.github.io.git/nginx-ru-men.html</id>
+    <published>2022-03-27T03:13:31.000Z</published>
+    <updated>2022-03-29T04:42:08.353Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- # Nginx 快速入门 --&gt;
+
+&lt;h2 id=&quot;1-基本介绍&quot;&gt;&lt;a href=&quot;#1-基本介绍&quot; class=&quot;headerlink&quot; title=&quot;1. 基本介绍&quot;&gt;&lt;/a&gt;1. 基本介绍&lt;/h2&gt;&lt;p&gt;Nginx 是一个高性能的 HTTP 和反向代理 Web
+        
+      
+    
+    </summary>
+    
+      <category term="计算机网络" scheme="https://mrjohnzh.github.io.git/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="Nginx" scheme="https://mrjohnzh.github.io.git/tags/Nginx/"/>
+    
+      <category term="计网" scheme="https://mrjohnzh.github.io.git/tags/%E8%AE%A1%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux学习（五）：用户组</title>
     <link href="https://mrjohnzh.github.io.git/linux-xue-xi-wu-yong-hu-zu.html"/>
     <id>https://mrjohnzh.github.io.git/linux-xue-xi-wu-yong-hu-zu.html</id>
     <published>2022-02-10T13:17:35.000Z</published>
-    <updated>2022-03-25T03:37:46.942Z</updated>
+    <updated>2022-03-27T13:29:11.524Z</updated>
     
     <summary type="html">
     
@@ -49,7 +109,7 @@
     <link href="https://mrjohnzh.github.io.git/1.html"/>
     <id>https://mrjohnzh.github.io.git/1.html</id>
     <published>2020-02-18T13:17:35.000Z</published>
-    <updated>2022-03-26T02:19:46.621Z</updated>
+    <updated>2022-03-27T14:15:19.120Z</updated>
     
     <summary type="html">
     
@@ -67,9 +127,9 @@
       <category term="后端" scheme="https://mrjohnzh.github.io.git/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="操作系统" scheme="https://mrjohnzh.github.io.git/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
       <category term="计网" scheme="https://mrjohnzh.github.io.git/tags/%E8%AE%A1%E7%BD%91/"/>
+    
+      <category term="操作系统" scheme="https://mrjohnzh.github.io.git/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
       <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
     
