@@ -37,6 +37,7 @@ body {
     background-color: #eaeaea;
     margin: 0;
     color: #34495e;
+    font-family: "Bookman Old Style", Helvetica, Tahoma, Arial, sans-serif;
 }
 
 h1 {
@@ -311,8 +312,8 @@ mark {
 
 /* 整体背景颜色，包括导航，移动导航，页脚，选项卡等。*/
 .bg-color {
-    /* background-image: linear-gradient(to right, #8CACD2 100%, #8CACD2 100%); */
-    background-image: linear-gradient(to right, #8CD2AE 100%, #8CD2AE 100%);
+    background-image: linear-gradient(to right, #8CACD2 100%, #8CACD2 100%);
+    /* background-image: linear-gradient(to right, #8CD2AE 100%, #8CD2AE 100%); */
     opacity: 1;
 }
 
@@ -354,8 +355,8 @@ nav {
 /* 将导航栏改为不透明 */
 header .nav-transparent {
     /* background-color: transparent !important; */
-    /* background-color: #8CACD2; */
-    background-color: #8CD2AE;
+    background-color: #8CACD2;
+    /* background-color: #8CD2AE; */
     background-image: none;
     box-shadow: none;
 }
@@ -368,10 +369,12 @@ header .brand-logo .logo-img {
     height: 45px;
     vertical-align: middle;
     padding-bottom: 6px;
+    margin-top: -10px;
 }
 
 header .brand-logo .logo-span {
     font-size: 2rem;
+    font-weight: bold;
 }
 
 header .button-collapse i {
@@ -650,19 +653,20 @@ header .go-back i {
 }
 
 .bg-cover .description {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 300;
+    /* font-weight: bold; */
     line-height: 1.4em;
-    color: rgb(159, 68, 94);
-    font-family: "Times New Roman", serif;
+    color: rgb(177, 111, 133);
+    font-family: "Bookman Old Style", "KaiTi", serif;
 }
 
 .bg-cover .post-title {
     font-size: 1.9rem;
-    font-weight: 300;
+    font-weight: bold;
     line-height: 1.4em;
-    color: #B83131;
-    font-family: "Times New Roman", serif;
+    color: #34495e;
+    font-family: "Bookman Old Style", "微软雅黑", serif;
 }
 
 /* @-webkit-keyframes rainbow {
@@ -837,6 +841,7 @@ header .go-back i {
     font-size: 1.1rem;
     padding: 0 11em;
     color: rgba(143, 151, 224, 0.815);
+    /* font-weight: bold; */
 }
 .recommend .post-card:before {
     position: absolute;
