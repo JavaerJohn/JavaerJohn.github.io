@@ -37,7 +37,7 @@ body {
     background-color: #eaeaea;
     margin: 0;
     color: #34495e;
-    font-family: "Bookman Old Style", Helvetica, Tahoma, Arial, sans-serif;
+    font-family: Bookman Old Style, American Typewriter, Helvetica, Tahoma, Arial, sans-serif;
 }
 
 h1 {
@@ -658,7 +658,7 @@ header .go-back i {
     /* font-weight: bold; */
     line-height: 1.4em;
     color: rgb(177, 111, 133);
-    font-family: "Bookman Old Style", "KaiTi", serif;
+    font-family: Bookman Old Style, American Typewriter, KaiTi, Helvetica, Tahoma, Arial, sans-serif;
 }
 
 .bg-cover .post-title {
@@ -666,7 +666,7 @@ header .go-back i {
     font-weight: bold;
     line-height: 1.4em;
     color: #34495e;
-    font-family: "Bookman Old Style", "微软雅黑", serif;
+    font-family: Bookman Old Style, American Typewriter, "微软雅黑", Helvetica, Tahoma, Arial, sans-serif;
 }
 
 /* @-webkit-keyframes rainbow {
