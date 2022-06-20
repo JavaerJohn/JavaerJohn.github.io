@@ -1,0 +1,1445 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java 知识点合集, 每天进步一点点！">
+    <meta name="baidu-site-verification" content="fmlEuI34ir">
+    <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
+    <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
+    <meta name="description" content="Java 基础概念Java 语言的特点
+简单性：Java 可看做是 C++ 的 “纯净” 版本，它取消了指针运算、多继承、操作符重载等难以理解的特性，且引入了垃圾的自动回收机制。
+
+面向对象：Java 是一种面向对象的编程语言。
+
+平台无关">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Java 知识点合集 | John&#39;s Blog</title>
+
+    <!-- <link rel="icon" href="#">  --> 
+    <link rel="icon" type="image/png" href="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/hexo/favicon.png">
+
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4d1d73af45a62734730491a6b6c41da4";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+   </script>
+
+
+  
+    
+
+    <script>
+        (function(){
+        var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+
+    <meta name="baidu-site-verification" content>
+
+
+
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <span class="logo-span">John's Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fas fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fas fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fas fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fas fa-user-circle"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fas fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fas fa-comments"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <div class="logo-name">John's Blog</div>
+        <div class="logo-desc">
+            
+            一名正在努力的程序员
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fas fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fas fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fas fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fas fa-user-circle"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fas fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fas fa-comments"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/JavaerJohn" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/JavaerJohn" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/43.jpg')"> -->
+<div class="bg-cover pd-header post-cover">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="center-align post-title">
+                        Java 知识点合集
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                        <a href="/tags/后端/" target="_blank">
+                            <span class="chip bg-color">后端</span>
+                        </a>
+                        
+                        <a href="/tags/Java/" target="_blank">
+                            <span class="chip bg-color">Java</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/Java-知识点/" class="post-category" target="_blank">
+                            Java 知识点
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-06-05
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    John同学
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+                
+
+                
+                <div id="busuanzi_container_page_pv" class="info-break-policy">
+                    <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                    <span id="busuanzi_value_page_pv"></span>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="Java-基础概念"><a href="#Java-基础概念" class="headerlink" title="Java 基础概念"></a>Java 基础概念</h2><h3 id="Java-语言的特点"><a href="#Java-语言的特点" class="headerlink" title="Java 语言的特点"></a>Java 语言的特点</h3><ol>
+<li><p>简单性：Java 可看做是 C++ 的 “纯净” 版本，它取消了指针运算、多继承、操作符重载等难以理解的特性，且引入了垃圾的自动回收机制。</p>
+</li>
+<li><p>面向对象：Java 是一种面向对象的编程语言。</p>
+</li>
+<li><p>平台无关性：一次编写，到处运行。</p>
+</li>
+<li><p>支持多线程：Java 是第一个支持并发程序设计的主流语言（C++ 没有内置的多线程机制，因此必须调用操作系统的多线程功能才能进行多线程程序设计）。</p>
+</li>
+<li><p>安全性：Java 从一开始就被设计成了能够防范各种攻击的语言，如防止运行时堆栈溢出，防止破坏自己进程空间之外的内存，防止未经授权读写文件等。</p>
+</li>
+<li><p>编译与解释并存：程序运行初期，Java 虚拟机通过解释器解释执行 Javac 编译的字节码（class）文件。随着运行时间的增长，即时编译器会将热点代码编译成本地机器码，以提高系统性能。</p>
+</li>
+</ol>
+<h3 id="Java-如何实现平台无关性"><a href="#Java-如何实现平台无关性" class="headerlink" title="Java 如何实现平台无关性"></a>Java 如何实现平台无关性</h3><ol>
+<li><p>JVM：编译器 Javac 可以将 Java 程序编译成与计算机体系结构无关的字节码文件，字节码文件不仅可以在任何计算机上解释执行，还可以动态地转换成本地机器码，该转换过程是由 JVM 实现的，JVM 是平台相关的，它屏蔽了不同操作系统之间的差异。</p>
+</li>
+<li><p>Java 语言规范：Java 语言保证了基本数据类型在所有平台上的一致性，如 int 类型永远是 32 位。在 C/C++ 中，基本数据类型的长度依赖于机器、编译器以及操作环境的版本等。Java 中基本数据类型有固定的的字节数，二进制数据以固定的格式进行存储和传输，字符串以标准的 Unicode 格式存储。</p>
+</li>
+</ol>
+<h3 id="JDK-vs-JRE-vs-JVM-vs-JIT"><a href="#JDK-vs-JRE-vs-JVM-vs-JIT" class="headerlink" title="JDK vs JRE vs JVM vs JIT"></a>JDK vs JRE vs JVM vs JIT</h3><ol>
+<li><p>JDK：Java 开发工具包（Java Development Kit，JDK），包含编译器 Javac、JRE 以及一些调试和分析工具（如 javadoc、jconsole 等），JDK 可创建和编译 Java 程序。</p>
+</li>
+<li><p>JRE：Java 运行时环境（Java Runtime Environment，JRE），是运行已编译 Java 程序所必需的软件环境，包含 JVM、Java 标准类库等。JRE 面向 Java 程序的使用者而非开发者，它不能创建 Java 程序。</p>
+</li>
+<li><p>JVM：Java 虚拟机（Java Virtual Machine，JVM），用来运行 Java 字节码文件，JVM 是 Java 跨平台的关键。</p>
+</li>
+<li><p>JIT：即时编译器（Just In Time Compiler，JIT），存在于 JVM 中，负责将热点代码编译成本地机器码，提高程序运行的效率。</p>
+</li>
+</ol>
+<h3 id="Java-基本数据类型有哪些"><a href="#Java-基本数据类型有哪些" class="headerlink" title="Java 基本数据类型有哪些"></a>Java 基本数据类型有哪些</h3><p>Java 中的基本数据类型共有 8 种，分别为：</p>
+<ol>
+<li><p>数值型：</p>
+<ol>
+<li>整形：byte、short、int、long。</li>
+<li>浮点型：float、double。</li>
+</ol>
+</li>
+<li><p>字符型：char。</p>
+</li>
+<li><p>布尔型：boolean。</p>
+</li>
+</ol>
+<p>各个类型的默认值以及占用空间如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">位数</th>
+<th align="center">字节数</th>
+<th align="center">默认值</th>
+<th align="center">取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">byte</td>
+<td align="center">8</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">-128 ~ 127</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">16</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">-32768 ~ 32767</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">32</td>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">-2147483648 ~ 2147483647</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">64</td>
+<td align="center">8</td>
+<td align="center">0L</td>
+<td align="center">-9223372036854775808 ~ 9223372036854775807</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">32</td>
+<td align="center">4</td>
+<td align="center">0f</td>
+<td align="center">1.4E-45 ~ 3.4028235E38</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">64</td>
+<td align="center">8</td>
+<td align="center">0d</td>
+<td align="center">4.9E-324 ~ 1.7976931348623157E308</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">16</td>
+<td align="center">2</td>
+<td align="center">‘u0000’</td>
+<td align="center">0 ~ 65535</td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center">8/32</td>
+<td align="center">1/4</td>
+<td align="center">false</td>
+<td align="center">true、false</td>
+</tr>
+</tbody></table>
+<p>Java 中，boolean 类型会被编译成 int 类型，每个变量占 4 个字节。boolean 数组会被编译成 byte 数组，数组中的每个变量占 1 个字节。Java 虚拟机使用 0 表示 false，使用 1 表示 true。</p>
+<h3 id="自动装箱与自动拆箱"><a href="#自动装箱与自动拆箱" class="headerlink" title="自动装箱与自动拆箱"></a>自动装箱与自动拆箱</h3><p>Java 中每个基本数据类型都对应一个包装类，自动装箱指的是将基本数据类型包装为一个包装类对象，例如向一个泛型类型为 Integer 的集合添加 int 元素。自动拆箱指的是将一个包装类对象转换为一个基本数据类型，例如将一个 Integer 对象赋值给一个 int 类型的变量。</p>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><p>泛型本质上是参数化类型，主要用来解决不确定对象具体类型的问题。泛型提供了编译时的类型安全检测机制，该机制允许程序员在编译时检测到非法的类型。泛型的好处包括：</p>
+<ol>
+<li><p>参数安全，放进去什么类型，取出来就是什么类型。</p>
+</li>
+<li><p>可读性高，编码阶段就可以显式知道泛型集合、泛型方法等处理的对象类型。</p>
+</li>
+<li><p>代码重用，可以合并同类型数据的处理代码。</p>
+</li>
+</ol>
+<h3 id="泛型擦除"><a href="#泛型擦除" class="headerlink" title="泛型擦除"></a>泛型擦除</h3><p>Java 中的泛型主要用于编译阶段，编译后的字节码文件不包含泛型类型信息，例如 List<integer> 和 List<string> 在编译后都会变成 List（泛型参数只用于编译阶段的类型检查，不作用于运行阶段）。</string></integer></p>
+<h3 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h3><p>注解是一种标记，可作用于类、方法、变量上，使类、方法、变量附加额外的信息，帮助编译器和 JVM 完成一些特定的功能。</p>
+<p>如 @Override 标识一个方法是重写方法。元注解是自定义注解的注解。</p>
+<p><strong>注解</strong></p>
+<h3 id="按值调用与按引用调用"><a href="#按值调用与按引用调用" class="headerlink" title="按值调用与按引用调用"></a>按值调用与按引用调用</h3><ol>
+<li><p>按值调用指的是方法接收调用者提供的值。</p>
+</li>
+<li><p>按引用调用指的是方法接收调用者提供的变量地址。</p>
+</li>
+</ol>
+<p>Java 是按值调用的，当向方法传递基本数据类型时，方法接收到的其实是参数值的副本。传递对象时，方法接收到的是对象引用的副本，对于引用类型而言，生成的副本同样指向原有对象。</p>
+<h3 id="String-对象是否可以修改"><a href="#String-对象是否可以修改" class="headerlink" title="String 对象是否可以修改"></a>String 对象是否可以修改</h3><p>不可以修改，因为 String 类和其存储数据的 char/byte 数组都是被 final 修饰的（JDK9 中使用 byte 数组）。对一个 String 对象的任何修改实际上都是创建一个新 String 对象，再引用该对象。</p>
+<blockquote>
+<p>JDK 1.8 及以前 String 使用 char 数组存储数据，JDK 1.9 及以后使用 byte 数组。</p>
+</blockquote>
+<h3 id="字符串拼接的方式"><a href="#字符串拼接的方式" class="headerlink" title="字符串拼接的方式"></a>字符串拼接的方式</h3><ol>
+<li><p>使用 <code>+</code> 拼接符。</p>
+</li>
+<li><p>使用 StringBuilder 或 StringBuffer，调用 append 方法。</p>
+</li>
+</ol>
+<p><code>+</code> 拼接符的底层是先 new 一个 StringBuilder 对象，然后调用 append 方法，之后再执行 toString 方法。<code>+</code> 与 StringBuilder 的执行效率可能会存在差异，如果是拼接多个字符串常量，那么 <code>+</code> 的效率会更高一些，因为编译器会进行优化，例如将 “a” + “b” 直接视为 “ab”。如果拼接不同的变量，则需要视情况而定，若不同变量写在同一行，那么 <code>+</code> 与 StringBuilder 几乎相同。若写在不同行，那么 <code>+</code> 会额外创建新的 StringBuilder 对象，例如在 for 循环的循环体中使用 <code>+</code>。</p>
+<blockquote>
+<p>TODO 通过反编译证明</p>
+</blockquote>
+<h3 id="浅拷贝与深拷贝"><a href="#浅拷贝与深拷贝" class="headerlink" title="浅拷贝与深拷贝"></a>浅拷贝与深拷贝</h3><ol>
+<li><p>浅拷贝仅拷贝原对象中的基本数据类型和引用变量，不拷贝引用变量指向的实际对象，因此修改拷贝对象可能会影响到原对象（不安全）。</p>
+</li>
+<li><p>深拷贝指的是完全拷贝基本数据类型和引用类型，拷贝对象与原对象完全独立（安全）。</p>
+</li>
+</ol>
+<h3 id="异常的分类"><a href="#异常的分类" class="headerlink" title="异常的分类"></a>异常的分类</h3><p>Java 中所有异常都是 Throwable 的子类，异常可分为 Error 和 Exception：</p>
+<ol>
+<li><p>Error：Error 是 Java 运行时系统的内部错误或资源耗尽错误，如 StackOverflowError 和 OutOfmemoryError，这种异常程序无法处理。</p>
+</li>
+<li><p>Exception 可分为受检异常和非受检异常：</p>
+<ol>
+<li>受检异常必须在代码中显式处理，否则编译时会出错，如 IOException、FileNotFoundException 等。</li>
+<li>非受检异常是运行时异常，继承自 RuntimeException，如 IndexOutOfBoundsException、NullPointerException 等。</li>
+</ol>
+</li>
+</ol>
+<h3 id="Class-类的作用"><a href="#Class-类的作用" class="headerlink" title="Class 类的作用"></a>Class 类的作用</h3><h3 id="JDK-1-8-的新特性"><a href="#JDK-1-8-的新特性" class="headerlink" title="JDK 1.8 的新特性"></a>JDK 1.8 的新特性</h3><ol>
+<li><p>Lambda 表达式：允许把函数作为参数传递给方法，可简化匿名内部类的代码。</p>
+</li>
+<li><p>函数式接口：使用 @FunctionalInterface 标识，有且仅有一个抽象方法（可包含默认方法、静态方法以及私有方法），使用时可转化为 lambda 表达式（@FunctionalInterface 可以检测接口是否为函数是接口）。</p>
+</li>
+<li><p>方法引用：可以直接引用已有类或对象的方法或构造方法，进一步简化 lambda 表达式（方法引用可看作 Lambda 表达式的另一种表现形式）。方法应用的调用示例有：</p>
+<ol>
+<li>引用静态方法：<code>类名::静态方法名</code>，如 String::valueOf。</li>
+<li>引用实例方法：<code>对象名::方法名</code>，如 user::getName。</li>
+<li>应用构造方法：<code>类名::new</code>，如 User::new。</li>
+</ol>
+</li>
+<li><p>默认/静态方法：接口可以定义 default 修饰的默认方法，降低接口升级的复杂性，还可以定义静态方法。</p>
+</li>
+<li><p>注解：引入重复注解机制，相同注解可以在同一个地方声明多次。注解的范围也进行了扩展，可作用于局部变量、泛型、方法、异常等。</p>
+</li>
+<li><p>Stream：Stream API 可对包含一个或多个元素的集合做各种操作，包括<code>中间操作</code> 和 <code>终端操作</code>（<code>终端操作</code> 会返回一个结果，而 <code>中间操作</code> 会返回一个 Stream 流）。</p>
+</li>
+<li><p>Optional 类：处理空指针异常。</p>
+</li>
+<li><p>Date API：加强对日期与时间的处理。</p>
+</li>
+</ol>
+<p>举一个方法引用的例子：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        TestInterface testInterface <span class="token operator">=</span> String<span class="token operator">:</span><span class="token operator">:</span>valueOf<span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>testInterface<span class="token punctuation">.</span><span class="token function">convertIntToString</span><span class="token punctuation">(</span><span class="token number">9527</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">TestInterface</span> <span class="token punctuation">{</span>
+    String <span class="token function">convertIntToString</span><span class="token punctuation">(</span>Integer number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="面向对象如何理解"><a href="#面向对象如何理解" class="headerlink" title="面向对象如何理解"></a>面向对象如何理解</h3><h3 id="面向对象的三大特征"><a href="#面向对象的三大特征" class="headerlink" title="面向对象的三大特征"></a>面向对象的三大特征</h3><ol>
+<li><p>封装：封装指的是将对象的状态信息（也就是属性）隐藏在对象内部，不允许外部对象直接访问，但可以提供一些可被外界访问的方法来操作这些属性。</p>
+</li>
+<li><p>继承：继承是使用现有的类作为基础建立新类的技术，新类既可以使用父类的功能，也可以额外添加新的功能。通过继承，我们可以复用以往的代码，提高开发的效率。</p>
+</li>
+<li><p>多态：引用变量所指向的具体类型和该引用变量调用的方法在编程时并不确定，而是在程序运行期间才能确定，具体表现为父类的引用指向子类的实例。</p>
+</li>
+</ol>
+<p>多态的注意事项：① 声明类型和实际类型之间具有继承（类）/实现（接口）的关系。② 引用变量调用的到底是哪个类中的方法，必须在程序运行期间才能确定。③ 多态不能调用只在子类存在但在父类不存在的方法。④ 如果子类重写了父类的方法，真正执行的是子类覆盖的方法，如果子类没有覆盖父类的方法，执行的是父类的方法。</p>
+<h3 id="重载和重写"><a href="#重载和重写" class="headerlink" title="重载和重写"></a>重载和重写</h3><ol>
+<li>重载指的是方法名称相同，但参数类型或参数个数不同。对编译器来说，方法名称和参数列表共同组成了一个唯一键，称为方法签名，JVM 通过方法签名决定调用哪种重载方法。由于重载在编译时就可以根据规则知道调用哪个目标方法，因此重载属于静态绑定。JVM 在重载方法中选择合适方法的顺序为：<ol>
+<li>精确匹配。</li>
+<li>基本数据类型自动转换成更大表示范围。</li>
+<li>自动拆箱与装箱。</li>
+<li>子类向上转型。</li>
+<li>可变参数。</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>方法的返回值不能作为判断方法之间是否构成重载的依据。</p>
+</blockquote>
+<ol start="2">
+<li><p>重写指的是子类在实现接口或继承父类时，保持方法签名完全相同，但实现了不同方法体。子类在重写父类的方法时需要注意：</p>
+<ol>
+<li>方法的返回值类型、方法名、参数列表必须与父类相同，抛出的异常范围要小于等于父类，访问修饰符范围要大于等于父类。</li>
+<li>如果父类方法访问修饰符为 private/final/static，那么子类就不能重写该方法，但是被 static 修饰的方法能够被再次声明。</li>
+<li>构造方法无法被重写。</li>
+</ol>
+</li>
+</ol>
+<h3 id="类之间的关系"><a href="#类之间的关系" class="headerlink" title="类之间的关系"></a>类之间的关系</h3><h3 id="Object-类有哪些方法"><a href="#Object-类有哪些方法" class="headerlink" title="Object 类有哪些方法"></a>Object 类有哪些方法</h3><h2 id="Java-集合"><a href="#Java-集合" class="headerlink" title="Java 集合"></a>Java 集合</h2><h2 id="Java-虚拟机"><a href="#Java-虚拟机" class="headerlink" title="Java 虚拟机"></a>Java 虚拟机</h2><h2 id="Java-并发"><a href="#Java-并发" class="headerlink" title="Java 并发"></a>Java 并发</h2>
+            </div>
+            <hr />
+
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #e6c5c4;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+
+    img[src=""],img:not([src]){
+        opacity:0;
+    }
+</style>
+
+
+
+    <!-- <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《Java 知识点合集》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/java-zhi-shi-dian-he-ji.html" property="cc:attributionName"
+               rel="cc:attributionURL">
+                John同学
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div> -->
+
+    <div class="reprint" id="reprint-statement">
+        
+        <div class="reprint__author">
+            <span class="reprint-meta">
+                <i class="fa fa-user" style="font-weight: bold;">
+                    作者:
+                </i>
+            </span>
+            <span class="reprint-info">
+                本文由
+                <a href="https://mrjohnzh.github.io" rel="external nofollow noreferrer">John同学</a>
+                创作。
+            </span>
+        </div>
+        <!-- <div class="reprint__type">
+            <span class="reprint-meta" style="font-weight: bold;">
+                <i class="fa fa-link">
+                    文章链接:
+                </i>
+            </span>
+            <span class="reprint-info">
+                <a href="https://javaguide.cn/2019/08/21/java/java%E5%9F%BA%E7%A1%80/BIO,NIO,AIO%20%E6%80%BB%E7%BB%93/">https://javaguide.cn/2019/08/21/java/java%E5%9F%BA%E7%A1%80/BIO,NIO,AIO%20%E6%80%BB%E7%BB%93/</a>
+            </span>
+        </div> -->
+        <div class="reprint__notice">
+            <span class="reprint-meta">
+                <i class="fa fa-copyright" style="font-weight: bold;">
+                    版权声明:
+                </i>
+            </span>
+            <span class="reprint-info">
+                本博客所有文章除特別声明外，均采用
+                <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                许可协议，转载请注明来源！
+            </span>
+        </div>
+
+        <div class="reprint__type">
+            <span class="reprint-meta">
+                <i class="fa fa-thumbs-up" style="font-weight: bold;">
+                    <!-- 求打赏: -->
+                    求关注: 
+                </i>
+            </span>
+            <span class="reprint-info">
+                <!-- 写作不易，客官能否打赏一杯奶茶 -->
+                写作不易，客官能否点个关注
+                <!-- <a href="#rewardModal" class="reward-link modal-trigger fa fa-coffee"></a> -->
+                <a class="fa fa-heart" onmouseover="on()" onmouseout="off()"></a>
+                支持一下。
+            </span>
+
+            <!-- Modal Structure -->
+            <!-- <div id="rewardModal" class="modal">
+                <div class="modal-content">
+                    <a class="close modal-close"><i class="fa fa-close"></i></a>
+                    <h4 class="reward-title"></h4>
+                    <div class="reward-content">
+                        <div class="reward-tabs">
+                            <ul class="tabs row">
+                                <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                                <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                            </ul>
+                            <div id="alipay">
+                                <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                            </div>
+                            <div id="wechat">
+                                <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        
+        <!-- <div class="social-share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+            <div class="social-share" data-sites="twitter, facebook, qq, wechat" data-wechat-qrcode-helper=""></div>
+        </div> -->
+    </div>
+    <body>
+        <img id="s" src=""/>
+    </body>
+
+
+    <script>
+        function on() {
+            $("#s").attr("src", "https://cdn.jsdelivr.net/gh/mrjohnzh/Common@1.2/imgs/%E5%85%AC%E4%BC%97%E5%8F%B7JohnLearning.png");
+            $(document).mousemove(function(e) {
+                // $("#s").css("position", "absolute").css("left", e.pageX+1+"px").css("top", e.pageY+1+"px");
+                $("#s").css("position", "absolute").css("left", e.pageX-285+"px").css("top", e.pageY-500+"px");
+            })
+        }
+    
+        /**
+         * 关闭图片, 当鼠标移出时执行
+         */
+        function off() {
+            $("#s").attr("src", "");
+            $(document).mousemove(function(e) {
+                $("#s").css("position", "absolute").css("left", "-400px").css("top", "-400px");
+            })
+        }
+    </script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span style="font-family: KaiTi">复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller; font-family: KaiTi">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+    <script>
+        $(function () {
+            $('.tabs').tabs();
+        });
+    </script>
+
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81NDY2NS8zMTEzNg==">
+        <script type="text/javascript">
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') { return; }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+        </script>
+    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/linux-xue-xi-wu-yong-hu-zu.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Linux学习（五）：用户组">
+                        
+                        <span class="card-title">Linux学习（五）：用户组</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            学习 Linux 如何做用户管理
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-02-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/用户组/" target="_blank">
+                        <span class="chip bg-color">用户组</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/jian-dan-zhi-shi-dian-bei-wang.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="简单知识点备忘">
+                        
+                        <span class="card-title">简单知识点备忘</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本文内容多转载自百度、谷歌等搜索引擎，以及博客园、CSDN、思否、掘金等技术论坛，意在为容易混淆的概念做一个备忘，同时添加一些自己的理解，方便以后查阅。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/杂记/" class="post-category" target="_blank">
+                                    杂记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/后端/" target="_blank">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
+                    <a href="/tags/知识点/" target="_blank">
+                        <span class="chip bg-color">知识点</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+       <div class="Copy-right">
+            &copy; 2021 John同学. All Rights Reserved.</br>
+
+                    
+           <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
+           <!-- 
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">34.4k
+             丨             -->
+          
+
+            <span id="sitetime"></span>
+
+            
+            
+             
+            
+            </br><span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-users"></i>
+            总访问量: <span id="busuanzi_value_site_pv" class="red-color"></span>
+            次</span>  &nbsp;|&nbsp;
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>&nbsp;<i class="fa fa-user"></i>
+                总访问人数: <span id="busuanzi_value_site_uv" class="blue-color"></span>&nbsp;人
+            </span>
+            
+            
+        </div>        
+    </div>
+    <!-- <div class="container row center-align">
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div> -->
+    <!-- <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://github.com/" target="_blank" title="静态网页托管于 GitHub Pages 和 Coding Pages">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub & Coding</span></a>
+    </div> -->
+    <!-- <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.cloud.tencent.com/" target="_blank" title="腾讯云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-blueviolet">Tencent cloud</span></a>
+    </div> -->
+    <!-- <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span></a>
+    </div> -->
+    <!-- <div class="github-badge">
+        <a style="color: #fff" rel="license" href="https://github.com/blinkfox/hexo-theme-matery/" target="_blank" title="站点使用 Matery 主题">
+      <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Matery</span></a>
+    </div> -->
+    <!-- <div class="github-badge">
+      <a style="color: #fff" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可">
+      <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a>
+    </div> -->
+    <!-- <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://996.icu/" target="_blank" title="支持 996.ICU">
+      <span class="badge-subject">Link</span><span class="badge-value bg-red">996.ICU</span></a>
+    </div> -->
+    <!-- <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv"></span>
+    </div> -->
+    <!-- <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">34.4k</span>
+    </div> -->
+</footer>
+
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 0;
+        var uvcountOffset = 0;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2021, 09, 17, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- <script type="text/javascript"> 
+    var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    
+    <script src="/libs/others/clicklove.js"></script>
+    
+
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+   <!--单击显示文字-->
+   <script type="text/javascript" src="/js/click_show_text.js"></script> 
+
+   <!--动态线条背景-->
+   <script type="text/javascript"
+   color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+   </script>
+
+   <!-- <script async src ="https://cdn.jsdelivr.net/npm/perfops-rom"> </script> -->
+
+   <!--自定义看板娘-->
+   <!-- <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> -->
+   <!-- <script src="/live2d-widget/autoload.js"></script> -->
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/> -->
+
+</body>
+
+</html>
