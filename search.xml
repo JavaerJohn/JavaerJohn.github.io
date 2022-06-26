@@ -321,6 +321,33 @@
     
     
     <entry>
+      <title>Git 常用指令（持续更新）</title>
+      <link href="/git-chang-yong-zhi-ling.html"/>
+      <url>/git-chang-yong-zhi-ling.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 查看当前分支</span><span class="token function">git</span> branch<span class="token comment" spellcheck="true"># 查看远程分支</span><span class="token function">git</span> branch -r<span class="token comment" spellcheck="true"># 查看所有分支</span><span class="token function">git</span> branch -a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 新建本地分支，但不会切换到该分支</span><span class="token function">git</span> branch new_branch<span class="token comment" spellcheck="true"># 切换分支</span><span class="token function">git</span> checkout new_branch<span class="token comment" spellcheck="true"># 新建本地分支，并切换到该分支</span><span class="token function">git</span> checkout -b new_branch<span class="token comment" spellcheck="true"># 基于 master 分支的代码创建新的分支，并切换到该分支</span><span class="token function">git</span> checkout master<span class="token function">git</span> checkout -b new_branch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具使用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 后端 </tag>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java 知识点合集</title>
       <link href="/java-zhi-shi-dian-he-ji.html"/>
       <url>/java-zhi-shi-dian-he-ji.html</url>

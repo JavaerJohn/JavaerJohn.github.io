@@ -9,6 +9,7 @@ https://mrjohnzh.github.io.git/mybatis-shi-xian-dong-tai-sql.html
 https://mrjohnzh.github.io.git/mybatis-jie-guo-ji-ying-she-zong-jie.html
 https://mrjohnzh.github.io.git/springboot-zheng-he-mybatis.html
 https://mrjohnzh.github.io.git/linux-xue-xi-wu-yong-hu-zu.html
+https://mrjohnzh.github.io.git/git-chang-yong-zhi-ling.html
 https://mrjohnzh.github.io.git/java-zhi-shi-dian-he-ji.html
 https://mrjohnzh.github.io.git/jian-dan-zhi-shi-dian-bei-wang.html
 https://mrjohnzh.github.io.git/leetcode-shua-ti-bi-ji.html
