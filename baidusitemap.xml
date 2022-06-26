@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mrjohnzh.github.io.git/git-chang-yong-zhi-ling.html</loc>
-    <lastmod>2022-06-25</lastmod>
-  </url>  <url>
-    <loc>https://mrjohnzh.github.io.git/java-zhi-shi-dian-he-ji.html</loc>
-    <lastmod>2022-06-14</lastmod>
+    <loc>https://mrjohnzh.github.io.git/hou-duan-kai-fa-zhi-shi-dian-he-ji.html</loc>
+    <lastmod>2022-06-26</lastmod>
   </url>  <url>
     <loc>https://mrjohnzh.github.io.git/jian-dan-zhi-shi-dian-bei-wang.html</loc>
-    <lastmod>2022-06-12</lastmod>
+    <lastmod>2022-06-26</lastmod>
+  </url>  <url>
+    <loc>https://mrjohnzh.github.io.git/git-chang-yong-zhi-ling.html</loc>
+    <lastmod>2022-06-26</lastmod>
   </url>  <url>
     <loc>https://mrjohnzh.github.io.git/leetcode-shua-ti-bi-ji.html</loc>
     <lastmod>2022-06-11</lastmod>
@@ -42,8 +42,5 @@
   </url>  <url>
     <loc>https://mrjohnzh.github.io.git/mybatis-shi-xian-dong-tai-sql.html</loc>
     <lastmod>2022-05-24</lastmod>
-  </url>  <url>
-    <loc>https://mrjohnzh.github.io.git/linux-xue-xi-wu-yong-hu-zu.html</loc>
-    <lastmod>2022-04-01</lastmod>
   </url>
 </urlset>

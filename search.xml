@@ -20,11 +20,11 @@
       
         <tags>
             
-            <tag> 后端 </tag>
+            <tag> Json </tag>
             
             <tag> Java </tag>
             
-            <tag> Json </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -103,9 +103,9 @@
       
         <tags>
             
-            <tag> 后端 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 后端 </tag>
             
             <tag> Spring Boot </tag>
             
@@ -186,9 +186,9 @@
       
         <tags>
             
-            <tag> 后端 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 后端 </tag>
             
             <tag> Spring Boot </tag>
             
@@ -217,9 +217,9 @@
       
         <tags>
             
-            <tag> 后端 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 后端 </tag>
             
             <tag> Spring Boot </tag>
             
@@ -248,9 +248,9 @@
       
         <tags>
             
-            <tag> 后端 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 后端 </tag>
             
             <tag> Spring Boot </tag>
             
@@ -279,9 +279,9 @@
       
         <tags>
             
-            <tag> 后端 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 后端 </tag>
             
             <tag> Spring Boot </tag>
             
@@ -294,38 +294,11 @@
     
     
     <entry>
-      <title>Linux学习（五）：用户组</title>
-      <link href="/linux-xue-xi-wu-yong-hu-zu.html"/>
-      <url>/linux-xue-xi-wu-yong-hu-zu.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-基本介绍"><a href="#1-基本介绍" class="headerlink" title="1. 基本介绍"></a>1. 基本介绍</h2><p>Linux 中每个用户都必须属于一个组，不能独立于组之外。在 Linux 中每个文件有所有者、所在组、其他组的概念。</p><h2 id="2-文件所有者"><a href="#2-文件所有者" class="headerlink" title="2. 文件所有者"></a>2. 文件所有者</h2><ul><li>ls -ahl：查看文件或目录的所有者。</li></ul><ul><li>chown 用户名 文件名：修改文件的所有者。</li></ul><h2 id="3-文件所在组"><a href="#3-文件所在组" class="headerlink" title="3. 文件所在组"></a>3. 文件所在组</h2><ul><li>cat /etc/group：查看有哪些组。</li></ul><ul><li>groupadd 组名：创建一个组。</li></ul><ul><li>useradd -g 组名 用户名：创建一个用户，并将该用户放到指定组内。当某个用户创建了一个文件后，该文件的所在组就是该用户所在的组。</li></ul><ul><li>chgrp 组名 文件名：修改文件所在的组。</li></ul><h2 id="4-其他组"><a href="#4-其他组" class="headerlink" title="4. 其他组"></a>4. 其他组</h2><p>除文件的所有者和所在组的用户外，系统的其它用户都是文件的其它组。</p><ul><li>usermod -g 组名 用户名：修改用户所在组。</li></ul><ul><li>usermod -d 目录名 用户名：修改用户登录的初始目录。</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> 用户组 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Git 常用指令（持续更新）</title>
       <link href="/git-chang-yong-zhi-ling.html"/>
       <url>/git-chang-yong-zhi-ling.html</url>
       
-        <content type="html"><![CDATA[<h2 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 查看当前分支</span><span class="token function">git</span> branch<span class="token comment" spellcheck="true"># 查看远程分支</span><span class="token function">git</span> branch -r<span class="token comment" spellcheck="true"># 查看所有分支</span><span class="token function">git</span> branch -a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 新建本地分支，但不会切换到该分支</span><span class="token function">git</span> branch new_branch<span class="token comment" spellcheck="true"># 切换分支</span><span class="token function">git</span> checkout new_branch<span class="token comment" spellcheck="true"># 新建本地分支，并切换到该分支</span><span class="token function">git</span> checkout -b new_branch<span class="token comment" spellcheck="true"># 基于 master 分支的代码创建新的分支，并切换到该分支</span><span class="token function">git</span> checkout master<span class="token function">git</span> checkout -b new_branch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>Git 是目前最流行的版本控制工具，熟练使用 Git 是每个程序员必备的技能。奈何自己非科班出身，对 Git 的使用少之又少，因此撰写本篇博文来记录常用的 Git 指令，以作备忘。</p><h2 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 查看当前分支</span><span class="token function">git</span> branch<span class="token comment" spellcheck="true"># 查看远程分支</span><span class="token function">git</span> branch -r<span class="token comment" spellcheck="true"># 查看所有分支</span><span class="token function">git</span> branch -a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 1. 新建本地分支，但不会切换到该分支，如果在 xxx 分支下执行该命令，那么 new_branch 分支的代码与 xxx 分支相同</span><span class="token function">git</span> branch new_branch<span class="token comment" spellcheck="true"># 2. 切换分支</span><span class="token function">git</span> checkout new_branch<span class="token comment" spellcheck="true"># 3. 上述两条命令等效于如下命令（新建本地分支，并切换到该分支）</span><span class="token function">git</span> checkout -b new_branch<span class="token comment" spellcheck="true"># 4. 基于 master 分支的代码创建新分支 new_branch，并切换到该分支</span><span class="token function">git</span> checkout master<span class="token function">git</span> checkout -b new_branch<span class="token comment" spellcheck="true"># 5. 基于远程分支 remote_branch 的代码创建新分支 new_branch，并切换到该分支</span><span class="token comment" spellcheck="true"># 法一：先创建再拉取</span><span class="token function">git</span> checkout -b new_branch<span class="token function">git</span> push origin remote_branch<span class="token comment" spellcheck="true"># 法二：上述两条命令等效于如下命令</span><span class="token function">git</span> checkout -b new_branch origin/remote_branch<span class="token comment" spellcheck="true"># 6. 远程仓库创建了新的分支，但本地仓库并未同步到（使用 git branch -a 获取不到新创建的分支），可先执行如下命令，然后就能看到新的分支了</span><span class="token function">git</span> fetch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="查看关联信息"><a href="#查看关联信息" class="headerlink" title="查看关联信息"></a>查看关联信息</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 查看本地分支与远程分支的对应关系（使用下面三条命令中的任何一个）</span><span class="token function">git</span> branch -vv<span class="token function">git</span> remote show origin<span class="token function">cat</span> .git/config<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 1. 提交代码到本地缓冲区</span><span class="token comment" spellcheck="true"># 1.1 逐个添加被修改的文件</span><span class="token function">git</span> add file1.java file2.java file3.xml<span class="token comment" spellcheck="true"># 1.2 添加所有被修改的文件</span><span class="token function">git</span> add <span class="token keyword">.</span><span class="token comment" spellcheck="true"># 2. 提交代码并添加修改说明</span><span class="token function">git</span> commit -m <span class="token string">'修改说明'</span><span class="token comment" spellcheck="true"># 3. 确保当前分支 current_branch 上的代码是最新的，即拉取最新的代码（可省略该步骤，若不是最新的代码，git 会返回提示信息）</span><span class="token function">git</span> pull<span class="token comment" spellcheck="true"># 4. 将代码推送到远程分支</span><span class="token function">git</span> push origin current_branch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 将当前分支 current_branch 合并到 master</span><span class="token function">git</span> checkout master<span class="token function">git</span> merge current_branch <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 1. 删除本地分支 current_branch（不能处于即将被删除的分支，需要切换到其它分支）</span><span class="token function">git</span> branch -d current_branch<span class="token comment" spellcheck="true"># 2. 删除远程分支 remote_branch</span><span class="token function">git</span> push origin -d remote_branch <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="修改分支名称"><a href="#修改分支名称" class="headerlink" title="修改分支名称"></a>修改分支名称</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 1. 将本地分支 old_branch 和远程分支 old_branch 的名称均修改为 new_branch</span><span class="token comment" spellcheck="true"># 1.1 切换到 old_branch 分支下</span><span class="token function">git</span> checkout old_branch<span class="token comment" spellcheck="true"># 1.2 确保本地分支的代码是最新的</span><span class="token function">git</span> pull origin old_branch<span class="token comment" spellcheck="true"># 1.3 修改本地分支的名称</span><span class="token function">git</span> branch -m old_branch new_branch<span class="token comment" spellcheck="true"># 1.4 删除远程分支</span><span class="token function">git</span> push origin --d old_branch<span class="token comment" spellcheck="true"># 1.5 将本地分支推送到远程仓库</span><span class="token function">git</span> push origin new_branch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://mp.weixin.qq.com/s/swnwBiuyVmhs5iPqv3H6BQ" target="_blank" rel="noopener">Git操作与命令看这篇足矣</a></p>]]></content>
       
       
       <categories>
@@ -348,16 +321,16 @@
     
     
     <entry>
-      <title>Java 知识点合集</title>
-      <link href="/java-zhi-shi-dian-he-ji.html"/>
-      <url>/java-zhi-shi-dian-he-ji.html</url>
+      <title>后端开发知识点合集</title>
+      <link href="/hou-duan-kai-fa-zhi-shi-dian-he-ji.html"/>
+      <url>/hou-duan-kai-fa-zhi-shi-dian-he-ji.html</url>
       
-        <content type="html"><![CDATA[<h2 id="Java-基础概念"><a href="#Java-基础概念" class="headerlink" title="Java 基础概念"></a>Java 基础概念</h2><h3 id="Java-语言的特点"><a href="#Java-语言的特点" class="headerlink" title="Java 语言的特点"></a>Java 语言的特点</h3><ol><li><p>简单性：Java 可看做是 C++ 的 “纯净” 版本，它取消了指针运算、多继承、操作符重载等难以理解的特性，且引入了垃圾的自动回收机制。</p></li><li><p>面向对象：Java 是一种面向对象的编程语言。</p></li><li><p>平台无关性：一次编写，到处运行。</p></li><li><p>支持多线程：Java 是第一个支持并发程序设计的主流语言（C++ 没有内置的多线程机制，因此必须调用操作系统的多线程功能才能进行多线程程序设计）。</p></li><li><p>安全性：Java 从一开始就被设计成了能够防范各种攻击的语言，如防止运行时堆栈溢出，防止破坏自己进程空间之外的内存，防止未经授权读写文件等。</p></li><li><p>编译与解释并存：程序运行初期，Java 虚拟机通过解释器解释执行 Javac 编译的字节码（class）文件。随着运行时间的增长，即时编译器会将热点代码编译成本地机器码，以提高系统性能。</p></li></ol><h3 id="Java-如何实现平台无关性"><a href="#Java-如何实现平台无关性" class="headerlink" title="Java 如何实现平台无关性"></a>Java 如何实现平台无关性</h3><ol><li><p>JVM：编译器 Javac 可以将 Java 程序编译成与计算机体系结构无关的字节码文件，字节码文件不仅可以在任何计算机上解释执行，还可以动态地转换成本地机器码，该转换过程是由 JVM 实现的，JVM 是平台相关的，它屏蔽了不同操作系统之间的差异。</p></li><li><p>Java 语言规范：Java 语言保证了基本数据类型在所有平台上的一致性，如 int 类型永远是 32 位。在 C/C++ 中，基本数据类型的长度依赖于机器、编译器以及操作环境的版本等。Java 中基本数据类型有固定的的字节数，二进制数据以固定的格式进行存储和传输，字符串以标准的 Unicode 格式存储。</p></li></ol><h3 id="JDK-vs-JRE-vs-JVM-vs-JIT"><a href="#JDK-vs-JRE-vs-JVM-vs-JIT" class="headerlink" title="JDK vs JRE vs JVM vs JIT"></a>JDK vs JRE vs JVM vs JIT</h3><ol><li><p>JDK：Java 开发工具包（Java Development Kit，JDK），包含编译器 Javac、JRE 以及一些调试和分析工具（如 javadoc、jconsole 等），JDK 可创建和编译 Java 程序。</p></li><li><p>JRE：Java 运行时环境（Java Runtime Environment，JRE），是运行已编译 Java 程序所必需的软件环境，包含 JVM、Java 标准类库等。JRE 面向 Java 程序的使用者而非开发者，它不能创建 Java 程序。</p></li><li><p>JVM：Java 虚拟机（Java Virtual Machine，JVM），用来运行 Java 字节码文件，JVM 是 Java 跨平台的关键。</p></li><li><p>JIT：即时编译器（Just In Time Compiler，JIT），存在于 JVM 中，负责将热点代码编译成本地机器码，提高程序运行的效率。</p></li></ol><h3 id="Java-基本数据类型有哪些"><a href="#Java-基本数据类型有哪些" class="headerlink" title="Java 基本数据类型有哪些"></a>Java 基本数据类型有哪些</h3><p>Java 中的基本数据类型共有 8 种，分别为：</p><ol><li><p>数值型：</p><ol><li>整形：byte、short、int、long。</li><li>浮点型：float、double。</li></ol></li><li><p>字符型：char。</p></li><li><p>布尔型：boolean。</p></li></ol><p>各个类型的默认值以及占用空间如下：</p><table><thead><tr><th align="center">类型</th><th align="center">位数</th><th align="center">字节数</th><th align="center">默认值</th><th align="center">取值范围</th></tr></thead><tbody><tr><td align="center">byte</td><td align="center">8</td><td align="center">1</td><td align="center">0</td><td align="center">-128 ~ 127</td></tr><tr><td align="center">short</td><td align="center">16</td><td align="center">2</td><td align="center">0</td><td align="center">-32768 ~ 32767</td></tr><tr><td align="center">int</td><td align="center">32</td><td align="center">4</td><td align="center">0</td><td align="center">-2147483648 ~ 2147483647</td></tr><tr><td align="center">long</td><td align="center">64</td><td align="center">8</td><td align="center">0L</td><td align="center">-9223372036854775808 ~ 9223372036854775807</td></tr><tr><td align="center">float</td><td align="center">32</td><td align="center">4</td><td align="center">0f</td><td align="center">1.4E-45 ~ 3.4028235E38</td></tr><tr><td align="center">double</td><td align="center">64</td><td align="center">8</td><td align="center">0d</td><td align="center">4.9E-324 ~ 1.7976931348623157E308</td></tr><tr><td align="center">char</td><td align="center">16</td><td align="center">2</td><td align="center">‘u0000’</td><td align="center">0 ~ 65535</td></tr><tr><td align="center">boolean</td><td align="center">8/32</td><td align="center">1/4</td><td align="center">false</td><td align="center">true、false</td></tr></tbody></table><p>Java 中，boolean 类型会被编译成 int 类型，每个变量占 4 个字节。boolean 数组会被编译成 byte 数组，数组中的每个变量占 1 个字节。Java 虚拟机使用 0 表示 false，使用 1 表示 true。</p><h3 id="自动装箱与自动拆箱"><a href="#自动装箱与自动拆箱" class="headerlink" title="自动装箱与自动拆箱"></a>自动装箱与自动拆箱</h3><p>Java 中每个基本数据类型都对应一个包装类，自动装箱指的是将基本数据类型包装为一个包装类对象，例如向一个泛型类型为 Integer 的集合添加 int 元素。自动拆箱指的是将一个包装类对象转换为一个基本数据类型，例如将一个 Integer 对象赋值给一个 int 类型的变量。</p><h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><p>泛型本质上是参数化类型，主要用来解决不确定对象具体类型的问题。泛型提供了编译时的类型安全检测机制，该机制允许程序员在编译时检测到非法的类型。泛型的好处包括：</p><ol><li><p>参数安全，放进去什么类型，取出来就是什么类型。</p></li><li><p>可读性高，编码阶段就可以显式知道泛型集合、泛型方法等处理的对象类型。</p></li><li><p>代码重用，可以合并同类型数据的处理代码。</p></li></ol><h3 id="泛型擦除"><a href="#泛型擦除" class="headerlink" title="泛型擦除"></a>泛型擦除</h3><p>Java 中的泛型主要用于编译阶段，编译后的字节码文件不包含泛型类型信息，例如 List<integer> 和 List<string> 在编译后都会变成 List（泛型参数只用于编译阶段的类型检查，不作用于运行阶段）。</string></integer></p><h3 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h3><p>注解是一种标记，可作用于类、方法、变量上，使类、方法、变量附加额外的信息，帮助编译器和 JVM 完成一些特定的功能。</p><p>如 @Override 标识一个方法是重写方法。元注解是自定义注解的注解。</p><p><strong>注解</strong></p><h3 id="按值调用与按引用调用"><a href="#按值调用与按引用调用" class="headerlink" title="按值调用与按引用调用"></a>按值调用与按引用调用</h3><ol><li><p>按值调用指的是方法接收调用者提供的值。</p></li><li><p>按引用调用指的是方法接收调用者提供的变量地址。</p></li></ol><p>Java 是按值调用的，当向方法传递基本数据类型时，方法接收到的其实是参数值的副本。传递对象时，方法接收到的是对象引用的副本，对于引用类型而言，生成的副本同样指向原有对象。</p><h3 id="String-对象是否可以修改"><a href="#String-对象是否可以修改" class="headerlink" title="String 对象是否可以修改"></a>String 对象是否可以修改</h3><p>不可以修改，因为 String 类和其存储数据的 char/byte 数组都是被 final 修饰的（JDK9 中使用 byte 数组）。对一个 String 对象的任何修改实际上都是创建一个新 String 对象，再引用该对象。</p><blockquote><p>JDK 1.8 及以前 String 使用 char 数组存储数据，JDK 1.9 及以后使用 byte 数组。</p></blockquote><h3 id="字符串拼接的方式"><a href="#字符串拼接的方式" class="headerlink" title="字符串拼接的方式"></a>字符串拼接的方式</h3><ol><li><p>使用 <code>+</code> 拼接符。</p></li><li><p>使用 StringBuilder 或 StringBuffer，调用 append 方法。</p></li></ol><p><code>+</code> 拼接符的底层是先 new 一个 StringBuilder 对象，然后调用 append 方法，之后再执行 toString 方法。<code>+</code> 与 StringBuilder 的执行效率可能会存在差异，如果是拼接多个字符串常量，那么 <code>+</code> 的效率会更高一些，因为编译器会进行优化，例如将 “a” + “b” 直接视为 “ab”。如果拼接不同的变量，则需要视情况而定，若不同变量写在同一行，那么 <code>+</code> 与 StringBuilder 几乎相同。若写在不同行，那么 <code>+</code> 会额外创建新的 StringBuilder 对象，例如在 for 循环的循环体中使用 <code>+</code>。</p><blockquote><p>TODO 通过反编译证明</p></blockquote><h3 id="浅拷贝与深拷贝"><a href="#浅拷贝与深拷贝" class="headerlink" title="浅拷贝与深拷贝"></a>浅拷贝与深拷贝</h3><ol><li><p>浅拷贝仅拷贝原对象中的基本数据类型和引用变量，不拷贝引用变量指向的实际对象，因此修改拷贝对象可能会影响到原对象（不安全）。</p></li><li><p>深拷贝指的是完全拷贝基本数据类型和引用类型，拷贝对象与原对象完全独立（安全）。</p></li></ol><h3 id="异常的分类"><a href="#异常的分类" class="headerlink" title="异常的分类"></a>异常的分类</h3><p>Java 中所有异常都是 Throwable 的子类，异常可分为 Error 和 Exception：</p><ol><li><p>Error：Error 是 Java 运行时系统的内部错误或资源耗尽错误，如 StackOverflowError 和 OutOfmemoryError，这种异常程序无法处理。</p></li><li><p>Exception 可分为受检异常和非受检异常：</p><ol><li>受检异常必须在代码中显式处理，否则编译时会出错，如 IOException、FileNotFoundException 等。</li><li>非受检异常是运行时异常，继承自 RuntimeException，如 IndexOutOfBoundsException、NullPointerException 等。</li></ol></li></ol><h3 id="Class-类的作用"><a href="#Class-类的作用" class="headerlink" title="Class 类的作用"></a>Class 类的作用</h3><h3 id="JDK-1-8-的新特性"><a href="#JDK-1-8-的新特性" class="headerlink" title="JDK 1.8 的新特性"></a>JDK 1.8 的新特性</h3><ol><li><p>Lambda 表达式：允许把函数作为参数传递给方法，可简化匿名内部类的代码。</p></li><li><p>函数式接口：使用 @FunctionalInterface 标识，有且仅有一个抽象方法（可包含默认方法、静态方法以及私有方法），使用时可转化为 lambda 表达式（@FunctionalInterface 可以检测接口是否为函数是接口）。</p></li><li><p>方法引用：可以直接引用已有类或对象的方法或构造方法，进一步简化 lambda 表达式（方法引用可看作 Lambda 表达式的另一种表现形式）。方法应用的调用示例有：</p><ol><li>引用静态方法：<code>类名::静态方法名</code>，如 String::valueOf。</li><li>引用实例方法：<code>对象名::方法名</code>，如 user::getName。</li><li>应用构造方法：<code>类名::new</code>，如 User::new。</li></ol></li><li><p>默认/静态方法：接口可以定义 default 修饰的默认方法，降低接口升级的复杂性，还可以定义静态方法。</p></li><li><p>注解：引入重复注解机制，相同注解可以在同一个地方声明多次。注解的范围也进行了扩展，可作用于局部变量、泛型、方法、异常等。</p></li><li><p>Stream：Stream API 可对包含一个或多个元素的集合做各种操作，包括<code>中间操作</code> 和 <code>终端操作</code>（<code>终端操作</code> 会返回一个结果，而 <code>中间操作</code> 会返回一个 Stream 流）。</p></li><li><p>Optional 类：处理空指针异常。</p></li><li><p>Date API：加强对日期与时间的处理。</p></li></ol><p>举一个方法引用的例子：</p><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>        TestInterface testInterface <span class="token operator">=</span> String<span class="token operator">:</span><span class="token operator">:</span>valueOf<span class="token punctuation">;</span>        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>testInterface<span class="token punctuation">.</span><span class="token function">convertIntToString</span><span class="token punctuation">(</span><span class="token number">9527</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">interface</span> <span class="token class-name">TestInterface</span> <span class="token punctuation">{</span>    String <span class="token function">convertIntToString</span><span class="token punctuation">(</span>Integer number<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="面向对象如何理解"><a href="#面向对象如何理解" class="headerlink" title="面向对象如何理解"></a>面向对象如何理解</h3><h3 id="面向对象的三大特征"><a href="#面向对象的三大特征" class="headerlink" title="面向对象的三大特征"></a>面向对象的三大特征</h3><ol><li><p>封装：封装指的是将对象的状态信息（也就是属性）隐藏在对象内部，不允许外部对象直接访问，但可以提供一些可被外界访问的方法来操作这些属性。</p></li><li><p>继承：继承是使用现有的类作为基础建立新类的技术，新类既可以使用父类的功能，也可以额外添加新的功能。通过继承，我们可以复用以往的代码，提高开发的效率。</p></li><li><p>多态：引用变量所指向的具体类型和该引用变量调用的方法在编程时并不确定，而是在程序运行期间才能确定，具体表现为父类的引用指向子类的实例。</p></li></ol><p>多态的注意事项：① 声明类型和实际类型之间具有继承（类）/实现（接口）的关系。② 引用变量调用的到底是哪个类中的方法，必须在程序运行期间才能确定。③ 多态不能调用只在子类存在但在父类不存在的方法。④ 如果子类重写了父类的方法，真正执行的是子类覆盖的方法，如果子类没有覆盖父类的方法，执行的是父类的方法。</p><h3 id="重载和重写"><a href="#重载和重写" class="headerlink" title="重载和重写"></a>重载和重写</h3><ol><li>重载指的是方法名称相同，但参数类型或参数个数不同。对编译器来说，方法名称和参数列表共同组成了一个唯一键，称为方法签名，JVM 通过方法签名决定调用哪种重载方法。由于重载在编译时就可以根据规则知道调用哪个目标方法，因此重载属于静态绑定。JVM 在重载方法中选择合适方法的顺序为：<ol><li>精确匹配。</li><li>基本数据类型自动转换成更大表示范围。</li><li>自动拆箱与装箱。</li><li>子类向上转型。</li><li>可变参数。</li></ol></li></ol><blockquote><p>方法的返回值不能作为判断方法之间是否构成重载的依据。</p></blockquote><ol start="2"><li><p>重写指的是子类在实现接口或继承父类时，保持方法签名完全相同，但实现了不同方法体。子类在重写父类的方法时需要注意：</p><ol><li>方法的返回值类型、方法名、参数列表必须与父类相同，抛出的异常范围要小于等于父类，访问修饰符范围要大于等于父类。</li><li>如果父类方法访问修饰符为 private/final/static，那么子类就不能重写该方法，但是被 static 修饰的方法能够被再次声明。</li><li>构造方法无法被重写。</li></ol></li></ol><h3 id="类之间的关系"><a href="#类之间的关系" class="headerlink" title="类之间的关系"></a>类之间的关系</h3><h3 id="Object-类有哪些方法"><a href="#Object-类有哪些方法" class="headerlink" title="Object 类有哪些方法"></a>Object 类有哪些方法</h3><h2 id="Java-集合"><a href="#Java-集合" class="headerlink" title="Java 集合"></a>Java 集合</h2><h2 id="Java-虚拟机"><a href="#Java-虚拟机" class="headerlink" title="Java 虚拟机"></a>Java 虚拟机</h2><h2 id="Java-并发"><a href="#Java-并发" class="headerlink" title="Java 并发"></a>Java 并发</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>🎓本人毕业于<a href="https://www.bupt.edu.cn/" target="_blank" rel="noopener">北京邮电大学</a>信息与通信工程学院，目前在北京的一家互联网公司从事后端开发的工作。作为 “半路出家” 的非科班程序员，我深切感受到了扎实基础的重要性，故打算利用空闲时间维护一个仓库来记录后端开发的常用知识点，希望大家能有所收获。</p><h2 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h2><p>😁欢迎访问：<a href="https://javaerjohn.github.io/" target="_blank" rel="noopener">JohnLearning</a>📚。</p>]]></content>
       
       
       <categories>
           
-          <category> Java 知识点 </category>
+          <category> 后端 </category>
           
       </categories>
       
@@ -366,7 +339,7 @@
             
             <tag> 后端 </tag>
             
-            <tag> Java </tag>
+            <tag> 开发 </tag>
             
         </tags>
       

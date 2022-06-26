@@ -4,16 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux学习（五）：用户组, 每天进步一点点！">
+    <meta name="keywords" content="后端开发知识点合集, 每天进步一点点！">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="1. 基本介绍Linux 中每个用户都必须属于一个组，不能独立于组之外。在 Linux 中每个文件有所有者、所在组、其他组的概念。
-2. 文件所有者
-ls -ahl：查看文件或目录的所有者。
-
-
-chown 用户名 文件名：修改文件的所有者">
+    <meta name="description" content="关于我🎓本人毕业于北京邮电大学信息与通信工程学院，目前在北京的一家互联网公司从事后端开发的工作。作为 “半路出家” 的非科班程序员，我深切感受到了扎实基础的重要性，故打算利用空闲时间维护一个仓库来记录后端开发的常用知识点，希望大家能有所收">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +16,7 @@ chown 用户名 文件名：修改文件的所有者">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux学习（五）：用户组 | John&#39;s Blog</title>
+    <title>后端开发知识点合集 | John&#39;s Blog</title>
 
     <!-- <link rel="icon" href="#">  --> 
     <link rel="icon" type="image/png" href="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/hexo/favicon.png">
@@ -315,7 +310,7 @@ chown 用户名 文件名：修改文件的所有者">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="center-align post-title">
-                        Linux学习（五）：用户组
+                        后端开发知识点合集
                     </div>
                 </div>
             </div>
@@ -426,12 +421,12 @@ chown 用户名 文件名：修改文件的所有者">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Linux/" target="_blank">
-                            <span class="chip bg-color">Linux</span>
+                        <a href="/tags/后端/" target="_blank">
+                            <span class="chip bg-color">后端</span>
                         </a>
                         
-                        <a href="/tags/用户组/" target="_blank">
-                            <span class="chip bg-color">用户组</span>
+                        <a href="/tags/开发/" target="_blank">
+                            <span class="chip bg-color">开发</span>
                         </a>
                         
                     </div>
@@ -442,8 +437,8 @@ chown 用户名 文件名：修改文件的所有者">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Linux/" class="post-category" target="_blank">
-                            Linux
+                        <a href="/categories/后端/" class="post-category" target="_blank">
+                            后端
                         </a>
                         
                     </div>
@@ -454,7 +449,7 @@ chown 用户名 文件名：修改文件的所有者">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-10
+                    2020-06-05
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -468,7 +463,7 @@ chown 用户名 文件名：修改文件的所有者">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    238
+                    119
                 </div>
                 
 
@@ -491,32 +486,8 @@ chown 用户名 文件名：修改文件的所有者">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-基本介绍"><a href="#1-基本介绍" class="headerlink" title="1. 基本介绍"></a>1. 基本介绍</h2><p>Linux 中每个用户都必须属于一个组，不能独立于组之外。在 Linux 中每个文件有所有者、所在组、其他组的概念。</p>
-<h2 id="2-文件所有者"><a href="#2-文件所有者" class="headerlink" title="2. 文件所有者"></a>2. 文件所有者</h2><ul>
-<li>ls -ahl：查看文件或目录的所有者。</li>
-</ul>
-<ul>
-<li>chown 用户名 文件名：修改文件的所有者。</li>
-</ul>
-<h2 id="3-文件所在组"><a href="#3-文件所在组" class="headerlink" title="3. 文件所在组"></a>3. 文件所在组</h2><ul>
-<li>cat /etc/group：查看有哪些组。</li>
-</ul>
-<ul>
-<li>groupadd 组名：创建一个组。</li>
-</ul>
-<ul>
-<li>useradd -g 组名 用户名：创建一个用户，并将该用户放到指定组内。当某个用户创建了一个文件后，该文件的所在组就是该用户所在的组。</li>
-</ul>
-<ul>
-<li>chgrp 组名 文件名：修改文件所在的组。</li>
-</ul>
-<h2 id="4-其他组"><a href="#4-其他组" class="headerlink" title="4. 其他组"></a>4. 其他组</h2><p>除文件的所有者和所在组的用户外，系统的其它用户都是文件的其它组。</p>
-<ul>
-<li>usermod -g 组名 用户名：修改用户所在组。</li>
-</ul>
-<ul>
-<li>usermod -d 目录名 用户名：修改用户登录的初始目录。</li>
-</ul>
+                <h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>🎓本人毕业于<a href="https://www.bupt.edu.cn/" target="_blank" rel="noopener">北京邮电大学</a>信息与通信工程学院，目前在北京的一家互联网公司从事后端开发的工作。作为 “半路出家” 的非科班程序员，我深切感受到了扎实基础的重要性，故打算利用空闲时间维护一个仓库来记录后端开发的常用知识点，希望大家能有所收获。</p>
+<h2 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h2><p>😁欢迎访问：<a href="https://javaerjohn.github.io/" target="_blank" rel="noopener">JohnLearning</a>📚。</p>
 
             </div>
             <hr />
@@ -635,9 +606,9 @@ chown 用户名 文件名：修改文件的所有者">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Linux学习（五）：用户组》
+                    《后端开发知识点合集》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/linux-xue-xi-wu-yong-hu-zu.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/hou-duan-kai-fa-zhi-shi-dian-he-ji.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 John同学
             </a> 采用
@@ -818,72 +789,11 @@ chown 用户名 文件名：修改文件的所有者">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/springboot-zheng-he-mybatis.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Spring Boot 整合 MyBatis">
-                        
-                        <span class="card-title">Spring Boot 整合 MyBatis</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            MyBatis 是一款优秀的持久层框架，其在许多公司中都有使用。因为它的操作简单，容易上手，且支持自定义的 SQL、存储过程以及高级映射。本文将详细介绍在 Spring Boot 项目中整合 MyBatis 的过程。
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-17
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/技术学习/" class="post-category" target="_blank">
-                                    技术学习
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/后端/" target="_blank">
-                        <span class="chip bg-color">后端</span>
-                    </a>
-                    
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/Spring-Boot/" target="_blank">
-                        <span class="chip bg-color">Spring Boot</span>
-                    </a>
-                    
-                    <a href="/tags/MyBatis/" target="_blank">
-                        <span class="chip bg-color">MyBatis</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/git-chang-yong-zhi-ling.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/34.jpg" class="responsive-img" alt="Git 常用指令（持续更新）">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="Git 常用指令（持续更新）">
                         
                         <span class="card-title">Git 常用指令（持续更新）</span>
                     </div>
@@ -895,9 +805,9 @@ chown 用户名 文件名：修改文件的所有者">
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -919,6 +829,59 @@ chown 用户名 文件名：修改文件的所有者">
                     
                     <a href="/tags/Git/" target="_blank">
                         <span class="chip bg-color">Git</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/jian-dan-zhi-shi-dian-bei-wang.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="简单知识点备忘">
+                        
+                        <span class="card-title">简单知识点备忘</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本文内容多转载自百度、谷歌等搜索引擎，以及博客园、CSDN、思否、掘金等技术论坛，意在为容易混淆的概念做一个备忘，同时添加一些自己的理解，方便以后查阅。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/杂记/" class="post-category" target="_blank">
+                                    杂记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/后端/" target="_blank">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
+                    <a href="/tags/知识点/" target="_blank">
+                        <span class="chip bg-color">知识点</span>
                     </a>
                     
                 </div>
@@ -1057,7 +1020,7 @@ chown 用户名 文件名：修改文件的所有者">
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            <!-- 
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">34.5k
+            <span class="white-color">32k
              丨             -->
           
 
@@ -1116,7 +1079,7 @@ chown 用户名 文件名：修改文件的所有者">
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">34.5k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">32k</span>
     </div> -->
 </footer>
 

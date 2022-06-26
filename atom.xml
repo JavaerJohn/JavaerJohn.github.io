@@ -38,11 +38,11 @@
       <category term="随笔" scheme="https://mrjohnzh.github.io.git/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="Json" scheme="https://mrjohnzh.github.io.git/tags/Json/"/>
     
       <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
     
-      <category term="Json" scheme="https://mrjohnzh.github.io.git/tags/Json/"/>
+      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -124,9 +124,9 @@
       <category term="系统设计" scheme="https://mrjohnzh.github.io.git/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
-    
       <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+    
+      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
     
       <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
     
@@ -210,9 +210,9 @@
       <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
-    
       <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+    
+      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
     
       <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
     
@@ -242,9 +242,9 @@
       <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
-    
       <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+    
+      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
     
       <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
     
@@ -274,9 +274,9 @@
       <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
-    
       <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+    
+      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
     
       <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
     
@@ -306,9 +306,9 @@
       <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
-    
       <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+    
+      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
     
       <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
     
@@ -317,39 +317,11 @@
   </entry>
   
   <entry>
-    <title>Linux学习（五）：用户组</title>
-    <link href="https://mrjohnzh.github.io.git/linux-xue-xi-wu-yong-hu-zu.html"/>
-    <id>https://mrjohnzh.github.io.git/linux-xue-xi-wu-yong-hu-zu.html</id>
-    <published>2022-02-10T13:17:35.000Z</published>
-    <updated>2022-04-01T01:55:21.146Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-基本介绍&quot;&gt;&lt;a href=&quot;#1-基本介绍&quot; class=&quot;headerlink&quot; title=&quot;1. 基本介绍&quot;&gt;&lt;/a&gt;1. 基本介绍&lt;/h2&gt;&lt;p&gt;Linux 中每个用户都必须属于一个组，不能独立于组之外。在 Linux
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://mrjohnzh.github.io.git/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="https://mrjohnzh.github.io.git/tags/Linux/"/>
-    
-      <category term="用户组" scheme="https://mrjohnzh.github.io.git/tags/%E7%94%A8%E6%88%B7%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Git 常用指令（持续更新）</title>
     <link href="https://mrjohnzh.github.io.git/git-chang-yong-zhi-ling.html"/>
     <id>https://mrjohnzh.github.io.git/git-chang-yong-zhi-ling.html</id>
     <published>2020-06-23T13:53:45.000Z</published>
-    <updated>2022-06-25T03:21:38.375Z</updated>
+    <updated>2022-06-26T11:33:13.155Z</updated>
     
     <summary type="html">
     
@@ -357,7 +329,7 @@
       
         
         
-          &lt;h2 id=&quot;查看分支&quot;&gt;&lt;a href=&quot;#查看分支&quot; class=&quot;headerlink&quot; title=&quot;查看分支&quot;&gt;&lt;/a&gt;查看分支&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-bash&quot;&gt;&lt;code
+          &lt;h2 id=&quot;基本介绍&quot;&gt;&lt;a href=&quot;#基本介绍&quot; class=&quot;headerlink&quot; title=&quot;基本介绍&quot;&gt;&lt;/a&gt;基本介绍&lt;/h2&gt;&lt;p&gt;Git 是目前最流行的版本控制工具，熟练使用 Git 是每个程序员必备的技能。奈何自己非科班出身，对 Git
         
       
     
@@ -373,11 +345,11 @@
   </entry>
   
   <entry>
-    <title>Java 知识点合集</title>
-    <link href="https://mrjohnzh.github.io.git/java-zhi-shi-dian-he-ji.html"/>
-    <id>https://mrjohnzh.github.io.git/java-zhi-shi-dian-he-ji.html</id>
+    <title>后端开发知识点合集</title>
+    <link href="https://mrjohnzh.github.io.git/hou-duan-kai-fa-zhi-shi-dian-he-ji.html"/>
+    <id>https://mrjohnzh.github.io.git/hou-duan-kai-fa-zhi-shi-dian-he-ji.html</id>
     <published>2020-06-05T08:10:23.000Z</published>
-    <updated>2022-06-14T14:34:23.190Z</updated>
+    <updated>2022-06-26T13:32:08.820Z</updated>
     
     <summary type="html">
     
@@ -385,18 +357,18 @@
       
         
         
-          &lt;h2 id=&quot;Java-基础概念&quot;&gt;&lt;a href=&quot;#Java-基础概念&quot; class=&quot;headerlink&quot; title=&quot;Java 基础概念&quot;&gt;&lt;/a&gt;Java 基础概念&lt;/h2&gt;&lt;h3 id=&quot;Java-语言的特点&quot;&gt;&lt;a href=&quot;#Java-语言的特点&quot;
+          &lt;h2 id=&quot;关于我&quot;&gt;&lt;a href=&quot;#关于我&quot; class=&quot;headerlink&quot; title=&quot;关于我&quot;&gt;&lt;/a&gt;关于我&lt;/h2&gt;&lt;p&gt;🎓本人毕业于&lt;a href=&quot;https://www.bupt.edu.cn/&quot; target=&quot;_blank&quot;
         
       
     
     </summary>
     
-      <category term="Java 知识点" scheme="https://mrjohnzh.github.io.git/categories/Java-%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="后端" scheme="https://mrjohnzh.github.io.git/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="开发" scheme="https://mrjohnzh.github.io.git/tags/%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -405,7 +377,7 @@
     <link href="https://mrjohnzh.github.io.git/jian-dan-zhi-shi-dian-bei-wang.html"/>
     <id>https://mrjohnzh.github.io.git/jian-dan-zhi-shi-dian-bei-wang.html</id>
     <published>2019-06-12T11:30:31.000Z</published>
-    <updated>2022-06-12T12:00:07.622Z</updated>
+    <updated>2022-06-26T11:33:35.675Z</updated>
     
     <summary type="html">
     

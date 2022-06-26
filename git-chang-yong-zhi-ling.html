@@ -8,18 +8,11 @@
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="查看分支# 查看当前分支
+    <meta name="description" content="基本介绍Git 是目前最流行的版本控制工具，熟练使用 Git 是每个程序员必备的技能。奈何自己非科班出身，对 Git 的使用少之又少，因此撰写本篇博文来记录常用的 Git 指令，以作备忘。
+查看分支# 查看当前分支
 git branch
 
-# 查看远程分支
-git branch -r
-
-# 查看所有分支
-git branch -a
-新建分支# 新建本地分支，但不会切换到该分支
-git branch new_branch
-
-# ">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -314,7 +307,7 @@ git branch new_branch
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/34.jpg')"> -->
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')"> -->
 <div class="bg-cover pd-header post-cover">
     <div class="container">
         <div class="row">
@@ -474,14 +467,14 @@ git branch new_branch
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    104
+                    704
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -497,7 +490,8 @@ git branch new_branch
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 查看当前分支</span>
+                <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>Git 是目前最流行的版本控制工具，熟练使用 Git 是每个程序员必备的技能。奈何自己非科班出身，对 Git 的使用少之又少，因此撰写本篇博文来记录常用的 Git 指令，以作备忘。</p>
+<h2 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 查看当前分支</span>
 <span class="token function">git</span> branch
 
 <span class="token comment" spellcheck="true"># 查看远程分支</span>
@@ -505,18 +499,66 @@ git branch new_branch
 
 <span class="token comment" spellcheck="true"># 查看所有分支</span>
 <span class="token function">git</span> branch -a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 新建本地分支，但不会切换到该分支</span>
+<h2 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 1. 新建本地分支，但不会切换到该分支，如果在 xxx 分支下执行该命令，那么 new_branch 分支的代码与 xxx 分支相同</span>
 <span class="token function">git</span> branch new_branch
 
-<span class="token comment" spellcheck="true"># 切换分支</span>
+<span class="token comment" spellcheck="true"># 2. 切换分支</span>
 <span class="token function">git</span> checkout new_branch
 
-<span class="token comment" spellcheck="true"># 新建本地分支，并切换到该分支</span>
+<span class="token comment" spellcheck="true"># 3. 上述两条命令等效于如下命令（新建本地分支，并切换到该分支）</span>
 <span class="token function">git</span> checkout -b new_branch
 
-<span class="token comment" spellcheck="true"># 基于 master 分支的代码创建新的分支，并切换到该分支</span>
+<span class="token comment" spellcheck="true"># 4. 基于 master 分支的代码创建新分支 new_branch，并切换到该分支</span>
 <span class="token function">git</span> checkout master
-<span class="token function">git</span> checkout -b new_branch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">git</span> checkout -b new_branch
+
+<span class="token comment" spellcheck="true"># 5. 基于远程分支 remote_branch 的代码创建新分支 new_branch，并切换到该分支</span>
+<span class="token comment" spellcheck="true"># 法一：先创建再拉取</span>
+<span class="token function">git</span> checkout -b new_branch
+<span class="token function">git</span> push origin remote_branch
+<span class="token comment" spellcheck="true"># 法二：上述两条命令等效于如下命令</span>
+<span class="token function">git</span> checkout -b new_branch origin/remote_branch
+
+<span class="token comment" spellcheck="true"># 6. 远程仓库创建了新的分支，但本地仓库并未同步到（使用 git branch -a 获取不到新创建的分支），可先执行如下命令，然后就能看到新的分支了</span>
+<span class="token function">git</span> fetch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="查看关联信息"><a href="#查看关联信息" class="headerlink" title="查看关联信息"></a>查看关联信息</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 查看本地分支与远程分支的对应关系（使用下面三条命令中的任何一个）</span>
+<span class="token function">git</span> branch -vv
+<span class="token function">git</span> remote show origin
+<span class="token function">cat</span> .git/config<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 1. 提交代码到本地缓冲区</span>
+<span class="token comment" spellcheck="true"># 1.1 逐个添加被修改的文件</span>
+<span class="token function">git</span> add file1.java file2.java file3.xml
+<span class="token comment" spellcheck="true"># 1.2 添加所有被修改的文件</span>
+<span class="token function">git</span> add <span class="token keyword">.</span>
+
+<span class="token comment" spellcheck="true"># 2. 提交代码并添加修改说明</span>
+<span class="token function">git</span> commit -m <span class="token string">'修改说明'</span>
+
+<span class="token comment" spellcheck="true"># 3. 确保当前分支 current_branch 上的代码是最新的，即拉取最新的代码（可省略该步骤，若不是最新的代码，git 会返回提示信息）</span>
+<span class="token function">git</span> pull
+
+<span class="token comment" spellcheck="true"># 4. 将代码推送到远程分支</span>
+<span class="token function">git</span> push origin current_branch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 将当前分支 current_branch 合并到 master</span>
+<span class="token function">git</span> checkout master
+<span class="token function">git</span> merge current_branch <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 1. 删除本地分支 current_branch（不能处于即将被删除的分支，需要切换到其它分支）</span>
+<span class="token function">git</span> branch -d current_branch
+
+<span class="token comment" spellcheck="true"># 2. 删除远程分支 remote_branch</span>
+<span class="token function">git</span> push origin -d remote_branch <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="修改分支名称"><a href="#修改分支名称" class="headerlink" title="修改分支名称"></a>修改分支名称</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 1. 将本地分支 old_branch 和远程分支 old_branch 的名称均修改为 new_branch</span>
+<span class="token comment" spellcheck="true"># 1.1 切换到 old_branch 分支下</span>
+<span class="token function">git</span> checkout old_branch
+<span class="token comment" spellcheck="true"># 1.2 确保本地分支的代码是最新的</span>
+<span class="token function">git</span> pull origin old_branch
+<span class="token comment" spellcheck="true"># 1.3 修改本地分支的名称</span>
+<span class="token function">git</span> branch -m old_branch new_branch
+<span class="token comment" spellcheck="true"># 1.4 删除远程分支</span>
+<span class="token function">git</span> push origin --d old_branch
+<span class="token comment" spellcheck="true"># 1.5 将本地分支推送到远程仓库</span>
+<span class="token function">git</span> push origin new_branch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://mp.weixin.qq.com/s/swnwBiuyVmhs5iPqv3H6BQ" target="_blank" rel="noopener">Git操作与命令看这篇足矣</a></p>
 
             </div>
             <hr />
@@ -818,31 +860,31 @@ git branch new_branch
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/linux-xue-xi-wu-yong-hu-zu.html">
+                <a href="/springboot-zheng-he-mybatis.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Linux学习（五）：用户组">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="Spring Boot 整合 MyBatis">
                         
-                        <span class="card-title">Linux学习（五）：用户组</span>
+                        <span class="card-title">Spring Boot 整合 MyBatis</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            学习 Linux 如何做用户管理
+                            MyBatis 是一款优秀的持久层框架，其在许多公司中都有使用。因为它的操作简单，容易上手，且支持自定义的 SQL、存储过程以及高级映射。本文将详细介绍在 Spring Boot 项目中整合 MyBatis 的过程。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-02-10
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-17
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
+                            <a href="/categories/技术学习/" class="post-category" target="_blank">
+                                    技术学习
                                 </a>
                             
                             
@@ -852,12 +894,20 @@ git branch new_branch
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/用户组/" target="_blank">
-                        <span class="chip bg-color">用户组</span>
+                    <a href="/tags/后端/" target="_blank">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
+                    <a href="/tags/Spring-Boot/" target="_blank">
+                        <span class="chip bg-color">Spring Boot</span>
+                    </a>
+                    
+                    <a href="/tags/MyBatis/" target="_blank">
+                        <span class="chip bg-color">MyBatis</span>
                     </a>
                     
                 </div>
@@ -871,19 +921,19 @@ git branch new_branch
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/java-zhi-shi-dian-he-ji.html">
+                <a href="/hou-duan-kai-fa-zhi-shi-dian-he-ji.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/38.jpg" class="responsive-img" alt="Java 知识点合集">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="后端开发知识点合集">
                         
-                        <span class="card-title">Java 知识点合集</span>
+                        <span class="card-title">后端开发知识点合集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文涵盖了 Java 语言的常见知识点，包括 Java 的基本语法、数据类型、数据结构、面向对象的相关理论、多线程编程、垃圾回收机制、I/O 流等。
+                            John 同学的后端开发知识体系，涵盖了 Java 编程、计网、操作系统、数据库、框架、中间件、数据结构与算法等相关内容。
                         
                     </div>
                     <div class="publish-info">
@@ -894,8 +944,8 @@ git branch new_branch
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java-知识点/" class="post-category" target="_blank">
-                                    Java 知识点
+                            <a href="/categories/后端/" class="post-category" target="_blank">
+                                    后端
                                 </a>
                             
                             
@@ -909,8 +959,8 @@ git branch new_branch
                         <span class="chip bg-color">后端</span>
                     </a>
                     
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/开发/" target="_blank">
+                        <span class="chip bg-color">开发</span>
                     </a>
                     
                 </div>
@@ -1049,7 +1099,7 @@ git branch new_branch
            <!--<a href="/sitemap.xml" target="_blank">站点地图</a>丨-->
            <!-- 
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">34.5k
+            <span class="white-color">32k
              丨             -->
           
 
@@ -1108,7 +1158,7 @@ git branch new_branch
       <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
     </div>
     <div class="github-badge">
-      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">34.5k</span>
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">32k</span>
     </div> -->
 </footer>
 
