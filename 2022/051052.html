@@ -4,11 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="利用 Nginx 实现动静分离, 每天进步一点点！">
+    <meta name="keywords" content="MVC 和三层架构, 每天进步一点点！">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="基本介绍动静分离指的是将动态请求和静态请求分隔开，然后分别路由到相应的后端服务器。通常用户的请求中，一部分需要后台程序处理，例如查询数据库或者进行一些数据运算，这类请求我们称之为动态请求；还有一部分不需要后台程序处理，如请求 css、htm">
+    <meta name="description" content="MVCMVC 是一种分层设计的软件开发架构模式，其将整个业务应用划分为三部分，分别为：
+
+View：视图层，负责界面的展示，与用户直接交互。用户可在视图层执行相关的操作，如查看数据或提交表单等（发送请求），视图层会向用户展示操作的结果。
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>利用 Nginx 实现动静分离 | John&#39;s Blog</title>
+    <title>MVC 和三层架构 | John&#39;s Blog</title>
 
     <!-- <link rel="icon" href="#">  --> 
     <link rel="icon" type="image/png" href="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/hexo/favicon.png">
@@ -303,14 +307,14 @@
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/52.jpg')"> -->
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')"> -->
 <div class="bg-cover pd-header post-cover">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="center-align post-title">
-                        利用 Nginx 实现动静分离
+                        MVC 和三层架构
                     </div>
                 </div>
             </div>
@@ -421,12 +425,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Nginx/" target="_blank">
-                            <span class="chip bg-color">Nginx</span>
+                        <a href="/tags/Java/" target="_blank">
+                            <span class="chip bg-color">Java</span>
                         </a>
                         
-                        <a href="/tags/计网/" target="_blank">
-                            <span class="chip bg-color">计网</span>
+                        <a href="/tags/Web/" target="_blank">
+                            <span class="chip bg-color">Web</span>
                         </a>
                         
                     </div>
@@ -437,8 +441,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/计算机网络/" class="post-category" target="_blank">
-                            计算机网络
+                        <a href="/categories/技术学习/" class="post-category" target="_blank">
+                            技术学习
                         </a>
                         
                     </div>
@@ -449,7 +453,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-31
+                    2022-05-02
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -463,14 +467,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    910
+                    594
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
                 
@@ -486,84 +490,43 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>动静分离指的是将动态请求和静态请求分隔开，然后分别路由到相应的后端服务器。通常用户的请求中，一部分需要后台程序处理，例如查询数据库或者进行一些数据运算，这类请求我们称之为动态请求；还有一部分不需要后台程序处理，如请求 css、html、js、图片等静态资源，这类请求我们称之为静态请求。Nginx 实现动静分离的基础是它可以根据配置对不同的请求做不同的转发，动静分离有利于提高整个服务器系统的性能。</p>
-<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB.png
-" width="70%"></p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在本机（Linux 虚拟机）中安装 Nginx，并确保 Nginx 可以正常运行。为了便于实践，我们在一台机器上执行所有操作，也就是在本机中部署 Nginx 和处理动态请求的后端服务，同时本机也会作为静态资源服务器存放静态文件。注意，实际中可使用不同的机器分开部署。</p>
-<p><strong>静态资源准备</strong></p>
-<p>在本机 <code>/usr/local/</code> 目录下创建 <code>/data/img</code> 和 <code>/data/html</code> 文件夹，分别存放 test.png 和 test.html：</p>
-<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/test.png
-" width="70%"></p>
-<p><strong>后端服务</strong></p>
-<p>写一个简单的 “Hello World” 项目并启动，端口为 8080： </p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Controller</span>
-<span class="token annotation punctuation">@RequestMapping</span>
-<span class="token annotation punctuation">@Log</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>path <span class="token operator">=</span> <span class="token string">"/hello"</span><span class="token punctuation">,</span> method <span class="token operator">=</span> RequestMethod<span class="token punctuation">.</span>GET<span class="token punctuation">)</span>
-    <span class="token annotation punctuation">@ResponseBody</span>
-    <span class="token keyword">public</span> String <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"Hello, world!"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>实际应用中的动态请求通常会涉及相关资源的调度，这里我们简化该过程，假设后端服务进行了一系列运算，最后返回字符串 “Hello, world!”。</p>
-<h2 id="配置-Nginx"><a href="#配置-Nginx" class="headerlink" title="配置 Nginx"></a>配置 Nginx</h2><p>打开 nginx.conf 配置文件，在 server 块中添加如下内容：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
-    listen       80<span class="token punctuation">;</span>
-    server_name  localhost<span class="token punctuation">;</span>
-
-    location / <span class="token punctuation">{</span>
-        root   html<span class="token punctuation">;</span>
-        index  index.html index.htm<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">#拦截动态请求</span>
-    location /hello <span class="token punctuation">{</span>
-        proxy_pass http://localhost:8080<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">#拦截静态请求</span>
-    location /img <span class="token punctuation">{</span>
-        root /usr/local/data<span class="token punctuation">;</span>
-        autoindex on<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">#拦截静态请求</span>
-    location /html <span class="token punctuation">{</span>
-        root /usr/local/data<span class="token punctuation">;</span>
-        autoindex on<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>动态请求</strong></p>
-<p>浏览器中输入 <code>localhost/hello</code> 得到如下响应：</p>
-<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/%E5%8A%A8%E6%80%81%E8%AF%B7%E6%B1%82%E7%BB%93%E6%9E%9C.png
-" width="70%"></p>
-<p>这里我们并没有指定端口，因为 HTTP 的默认端口就是 80，而 Nginx 配置文件中也监听了 80 端口，真实的请求为  <code>localhost:8080/hello</code>。</p>
-<p><strong>静态请求</strong></p>
-<p>浏览器中输入 <code>localhost/img</code>，得到如下响应：</p>
-<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png
-" width="70%"></p>
-<p>上图中列举出了 <code>/img</code> 目录下的文件，这是因为配置文件中设置了 <code>autoindex on;</code>，它表示打开目录浏览功能。</p>
-<p>浏览器中输入 <code>localhost/img/test.png</code>，得到如下响应：</p>
-<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/%E5%9B%BE%E7%89%87%E7%BB%93%E6%9E%9C.png
-" width="70%"></p>
-<p>浏览器中输入 <code>localhost/html/test.html</code>，得到如下响应：</p>
-<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%8A%A8%E9%9D%99%E5%88%86%E7%A6%BB/html%E7%BB%93%E6%9E%9C.png
-" width="70%"></p>
-<p>上述操作中，我们实现了静态请求和动态请求的分离，当访问静态资源（如 html 和图片）时，请求并不会到达 “Hello World” 后端服务，而是从静态资源服务器（这里是本机）中获取资源，当访问 <code>localhost/img/test.png</code> 时，真实的请求为 <code>localhost:80/usr/data/img/test.png</code>。另外，也可以将负责拦截静态请求的 location 块写成如下形式：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#拦截静态请求</span>
-location ~ .*\.<span class="token punctuation">(</span>html<span class="token operator">|</span>htm<span class="token operator">|</span>gif<span class="token operator">|</span>jpg<span class="token operator">|</span>jpeg<span class="token operator">|</span>bmp<span class="token operator">|</span>png<span class="token operator">|</span>ico<span class="token operator">|</span>js<span class="token operator">|</span>css<span class="token punctuation">)</span>$ <span class="token punctuation">{</span>
-    root /usr/local/data<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>下面解析一下上述配置中的匹配规则：</p>
+                <h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><p>MVC 是一种分层设计的软件开发架构模式，其将整个业务应用划分为三部分，分别为：</p>
 <ul>
-<li><p><code>~</code>：表示匹配时区分大小写。</p>
+<li><p>View：视图层，负责界面的展示，与用户直接交互。用户可在视图层执行相关的操作，如查看数据或提交表单等（发送请求），视图层会向用户展示操作的结果。</p>
 </li>
-<li><p><code>.*</code>：<code>.</code> 表示匹配除换行符 <code>\n</code> 之外的任何单字符，<code>*</code> 表示零次或多次，所以 <code>.*</code> 表示任意字符出现零次或多次。</p>
+<li><p>Controller：控制器层，负责接收用户的请求，并将请求委托给 Model 层处理。接收到 Model 层处理的结果后，Controller 会选择合适的视图，并将处理结果交付给该视图。对于某些请求，Controller 还负责做请求的转发或重定向。</p>
 </li>
-<li><p><code>\.</code>：表示匹配字符 <code>.</code>。</p>
+<li><p>Model：模型层，负责处理用户的业务请求以及与数据库进行交互。当业务逻辑处理完成后，Model 层会将处理的结果返回给 Controller。</p>
 </li>
 </ul>
-<p>综上，该配置表示匹配以 <code>.html, ···, .css</code> 为后缀的请求，我们可以将 html、jpg 等静态资源存入到 <code>/usr/local/data</code> 下，然后通过指定的 URL 就可以访问到这些资源，当然不同类型的资源也可以分开存放。</p>
+<p>MVC 模式中，一个请求的处理流程如下：</p>
+<p><img src="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/technology/Web/MVC/MVC%E5%92%8C%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84.jpg" alt></p>
+<p>MVC 模式的优点：</p>
+<ol>
+<li><p>低耦合：降低了层与层之间的依赖，开发人员可只关注其中的某一层。</p>
+</li>
+<li><p>高复用：不同的视图、控制器可复用同一套业务处理逻辑。</p>
+</li>
+<li><p>可维护：分离不同的组件有利于提高程序的可维护性。</p>
+</li>
+</ol>
+<p>MCV 模式的缺点：</p>
+<ol>
+<li><p>高复杂度：严格遵守 MVC 模式可能会产生一些冗余操作，尤其是在小型项目中。</p>
+</li>
+<li><p>低效率：由于 Model 称重不同的接口负责不同的功能，因此视图可能需要多次调用才能获取到全部的数据。对未变化数据的不必要的频繁访问，也将降低系统性能。</p>
+</li>
+</ol>
+<h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h2><p>三层架构指的是将软件设计划分为表现层、业务逻辑层以及数据访问层：</p>
+<ul>
+<li><p>表现层：与用户直接交互，提供展示数据的界面。同时负责接收用户的请求，并调用业务逻辑层处理请求，请求处理完成后向用户展示处理的结果。</p>
+</li>
+<li><p>业务逻辑层：定义业务的处理逻辑，也就是我们常说的 Service 层。</p>
+</li>
+<li><p>数据访问层：提供访问和操作数据库的方法，即 Dao 层。</p>
+</li>
+</ul>
+<p>MVC 中的 Model 就是三层架构中的业务逻辑层和数据访问层；三层架构中的表现层就是 MVC 中的 View 和 Controller。</p>
 
             </div>
             <hr />
@@ -682,9 +645,9 @@ location ~ .*\.<span class="token punctuation">(</span>html<span class="token op
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《利用 Nginx 实现动静分离》
+                    《MVC 和三层架构》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/nginx-shi-xian-dong-jing-fen-chi.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2022/051052.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 John同学
             </a> 采用
@@ -865,82 +828,25 @@ location ~ .*\.<span class="token punctuation">(</span>html<span class="token op
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/java-yu-yan-shi-xian-jian-yi-sao-ma-deng-lu.html">
+                <a href="/2022/054508.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/59.jpg" class="responsive-img" alt="Java 语言实现简易版扫码登录">
+                        <img src="/medias/featureimages/74.jpg" class="responsive-img" alt="聊一聊过滤器与拦截器">
                         
-                        <span class="card-title">Java 语言实现简易版扫码登录</span>
+                        <span class="card-title">聊一聊过滤器与拦截器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            相信大家对二维码都不陌生，生活中到处充斥着扫码登录的场景，如登录网页版微信、支付宝等。最近学习了一下扫码登录的原理，感觉蛮有趣的，于是自己实现了一个简易版扫码登录的 Demo，以此记录一下学习过程。
+                            过滤器 Filter 和拦截器 Interceptor 是 Web 开发中常用的两个组件，二者主要用于对客户端的请求和响应做自定义的预处理和后处理，本文主要介绍 Filter 和 Interceptor 的实现原理、创建过程、应用场景以及主要区别。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-04-10
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-05-11
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/系统设计/" class="post-category" target="_blank">
-                                    系统设计
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/后端/" target="_blank">
-                        <span class="chip bg-color">后端</span>
-                    </a>
-                    
-                    <a href="/tags/Spring-Boot/" target="_blank">
-                        <span class="chip bg-color">Spring Boot</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/nginx-kuai-su-ru-men.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/42.jpg" class="responsive-img" alt="Nginx 快速入门">
-                        
-                        <span class="card-title">Nginx 快速入门</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Nginx 是一个高性能的 HTTP 和反向代理 Web 服务器，它可以帮助我们实现负载均衡、反向代理、动静分离等常用功能，本文将带你快速了解 Nginx 的使用。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-27
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -956,12 +862,69 @@ location ~ .*\.<span class="token punctuation">(</span>html<span class="token op
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Nginx/" target="_blank">
-                        <span class="chip bg-color">Nginx</span>
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/计网/" target="_blank">
-                        <span class="chip bg-color">计网</span>
+                    <a href="/tags/Web/" target="_blank">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/0410823.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/59.jpg" class="responsive-img" alt="Java 语言实现简易版扫码登录">
+                        
+                        <span class="card-title">Java 语言实现简易版扫码登录</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            相信大家对二维码都不陌生，生活中到处充斥着扫码登录的场景，如登录网页版微信、支付宝等。最近学习了一下扫码登录的原理，感觉蛮有趣的，于是自己实现了一个简易版扫码登录的 Demo，以此记录一下学习过程。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-04-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/系统设计/" class="post-category" target="_blank">
+                                    系统设计
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/后端/" target="_blank">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/Spring-Boot/" target="_blank">
+                        <span class="chip bg-color">Spring Boot</span>
                     </a>
                     
                 </div>

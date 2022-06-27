@@ -4,11 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="FastJson、JackJson 以及 Gson 的区别, 每天进步一点点！">
+    <meta name="keywords" content="Nginx 快速入门, 每天进步一点点！">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="基本介绍FastJson、JackJson 以及 Gson 是 Java 生态圈中三种常用的 Json 解析器，它们均可将 Java 对象序列化为 Json 格式的字符串，也可将 Json 字符串反序列化为 Java 对象。下面我们讨论一下">
+    <meta name="description" content="基本介绍Nginx 是一个高性能的 HTTP 和反向代理 Web 服务器，同时它提供了 IMAP、POP3 以及 SMTP 等服务，因此也可作为电子邮件代理服务器。Nginx 占用内存少，并发能力强，目前已被许多国内产商所使用。
+为什么使用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>FastJson、JackJson 以及 Gson 的区别 | John&#39;s Blog</title>
+    <title>Nginx 快速入门 | John&#39;s Blog</title>
 
     <!-- <link rel="icon" href="#">  --> 
     <link rel="icon" type="image/png" href="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/hexo/favicon.png">
@@ -303,14 +304,14 @@
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')"> -->
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/42.jpg')"> -->
 <div class="bg-cover pd-header post-cover">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="center-align post-title">
-                        FastJson、JackJson 以及 Gson 的区别
+                        Nginx 快速入门
                     </div>
                 </div>
             </div>
@@ -421,16 +422,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Json/" target="_blank">
-                            <span class="chip bg-color">Json</span>
+                        <a href="/tags/Nginx/" target="_blank">
+                            <span class="chip bg-color">Nginx</span>
                         </a>
                         
-                        <a href="/tags/Java/" target="_blank">
-                            <span class="chip bg-color">Java</span>
-                        </a>
-                        
-                        <a href="/tags/后端/" target="_blank">
-                            <span class="chip bg-color">后端</span>
+                        <a href="/tags/计网/" target="_blank">
+                            <span class="chip bg-color">计网</span>
                         </a>
                         
                     </div>
@@ -441,8 +438,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/随笔/" class="post-category" target="_blank">
-                            随笔
+                        <a href="/categories/技术学习/" class="post-category" target="_blank">
+                            技术学习
                         </a>
                         
                     </div>
@@ -453,7 +450,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-01
+                    2022-03-27
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -467,14 +464,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    3.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    13 分
                 </div>
                 
                 
@@ -490,132 +487,255 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>FastJson、JackJson 以及 Gson 是 Java 生态圈中三种常用的 Json 解析器，它们均可将 Java 对象序列化为 Json 格式的字符串，也可将 Json 字符串反序列化为 Java 对象。下面我们讨论一下三者在序列化和反序列化操作中的一些区别。 </p>
-<blockquote>
-<p>Spring Boot 默认使用 JackJson 作为 Json 解析器。 </p>
-</blockquote>
-<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>FastJson 和 JackJson 会根据 getter 方法（如 getXXX）或 is 方法（如 isXXX）获取属性名（XXX），然后调用 getter 方法或 is 方法获取属性值，最终将属性和属性值添加到 Json 字符串中。而 Gson 则是通过遍历实体类中的所有属性并直接获取属性值（未调用 getter 方法）来完成序列化操作。</p>
-<blockquote>
-<p>isXXX 方法生效的前提条件是其返回值的类型为 boolean 或 Boolean。</p>
-</blockquote>
-<p>引入 FashJson 和 Gson 的依赖：</p>
-<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>fastjson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.2.58<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+                <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>Nginx 是一个高性能的 HTTP 和反向代理 Web 服务器，同时它提供了 IMAP、POP3 以及 SMTP 等服务，因此也可作为电子邮件代理服务器。Nginx 占用内存少，并发能力强，目前已被许多国内产商所使用。</p>
+<h2 id="为什么使用-Nginx"><a href="#为什么使用-Nginx" class="headerlink" title="为什么使用 Nginx"></a>为什么使用 Nginx</h2><p>网站建设初期，由于用户数比较少，并发量比较低，一台服务器基本能够满足我们的需求，通过部署 Tomcat 就能将数据信息返回给用户。</p>
+<img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E5%8D%95%E7%94%A8%E6%88%B7.png" width="70%">
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.google.code.gson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>gson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.8.9<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>创建实体类 User：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
 
-    <span class="token keyword">private</span> Integer id<span class="token punctuation">;</span>
+<p>慢慢的，随着用户数不断增大，较高的并发量使得服务器上处理请求的线程和数据库承受着巨大压力，这将导致请求的响应时间被不断拉长，大量服务超时，最终服务器的可用连接数被耗尽，不再接收新的请求。</p>
+<img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E5%A4%9A%E7%94%A8%E6%88%B7.png" width="70%">
 
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setId</span><span class="token punctuation">(</span>Integer id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+<p>一个可行的解决办法是做水平扩展，增加多台服务器，这样不同用户的请求可以由不同的服务器受理，从而大大减小了每台服务器的压力。值得注意的是，分布式系统中各个服务器之间可能并不共享用户的 Session 信息，所以需要一个中间层服务器将一个用户的不同请求路由到同一台服务器上。不仅如此，该中间层服务器还需要使得各个服务器接收的请求量保持均衡，以获得最佳体验。</p>
+<img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E4%B8%AD%E9%97%B4%E5%B1%82%E6%9C%8D%E5%8A%A1%E5%99%A8.png" width="70%">
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>测试：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> JsonProcessingException <span class="token punctuation">{</span>
-        User user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        user<span class="token punctuation">.</span><span class="token function">setId</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        user<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"John同学"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>基于上述考虑，我们可以使用 Nginx 进行转发和处理请求。Nginx 首先接收用户的请求，然后根据用户的身份以及服务器的性能将请求路由到对应的服务器节点上，该过程对用户来说是无感知的，用户并不知道具体是哪台服务器在处理请求。</p>
+<img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/Nginx.png" width="70%">
 
-        <span class="token comment" spellcheck="true">// FastJson 序列化</span>
-        String json1 <span class="token operator">=</span> JSONObject<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"FastJson 解析结果: "</span> <span class="token operator">+</span> json1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// Gson 序列化</span>
-        Gson gson <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        String json2 <span class="token operator">=</span> gson<span class="token punctuation">.</span><span class="token function">toJson</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Gson 解析结果: "</span> <span class="token operator">+</span> json2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// JackJson 序列化</span>
-        ObjectMapper objectMapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        String json3 <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"JackJson 解析结果: "</span> <span class="token operator">+</span> json3<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>测试结果：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: <span class="token punctuation">{</span><span class="token punctuation">}</span>
-Gson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span><span class="token punctuation">}</span>
-Exception <span class="token keyword">in</span> thread <span class="token string">"main"</span> com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found <span class="token keyword">for</span> class com.example.test.User and no properties discovered to create BeanSerializer <span class="token punctuation">(</span>to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>在 User 类中，我们并未添加任何的 getter 方法，因此 FastJson 返回了一个 “空串”。由于 Gson 不依赖 getter，所以它可以解析出完整的属性以及属性值。默认情况下，若 JackJson 未获取到任何属性（通过 getter 方法），那么程序将抛出异常。根据提示，我们可以通过关闭 <code>SerializationFeature.FAIL_ON_EMPTY_BEANS</code> 来忽略该异常。</p>
-<p>关闭 <code>SerializationFeature.FAIL_ON_EMPTY_BEANS</code>：</p>
-<pre class="line-numbers language-java"><code class="language-java">ObjectMapper objectMapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-objectMapper<span class="token punctuation">.</span><span class="token function">disable</span><span class="token punctuation">(</span>SerializationFeature<span class="token punctuation">.</span>FAIL_ON_EMPTY_BEANS<span class="token punctuation">)</span><span class="token punctuation">;</span>
-String json3 <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"JackJson 解析结果: "</span> <span class="token operator">+</span> json3<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>测试结果：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: <span class="token punctuation">{</span><span class="token punctuation">}</span>
-Gson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span><span class="token punctuation">}</span>
-JackJson 解析结果: <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>下面我们为 User 类添加 getter 方法和 is 方法，再次测试序列化操作：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isRemoved</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<h2 id="Nginx-主要功能"><a href="#Nginx-主要功能" class="headerlink" title="Nginx 主要功能"></a>Nginx 主要功能</h2><p>Nginx 可以作为反向代理和负载均衡服务器，还可以作为 HTTP 服务器实现 Web 服务的动静分离。</p>
+<h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>正向代理类似于一个跳板机，代理客户端访问外部资源。比如国内用户直接访问 Google 时请求会被阻塞，但是挂上 VPN 后就可以正常访问了。这里的 VPN 实际上就是正向代理服务器，用户的请求首先发送给代理服务器，代理服务器能够访问 Google，之后代理服务器接收到 Google 的响应并将该响应返回给用户。对于 Google 服务器来说，它只知道代理服务器发送了多个请求，而并不知道这些请求具体来自于哪些用户。</p>
+<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8.png
+" width="70%"></p>
+<p>正向代理的用途：</p>
+<ol>
+<li><p>访问原先无法访问的资源。</p>
+</li>
+<li><p>用做缓存，加快资源的访问。</p>
+</li>
+<li><p>对客户端做鉴权。</p>
+</li>
+<li><p>实现匿名访问，对后端服务器隐藏真实的 IP。</p>
+</li>
+</ol>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>反向代理指的是指利用代理服务器接受用户的请求，代理服务器将请求转发给某一个内网服务器，并将得到的响应返回给对应的客户端，此时整个后端服务对外就表现为一个代理服务器。比如访问 Baidu，Baidu 的服务实际上是部署在多台机器上的，但是我们每次访问的都是同一个地址 www.<span></span>baidu<span></span>.com，这里的 www.<span></span>baidu.<span></span>com 其实就是反向代理服务器。对客户端来说，它只知道请求都是发送给了代理服务器，而并不知道具体是哪一个真实服务器在处理请求，后续无论动态扩容多少台服务器，客户端也总是访问 www.<span></span>baidu.<span></span>com。</p>
+<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8.png
+" width="70%"></p>
+<p>反向代理的用途：</p>
+<ol>
+<li><p>隐藏后端服务器集群的 IP，保证内网安全。通常反向代理服务器的 IP 会作为公网地址供用户访问，而代理服务器和后端服务器使用内网进行通信。</p>
+</li>
+<li><p>负载均衡，利用反向代理服务器可以优化各个后端服务器的负载。</p>
+</li>
+</ol>
+<p><strong>正向代理和反向代理小结</strong></p>
+<ul>
+<li><p>正向代理代理的对象是客户端，它隐藏了真实的客户端，服务端不知道真正的客户端是谁。</p>
+</li>
+<li><p>反向代理代理的对象是服务端，它隐藏了真实的服务端，客户端不知道具体是哪台服务器做出的回应。</p>
+</li>
+</ul>
+<h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><p>高并发场景下，如天猫双十一当天，某个服务的瞬时访问量及其庞大，此时即使将服务器升级到现有的顶级物理配置，也可能无法满足需求。这个时候可以拓展服务器的数量，将数据流量分摊到多个服务器上，减轻每台服务器的压力，这种应用就称为负载均衡。Nginx 支持的负载均衡策略分为内置策略和扩展策略，其中内置策略就是轮询，扩展策略需要借助第三方插件来实现。</p>
+<p>内置策略有：</p>
+<ol>
+<li><p>轮询：将请求依次分发到不同的后端服务器，如果某个服务器宕机，Nginx 可自动将其剔除。</p>
+</li>
+<li><p>加权轮询：为每台服务器都分配一个权重值，权重值越高的机器被分配请求量也越大，加权轮询多用于后端服务器性能不均的情况。</p>
+</li>
+<li><p>ip_hash：对客户端请求的 IP 进行 Hash 运算，然后根据 Hash 结果将请求分发给对应的服务器。这种方法能够确保同一客户端的不同请求总是由相同的服务器处理，从而解决了 Session 不共享的问题。</p>
+</li>
+<li><p>最少连接分配 least_conn：将请求转发给连接数较少的后端服务器，轮询方案是将请求平均分配给各个服务器，使它们的负载大致相同。然而，某些请求处理起来可能非常耗时，这可能导致其所在后端的负载显著提高，此时使用 least_conn 就可以达到更好的负载均衡效果。</p>
+</li>
+</ol>
+<p>扩展策略有：</p>
+<ol>
+<li><p>fair：按照服务器端的响应时间来分配请求，响应时间短的优先分配。</p>
+</li>
+<li><p>url_hash：对访问的 URL 进行 Hash 运算，然后根据 Hash 的结果来分配请求，这样同一个 URL 总会定向到同一个后端服务器。此种方式适用于后端服务器作为缓存时的情况，因为缓存的命中率比较高。 </p>
+</li>
+</ol>
+<h3 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h3><p>由于 Nginx 可以根据配置对不同的请求做不同的转发，因此可用来实现动静分离。动静分离指的是将动态请求（需要后台处理的请求）和静态请求（不需要后台处理的请求，如请求 css、html、js、图片等静态资源）分离开，然后将静态请求对应的静态资源直接放在 Nginx 上做缓存，或者放在指定的服务器上，而动态请求仍由相应的后端服务器处理，这样可以使整个服务器系统的性能、效率更高。</p>
+<h2 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h2><p><strong>基础配置文件</strong></p>
+<p>nginx.conf 是 Nginx 的基础配置文件，其默认内容如下：</p>
+<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/nginx.conf.png
+" width="70%"></p>
+<p>该配置文件总共包含三个部分：全局块、events 块、http 块。</p>
+<ol>
+<li><p>全局块：从配置文件开始到 events 块之间的内容为全局块，全局块中设置了一些影响 Nginx 服务器整体运行性能的配置指令，包括配置运行 Nginx 的用户（组），允许生成的 worker process 数，进程 PID 存放路径、日志的级别和存放路径等。例如上述配置文件中，<code>worker_processes 1;</code> 表示 Nginx 并发处理的进程数，该值越大，可支持的并发处理量也越多。</p>
+</li>
+<li><p>events 块：<code>events{}</code> 括号所包含的内容为 events 块，events 块涉及的指令主要影响 Nginx 服务器和用户之间的网络连接，如 <code>worker_connections  1024;</code> 表示每个 worker process 支持的最大连接数为 1024。events 块中的配置对 Nginx 的性能影响较大，实际中应灵活配置。</p>
+</li>
+<li><p>http 块：<code>https{}</code> 括号所包含的内容为 http 块，http 块中主要用来设置反向代理、缓存、日志定义以及第三方模块的配置。http 块包含 http 全局块和 server 块。</p>
+</li>
+</ol>
+<ul>
+<li><p>http 全局块：http 全局块配置的指令包括文件引入、mime-type 定义、日志自定义、连接超时时间、单连接请求数上限等。</p>
+</li>
+<li><p>server 块：server 块与虚拟主机联系紧密，每个 http 块可以包含多个 server 块，而每个server 块就相当于一个虚拟主机。server 块也分为全局 server 块和 location 块。</p>
+<ul>
+<li><p>全局 server 块：主要配置虚拟主机的名称或 IP 地址、监听的端口号等。</p>
+</li>
+<li><p>location 块：主要配置请求的路由，各种页面的处理情况以及数据的缓存等。当请求的路径满足 location 块中设定的路径匹配规则时，程序就会进入 location 块执行相应的操作，如请求跳转等。下图中，Nginx 会监听主机 <code>localhost</code> 的 <code>80</code> 端口（由 server_name 和 listen 配置），当访问 <code>localhost:80</code> 时，会自动跳转到 <code>127.0.0.1:8080</code>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/Server.png
+" width="50%"></p>
+<p><strong>location 匹配规则</strong></p>
+<p>location 块中 <code>location</code> 关键词后跟的是一个字符串或正则表达式，其基本语法为 <code>location [=|~|~*|^~] uri {……}</code>。如果请求的 URI 匹配该正则表达式，那么就进入 location 块。</p>
+<p><code>无任何修饰符</code>表示前缀匹配，当请求的 URI 的开头与 location 后的 URI 匹配时，则进入 location 块：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+　　server_name baidu.com<span class="token punctuation">;</span>
+　　location /hello <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo 虽然 /helloo 与 /hello 匹配, 但最终访问的仍然是 http://真实服务器IP:端口/helloo</span>
 
-<span class="token keyword">public</span> Integer <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> id<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">#如下请求不匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hell</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>=</code> 表示精确匹配：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    server_name baidu.com
+　　location <span class="token operator">=</span> /hello <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
 
-<span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">#如下请求均不匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>~</code> 表示区分大小写的前缀匹配:</p>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    server_name baidu.com<span class="token punctuation">;</span>
+　　location ~ /hello <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo</span>
+
+<span class="token comment" spellcheck="true">#如下请求均不匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/Hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hellO</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    server_name baidu.com<span class="token punctuation">;</span>
+　　location ~ ^/hello$ <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
+
+<span class="token comment" spellcheck="true">#如下请求均不匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/Hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hellO</span>
+<span class="token comment" spellcheck="true">#$表示匹配字符串的结尾位置, 就是说必须在字符串的结尾匹配到 $ 前面的部分才行, 因此 /hello 能匹配成功而 /helloo 就不行, 与之类似, ^ 匹配字符串开始的位置</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>~*</code> 表示不区分大小写的前缀匹配:</p>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    server_name baidu.com<span class="token punctuation">;</span>
+    location ~* /hello <span class="token punctuation">{</span>
+　　　　……
+　　<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">#如下请求均匹配：</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello?a=1</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/helloo</span>
+<span class="token comment" spellcheck="true">#http://baidu.com/HELLO </span>
+<span class="token comment" spellcheck="true">#http://baidu.com/hello/</span>
+<span class="token comment" spellcheck="true">#所以无修饰符的前缀匹配与不区分大小的写前缀匹配有什么区别？</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>^~</code> 的匹配规则与无修饰符的情况相似，不同的是，匹配成功之后，会停止搜索后面的正则表达式。</p>
+<p><strong>以上匹配规则均是在 Linux 操作系统下测试得出，可能 Windows 和 Mac OS 系统下请求的 URL 仍然是大小写不敏感的。另外，如有错误欢迎批评指正！</strong></p>
+<p>Nginx 做请求转发时，如果请求的 URI 与多个 location 块中定义的 URI 匹配，那么应该如何做跳转呢？Nginx 中规定了匹配的优先级：</p>
+<ol>
+<li><p>带有 “=” 的精确匹配。</p>
+</li>
+<li><p>无修饰符的精确匹配。</p>
+</li>
+<li><p>带有 “^~” 修饰符的前缀匹配。</p>
+</li>
+<li><p>按照正则表达式在配置文件中定义的顺序进行匹配。</p>
+</li>
+<li><p>带有 “~“ 或  “~*” 修饰符的前缀匹配。</p>
+</li>
+<li><p>无修饰符的前缀匹配。</p>
+</li>
+<li><p>通用匹配 “/“。</p>
+</li>
+</ol>
+<h2 id="Nginx-常用命令"><a href="#Nginx-常用命令" class="headerlink" title="Nginx 常用命令"></a>Nginx 常用命令</h2><p>Nginx 的启动、停止、更新配置文件后的重新加载命令如下：</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> /usr/local/nginx/sbin/  <span class="token comment" spellcheck="true">#Linux 下 Nginx 的默认安装目录</span>
+./nginx  <span class="token comment" spellcheck="true">#启动</span>
+./nginx -s stop  <span class="token comment" spellcheck="true">#停止</span>
+./nginx -s quit  <span class="token comment" spellcheck="true">#安全退出</span>
+./nginx -s reload  <span class="token comment" spellcheck="true">#重新加载配置文件, Nginx 启动后如果修改了配置文件, 可执行该命令重新加载</span>
+<span class="token function">ps</span> aux<span class="token operator">|</span><span class="token function">grep</span> nginx  <span class="token comment" spellcheck="true">#查看 Nginx 进程</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Nginx-实践"><a href="#Nginx-实践" class="headerlink" title="Nginx 实践"></a>Nginx 实践</h2><p><strong>设计思路</strong></p>
+<p>首先在 Windows 主机中安装 Nginx，然后使用 VirtualBox 或 VMware 启动两台虚拟机，并将后端服务部署在这两台虚拟机中。此时，部署 Nginx 的 Windows 主机负责接收请求，而两台 Linux 虚拟机则充当后端服务器，当有请求到达时，Nginx 服务器根据配置将该请求路由到真实的服务器（虚拟机）中。</p>
+<p><strong>后端服务</strong></p>
+<p>写一个简单的 “Hello World” 项目： </p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Controller</span>
+<span class="token annotation punctuation">@RequestMapping</span>
+<span class="token annotation punctuation">@Log</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>path <span class="token operator">=</span> <span class="token string">"/hello"</span><span class="token punctuation">,</span> method <span class="token operator">=</span> RequestMethod<span class="token punctuation">.</span>GET<span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@ResponseBody</span>
+    <span class="token keyword">public</span> String <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"I'm fine, thank you."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token keyword">return</span> <span class="token string">"Hello, world!"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>测试结果：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span>,<span class="token string">"removed"</span>:false<span class="token punctuation">}</span>
-Gson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span><span class="token punctuation">}</span>
-JackJson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span>,<span class="token string">"removed"</span>:false<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>可见，FashJson 和 JackJson 均解析出了 removed 属性，虽然该属性并未在 User 类中定义，但由于我们添加了 isRemoved 方法且该方法的返回值类型为 boolean，因此 removed 会出现在 Json 串中。反观 Gson，其仅会将 User 类中定义的属性进行序列化。</p>
-<h2 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化"></a>反序列化</h2><p>FastJson 和 JackJson 会根据 Json 字符串中的属性，在实体类中查找对应的 setter 方法来为该属性赋值。若未查找到属性对应的 setter 方法，那么 FastJson 会忽略该属性，Jackson 则会抛出异常。相比之下，Gson 会根据 Json 串中的属性以及属性值来填充实体类中对应的属性。</p>
-<p>测试：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> JsonProcessingException <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// FastJson 反序列化</span>
-        String json <span class="token operator">=</span> <span class="token string">"{\"id\":1,\"name\":\"John同学\",\"removed\":false}"</span><span class="token punctuation">;</span>
-        User user1 <span class="token operator">=</span> JSONObject<span class="token punctuation">.</span><span class="token function">parseObject</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"FastJson 解析结果: "</span> <span class="token operator">+</span> user1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// Gson 反序列化</span>
-        Gson gson <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        User user2 <span class="token operator">=</span> gson<span class="token punctuation">.</span><span class="token function">fromJson</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Gson 解析结果: "</span> <span class="token operator">+</span> user2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// JackJson 反序列化</span>
-        ObjectMapper objectMapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        User user3 <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">readValue</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"JackJson 解析结果: "</span> <span class="token operator">+</span> user3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>将该项目打成 jar 包，分别部署在两台虚拟机中。正常情况下该服务会返回 “Hello, world!” 字符串，并打印日志 “I’m fine, thank you.”，为了更好地区分请求由哪台虚拟机处理，我们将其中一个服务中打印的日志修改为 “And you?”。</p>
+<p><strong>Nginx 配置</strong></p>
+<p>接着打开 Nginx 的配置文件 nginx.conf，配置反向代理和负载均衡策略：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">upstream nginxTest <span class="token punctuation">{</span>
+    server 192.168.3.118:8080 weight<span class="token operator">=</span>1<span class="token punctuation">;</span>
+    server 192.168.3.124:8080 weight<span class="token operator">=</span>1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+server <span class="token punctuation">{</span>
+    listen       80<span class="token punctuation">;</span>
+    server_name  localhost<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">#charset koi8-r;</span>
+
+    <span class="token comment" spellcheck="true">#access_log  logs/host.access.log  main;</span>
+
+    location / <span class="token punctuation">{</span>
+        root   html<span class="token punctuation">;</span>
+        index  index.html index.htm<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>测试结果：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
-Gson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
-Exception <span class="token keyword">in</span> thread <span class="token string">"main"</span> com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field <span class="token string">"removed"</span> <span class="token punctuation">(</span>class com.example.test.User<span class="token punctuation">)</span>, not marked as ignorable <span class="token punctuation">(</span>2 known properties: <span class="token string">"id"</span>, <span class="token string">"name"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>上述代码中，我们在 Json 串中添加了一个 User 类中没有的属性，即 removed。FastJson 和 Gson 均会将该属性忽略，而 JackJson 则抛出了异常，该异常提示 “removed 为不能识别的属性”。当然，我们也可以通过配置 ObjectMapper 来忽略该异常：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// JackJson 反序列化</span>
-ObjectMapper objectMapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-objectMapper<span class="token punctuation">.</span><span class="token function">configure</span><span class="token punctuation">(</span>DeserializationFeature<span class="token punctuation">.</span>FAIL_ON_UNKNOWN_PROPERTIES<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-User user3 <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">readValue</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"JackJson 解析结果: "</span> <span class="token operator">+</span> user3<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>测试结果：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
-Gson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
-JackJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>虽然 FastJson 和 JackJson 在反序列化时均会依赖 setter 方法，但二者之间也存在一些区别。如果我们在实体类中未添加某个属性的 setter 方法，那么 FastJson 将不会为该属性赋值，而 JackJson 则会进一步查找同名的属性，接着完成赋值操作。下面我们注释掉 User 类中的 setName 方法：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    public void setName(String name) {</span>
-<span class="token comment" spellcheck="true">//        this.name = name;</span>
-<span class="token comment" spellcheck="true">//    }</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>再次测试反序列化操作：</p>
-<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'null'</span><span class="token punctuation">}</span>
-Gson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
-JackJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+    location /hello <span class="token punctuation">{</span>
+        proxy_pass http://nginxTest<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">#路由到 http://192.128.3.xxx:8080/hello</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>upstream 块中定义的是负载均衡服务器的列表，weight 表示每个 server 的权重。</p>
+<blockquote>
+<p>小知识：上述配置文件的 15 和 16 行表明，当访问 localhost:80 时，服务器会先访问 html/index.html，如果没有找到则继续访问 html/index.htm。</p>
+</blockquote>
+<p><strong>测试</strong></p>
+<p>在 Windows 主机的浏览器中访问 localhost:80/hello，得到响应 “Hello, world!”，多次访问后可以发现，两台 Linux 虚拟机均打印出了相应的日志：</p>
+<p>主机 1：<br><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/Centos.png" width="70%"></p>
+<p>主机 2：<br><img src="http://r9eatfbfc.hb-bkt.clouddn.com/Nginx%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/Ubuntu_result.png" width="70%"></p>
+<p>这说明请求会被随机分配给两台主机，因为我们在配置文件中为它们设置了相同的权重。</p>
+<p><strong>注意事项</strong></p>
+<p>上述操作中，需要确保 Windows 主机与两台虚拟机可以相互 Ping 通。当然也可以使用一台主机（Windows 或 Linux）来完成测试，只需要在主机上启动多个后端服务并分别设置不同的服务端口，之后在 nginx.conf 中配置相关的路由规则。</p>
 
             </div>
             <hr />
@@ -734,9 +854,9 @@ JackJson 解析结果: User<span class="token punctuation">{</span>id<span class
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《FastJson、JackJson 以及 Gson 的区别》
+                    《Nginx 快速入门》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/fastjson-jackjson-yi-ji-gson-de-qu-bie.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2022/0347606.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 John同学
             </a> 采用
@@ -913,56 +1033,50 @@ JackJson 解析结果: User<span class="token punctuation">{</span>id<span class
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/fastjson-jackjson-yi-ji-gson-de-qu-bie.html">
+                <a href="/2022/032508.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="FastJson、JackJson 以及 Gson 的区别">
+                        <img src="/medias/featureimages/52.jpg" class="responsive-img" alt="利用 Nginx 实现动静分离">
                         
-                        <span class="card-title">FastJson、JackJson 以及 Gson 的区别</span>
+                        <span class="card-title">利用 Nginx 实现动静分离</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            FastJson、JackJson 以及 Gson 是 Java 生态圈中三种常用的 Json 解析器，它们均可将 Java 对象序列化为 Json 格式的字符串，也可将 Json 字符串反序列化为 Java 对象。下面我们讨论一下三者在序列化和反序列化操作中的一些区别。
+                            动静分离指的是将动态请求和静态请求分隔开，然后分别路由到相应的后端服务器。通常用户的请求中，一部分需要后台程序处理，例如查询数据库或者进行一些数据运算，这类请求我们称之为动态请求；还有一部分不需要后台程序处理，如请求 css、html、js、图片等静态资源，这类请求我们称之为静态请求。Nginx 实现动静分离的基础是它可以根据配置对不同的请求做不同的转发，动静分离有利于提高整个服务器系统的性能。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-31
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/随笔/" class="post-category" target="_blank">
-                                    随笔
+                            <a href="/categories/计算机网络/" class="post-category" target="_blank">
+                                    计算机网络
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Json/" target="_blank">
-                        <span class="chip bg-color">Json</span>
+                    <a href="/tags/Nginx/" target="_blank">
+                        <span class="chip bg-color">Nginx</span>
                     </a>
                     
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/后端/" target="_blank">
-                        <span class="chip bg-color">后端</span>
+                    <a href="/tags/计网/" target="_blank">
+                        <span class="chip bg-color">计网</span>
                     </a>
                     
                 </div>
@@ -976,24 +1090,24 @@ JackJson 解析结果: User<span class="token punctuation">{</span>id<span class
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/liao-yi-liao-guo-lu-qi-yu-lan-jie-qi.html">
+                <a href="/2022/0318336.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/74.jpg" class="responsive-img" alt="聊一聊过滤器与拦截器">
+                        <img src="/medias/featureimages/60.jpg" class="responsive-img" alt="MyBatis 实现分页查询的三种方式">
                         
-                        <span class="card-title">聊一聊过滤器与拦截器</span>
+                        <span class="card-title">MyBatis 实现分页查询的三种方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            过滤器 Filter 和拦截器 Interceptor 是 Web 开发中常用的两个组件，二者主要用于对客户端的请求和响应做自定义的预处理和后处理，本文主要介绍 Filter 和 Interceptor 的实现原理、创建过程、应用场景以及主要区别。
+                            分页查询是许多网站都具备的一个基本功能，其作用是将查询到的结果集做分页展示。当数据量较大时，分页查询可以减轻服务端的查询压力以及前端的渲染压力。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-05-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-19
                             </span>
                         <span class="publish-author">
                             
@@ -1010,12 +1124,20 @@ JackJson 解析结果: User<span class="token punctuation">{</span>id<span class
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/后端/" target="_blank">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
                     <a href="/tags/Java/" target="_blank">
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/Web/" target="_blank">
-                        <span class="chip bg-color">Web</span>
+                    <a href="/tags/Spring-Boot/" target="_blank">
+                        <span class="chip bg-color">Spring Boot</span>
+                    </a>
+                    
+                    <a href="/tags/MyBatis/" target="_blank">
+                        <span class="chip bg-color">MyBatis</span>
                     </a>
                     
                 </div>

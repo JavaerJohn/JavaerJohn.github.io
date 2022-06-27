@@ -4,15 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="MVC 和三层架构, 每天进步一点点！">
+    <meta name="keywords" content="Spring Boot 整合 MyBatis, 每天进步一点点！">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="MVCMVC 是一种分层设计的软件开发架构模式，其将整个业务应用划分为三部分，分别为：
-
-View：视图层，负责界面的展示，与用户直接交互。用户可在视图层执行相关的操作，如查看数据或提交表单等（发送请求），视图层会向用户展示操作的结果。
-
-">
+    <meta name="description" content="MyBatis 简介MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +16,7 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MVC 和三层架构 | John&#39;s Blog</title>
+    <title>Spring Boot 整合 MyBatis | John&#39;s Blog</title>
 
     <!-- <link rel="icon" href="#">  --> 
     <link rel="icon" type="image/png" href="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/hexo/favicon.png">
@@ -307,14 +303,14 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')"> -->
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')"> -->
 <div class="bg-cover pd-header post-cover">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="center-align post-title">
-                        MVC 和三层架构
+                        Spring Boot 整合 MyBatis
                     </div>
                 </div>
             </div>
@@ -425,12 +421,20 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
                     
                     <div class="article-tag">
                         
+                        <a href="/tags/后端/" target="_blank">
+                            <span class="chip bg-color">后端</span>
+                        </a>
+                        
                         <a href="/tags/Java/" target="_blank">
                             <span class="chip bg-color">Java</span>
                         </a>
                         
-                        <a href="/tags/Web/" target="_blank">
-                            <span class="chip bg-color">Web</span>
+                        <a href="/tags/Spring-Boot/" target="_blank">
+                            <span class="chip bg-color">Spring Boot</span>
+                        </a>
+                        
+                        <a href="/tags/MyBatis/" target="_blank">
+                            <span class="chip bg-color">MyBatis</span>
                         </a>
                         
                     </div>
@@ -453,7 +457,7 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-05-02
+                    2022-03-17
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -467,14 +471,14 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    594
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    12 分
                 </div>
                 
                 
@@ -490,43 +494,432 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><p>MVC 是一种分层设计的软件开发架构模式，其将整个业务应用划分为三部分，分别为：</p>
-<ul>
-<li><p>View：视图层，负责界面的展示，与用户直接交互。用户可在视图层执行相关的操作，如查看数据或提交表单等（发送请求），视图层会向用户展示操作的结果。</p>
-</li>
-<li><p>Controller：控制器层，负责接收用户的请求，并将请求委托给 Model 层处理。接收到 Model 层处理的结果后，Controller 会选择合适的视图，并将处理结果交付给该视图。对于某些请求，Controller 还负责做请求的转发或重定向。</p>
-</li>
-<li><p>Model：模型层，负责处理用户的业务请求以及与数据库进行交互。当业务逻辑处理完成后，Model 层会将处理的结果返回给 Controller。</p>
-</li>
-</ul>
-<p>MVC 模式中，一个请求的处理流程如下：</p>
-<p><img src="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/technology/Web/MVC/MVC%E5%92%8C%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84.jpg" alt></p>
-<p>MVC 模式的优点：</p>
+                <h2 id="MyBatis-简介"><a href="#MyBatis-简介" class="headerlink" title="MyBatis 简介"></a>MyBatis 简介</h2><p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Ordinary Java Objects，简单 Java 对象）为数据库中的记录。</p>
+<blockquote>
+<p>参考自 MyBatis 的官方简介。</p>
+</blockquote>
+<p>MyBatis 作为一款优秀的持久层框架，具有如下优点：</p>
 <ol>
-<li><p>低耦合：降低了层与层之间的依赖，开发人员可只关注其中的某一层。</p>
+<li><p>小巧并且简单易学。</p>
 </li>
-<li><p>高复用：不同的视图、控制器可复用同一套业务处理逻辑。</p>
+<li><p>相比于 JDBC 减少了大量冗余的代码。</p>
 </li>
-<li><p>可维护：分离不同的组件有利于提高程序的可维护性。</p>
+<li><p>将 SQL 语句与程序代码进行分离，降低了耦合，便于管理。</p>
+</li>
+<li><p>提供 XML 标签，支持编写动态 SQL 语句。</p>
+</li>
+<li><p>提供映射标签，支持 Java 对象与数据库 ORM 字段的映射关系。</p>
 </li>
 </ol>
-<p>MCV 模式的缺点：</p>
-<ol>
-<li><p>高复杂度：严格遵守 MVC 模式可能会产生一些冗余操作，尤其是在小型项目中。</p>
-</li>
-<li><p>低效率：由于 Model 称重不同的接口负责不同的功能，因此视图可能需要多次调用才能获取到全部的数据。对未变化数据的不必要的频繁访问，也将降低系统性能。</p>
-</li>
-</ol>
-<h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h2><p>三层架构指的是将软件设计划分为表现层、业务逻辑层以及数据访问层：</p>
+<!-- MyBatis 的缺点
+
+1. SQL 语句编写工作量较大，尤其是字段和关联表比较多时。
+
+2. SQL 语句依赖于数据库，导致数据库移植性差，不能随意更换数据库。 -->
+
+<h2 id="MyBatis-实践"><a href="#MyBatis-实践" class="headerlink" title="MyBatis 实践"></a>MyBatis 实践</h2><p>下面我们创建一个 Spring Boot 项目，整合 MyBatis，实现简单的 CRUD 功能。</p>
+<p><strong>1. 引入依赖</strong></p>
+<p>POM 文件如下：</p>
+<pre class="line-numbers language-XML"><code class="language-XML"><?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.6</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.example</groupId>
+    <artifactId>springboot-mybatis</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springboot-mybatis</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>2. 配置 MySQL 和 MyBatis</strong></p>
+<p>配置文件 application.yml 的内容如下： </p>
+<pre class="line-numbers language-yml"><code class="language-yml"># 配置 MySQL
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# 配置 MyBatis
+mybatis:
+  mapper-locations: classpath:mapper/*
+  type-aliases-package: com.example.entity
+  configuration:
+    map-underscore-to-camel-case: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>MyBatis 的配置项中：</p>
 <ul>
-<li><p>表现层：与用户直接交互，提供展示数据的界面。同时负责接收用户的请求，并调用业务逻辑层处理请求，请求处理完成后向用户展示处理的结果。</p>
+<li><p><code>mapper-locations</code>：用来指定 mapper.xml 文件的路径，该文件用于编写 SQL 语句。</p>
 </li>
-<li><p>业务逻辑层：定义业务的处理逻辑，也就是我们常说的 Service 层。</p>
+<li><p><code>type-aliases-package</code>：用来设置别名，它的作用是告诉 MyBatis 需要设置别名的实体类的所在的包。默认情况下，MyBatis 会使用实体类的非限定类名来作为它的别名，如将 <code>com.example.entity.User</code> 的别名设置为 <code>User</code> 或 <code>user</code>（别名不区分大小写）。当然，MyBatis 也支持自定义别名，这个我们在后文中再聊。</p>
 </li>
-<li><p>数据访问层：提供访问和操作数据库的方法，即 Dao 层。</p>
+<li><p><code>map-underscore-to-camel-case</code>：用来开启驼峰命名自动映射，如将数据表中的字段 user_name 映射到实体对象的属性 userName。</p>
+<!-- 这样在 mapper.xml 文件中就可以直接使用非限定类名来作为它的别名，如 "com.example.entity.User" 可使用别名 "User" 代替 -->
+
 </li>
 </ul>
-<p>MVC 中的 Model 就是三层架构中的业务逻辑层和数据访问层；三层架构中的表现层就是 MVC 中的 View 和 Controller。</p>
+<p><strong>3. 实体类</strong></p>
+<p>编写简单的 User 类：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>entity<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> lombok<span class="token punctuation">.</span>Data<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Date<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/**
+ * @Author john
+ * @Date 2021/11/14
+ */</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">long</span> id<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String userName<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String address<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> Date createTime<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> Date updateTime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>User 类中封装了用户的 id、姓名、年龄、地址、创建时间以及修改时间等信息。</p>
+<p><strong>4. 创建 user 表</strong></p>
+<p>user 表的字段设计如下：</p>
+<p><img src="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/technology/MyBatis/user_table.png" alt></p>
+<p><strong>5. 编写 Mapper 接口和 mapper 文件</strong></p>
+<p>首先编写 UserMapper 接口：</p>
+<pre class="line-numbers language-Java"><code class="language-Java">package com.example.mapper;
+
+import com.example.entity.User;
+
+/**
+ * @Author john
+ * @Date 2021/11/16
+ */
+public interface UserMapper {
+
+    void insertUser(User user);
+
+    User findUserById(long id);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>接口中定义了两个方法，insertUser 用来向数据表中插入一条记录，findUserById 用来通过 id 查询 User。</p>
+<p>上述操作完成后，我们在 resources 文件夹中创建 mapper/user-mapper.xml 文件（文件路径在配置文件 application.yml 中设置）。user-mapper.xml 文件的内容如下：</p>
+<pre class="line-numbers language-XML"><code class="language-XML"><?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mapper.UserMapper">
+
+    <sql id="insertFields">
+        user_name, age, address, gmt_create, gmt_modified
+    </sql>
+
+    <sql id="selectFields">
+        id, user_name, age, address, gmt_create, gmt_modified
+    </sql>
+
+    <resultMap id="UserMap" type="User">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="gmt_create" jdbcType="DATE" property="createTime" />
+        <result column="gmt_modified" jdbcType="DATE" property="updateTime" />
+    </resultMap>
+
+    <select id="findUserById" parameterType="Long" resultMap="UserMap">
+        select
+        <include refid="selectFields"/>
+        from user
+        where id = #{id}
+    </select>
+
+    <insert id="insertUser" parameterType="User" keyProperty="id">
+        insert into user (<include refid="insertFields"/>)
+        values(#{userName}, #{age}, #{address}, UTC_TIMESTAMP(), UTC_TIMESTAMP())
+    </insert>
+
+</mapper><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以看到，Mapper 接口中定义的是 CRUD 相关的方法，mapper.xml 文件中定义的是具体的 SQL 语句。MyBatis 允许我们将 Mapper 接口与 mapper.xml 文件关联在一起，这样当调用 Mapper 接口中的方法时，实际的处理逻辑为执行 mapper.xml 文件中对应的 SQL 语句。关联 Mapper 接口和 mapper.xml 文件时需要保证：</p>
+<ul>
+<li><p>Mapper 接口的全限定名对应 mapper.xml 文件的 namespace 值。</p>
+</li>
+<li><p>Mapper 接口的方法名对应 statement（每一个 SQL 就是一个 statement）的 id 值。</p>
+</li>
+<li><p>Mapper 接口中方法接收的参数对应 statement 的入参。</p>
+</li>
+<li><p>Mapper 接口中方法的返回值对应 statement 的出参。</p>
+</li>
+</ul>
+<p>下面介绍一下 mapper.xml 文件中几个重要标签的含义：</p>
+<ul>
+<li><p><code>&lt;sql&gt;</code> 标签：用于定义复用的 SQL 片段，如果多个 SQL 需要操作相同的字段集，那么就可以使用 <code>&lt;sql&gt;</code> 标签将这些字段提取出来，然后在 SQL 语句中直接引用即可。引用的语法为 <code>&lt;include refid=&quot; &quot;/&gt;</code>，其中 refid 的值就是 <code>&lt;sql&gt;</code> 的 id 值。</p>
+</li>
+<li><p><code>&lt;resultMap&gt;</code> 标签：用于创建数据表字段与实体属性的映射关系，在查询操作中，MyBatis 会根据查询到的字段名找到 POJO 对应的属性名，然后调用该属性的 setter 方法进行赋值。如果数据表的字段名与实体类的属性名完全相同，或者符合驼峰式命名映射的规则，那么 MyBatis 可以直接完成赋值操作。否则的话，就需要我们使用 <code>&lt;resultMap&gt;</code> 标签创建自定义的映射规则，告诉 MyBatis 字段和属性之间应该如何映射。本实验中，user 表的 id 会自动映射为 User 对象的 id，user 表的 user_name 也会自动映射为 User 对象的 userName。但是 gmt_create 和 gmt_modified 不会映射为 createTime 和 updateTime，因为字段名和属性名既不完全一致，也不符合驼峰式命名映射的规则，所以这里我们需要使用 <code>&lt;resultMap&gt;</code> 来创建新的映射关系，其中属性 id 用于指明该 resultMap 的标志，属性 type 用于指明映射的实体类。</p>
+</li>
+<li><p><code>&lt;select&gt;</code> 标签：用于执行查询操作。 </p>
+</li>
+<li><p><code>&lt;insert&gt;</code> 标签：用于执行插入操作。</p>
+</li>
+</ul>
+<blockquote>
+<p>实际上，MyBatis 赋值时不一定会调用实体类属性的 setter 方法，因为我们在编码时可能并没有添加该方法。以 User 类的属性 id 为例，如果我们添加了 setId 方法，那么 MyBatis 会通过反射获取到 setId 对应的 MethodInvoker，然后调用 setId 方法为 id 赋值；如果未设置 setId 方法，那么 MyBatis 会获取属性 id 对应的 SetFieldInvoker，然后为属性赋值。详见 MetaObject 类的 setValue 方法。</p>
+</blockquote>
+<p>接下来介绍 SQL 语句中几个重要属性的含义：</p>
+<ul>
+<li><p>parameterType：用于指定 SQL 语句的入参类型（可以是基本数据类型或者 JavaBean），该类型需要与对应的接口方法的入参类型一致。如果我们设置了别名，那么也可以使用别名作为参数，例如使用 <code>User</code> 或 <code>user</code> 代替 <code>com.example.entity.User</code>。</p>
+</li>
+<li><p>resultMap：用于指定 SQL 语句的出参类型，以 insertUser 方法为例，在 Mapper 接口中，该方法的返回值为 User 类型，所以对应的 SQL 语句的返回值也应为 User 类型，由于 User 对象需要使用 <code>&lt;resultMap&gt;</code> 进行属性映射，所以我们将自定义的 <code>UserMap</code> 来作为 SQL 语句的返回值类型。</p>
+</li>
+<li><p>keyProperty：用于指定主键在 POJO 中对应的属性名，需要配合数据库的自增主键来使用。以 user 表为例，我们在建表的时候将表的主键 id 设置为了数据库自增 id，因此在将 User 对象持久化到数据库之前不需要为属性 id 设置初始值，MySQL 会自动帮我们赋值，keyProperty 的作用就是告诉 MyBatis 哪个属性是主键。</p>
+</li>
+</ul>
+<!-- parameterType 和 resultType（本实验中未使用）分别用来指定参数和返回值的类型，因为我们在配置文件中启用了别名，所以 parameterType 和 resultType 可以直接设置为 "User" 或 "user"，而非全限定名 "com.example.entity.User"。 -->
+
+
+<!-- mapper 文件中还有一个关键标签 resultMap，resultMap 主要用来创建自定义的映射关系。以查询为例，MyBatis 的映射规则是：根据查询到的字段名找到 POJO 对应的属性名，然后调用该属性的 setter 方法进行赋值。本实验中，user 表的 id 会自动映射为 User 对象的 id，因为字段名和属性名是完全一致的；user 表的 user_name 也会自动映射为 User 对象的 userName，因为我们开启了驼峰式命名映射。但是 gmt_create 不会映射到 createTime，因为字段名和属性名既不完全一致，也不符合驼峰式命名映射的规则。所以这里我们使用 resultMap 来创建新的映射关系，将 gmt_create 和 gmt_modified 分别映射到 createTime 和 updateTime，然后再将 resultType 替换为 resultMap（如果不需要自定义映射，本实验中的 resultMap='UserMap' 可替换为 resultType='User'）。 -->
+
+<p>除了 resultMap 外，resultType 属性也可用于指定出参类型。如果我们将 user 表中的字段 gmt_create 和 gmt_modified 分别改为 create_time 和 update_time，那么就不需要使用 <code>&lt;resultMap&gt;</code> 标签来配置映射规则，因为 user 表的所有字段都可以和 User 对象的属性一一对应，这样在 SQL 语句中，就可以将 <code>resultMap=&quot;UserMap&quot;</code> 替换为 <code>resulType=&quot;User&quot;</code> 或 <code>resulType=&quot;user&quot;</code>。另外，在本实验中，resultMap 标签也可以定义为：</p>
+<pre class="line-numbers language-XML"><code class="language-XML"><resultMap id="UserMap" type="User">
+    <result column="gmt_create" jdbcType="DATE" property="createTime" />
+    <result column="gmt_modified" jdbcType="DATE" property="updateTime" />
+</resultMap><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>因为其他字段会自动映射，不需要额外书写。</p>
+<p><strong>6. 编写 Service</strong></p>
+<p>创建 UserService：</p>
+<pre class="line-numbers language-Java"><code class="language-Java">package com.example.service;
+
+import com.example.entity.User;
+import com.example.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+/**
+ * @Author john
+ * @Date 2021/11/16
+ */
+@Service
+public class UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    public void insertUser(User user) {
+        userMapper.insertUser(user);
+    }
+
+    public User findUserById(long id) {
+        return userMapper.findUserById(id);
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在 UserService 中注入 UserMapper 对象，并调用相关方法来添加/查询 User。</p>
+<p>为了能够正常注入 UserMapper 对象，我们还需要再启动类上添加 @MapperScan 注解，并指定 Mapper 接口所在的包：</p>
+<pre class="line-numbers language-Java"><code class="language-Java">package com.example;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@MapperScan("com.example.mapper")
+public class SpringbootMybatisApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootMybatisApplication.class, args);
+    }
+
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>com.example.mapper</code> 包下的所有 Mapper 接口都会被 Spring 扫描。</p>
+<p>除了在启动类上添加 @MapperScan 注解外，还可以在 Mapper 接口上直接添加 @Mapper 注解，这种方法相对比较麻烦，因为实际中我们可能会有多个 Mapper 接口，这样就需要添加多个注解。</p>
+<p><strong>7. 测试</strong></p>
+<p>编写测试接口：</p>
+<pre class="line-numbers language-Java"><code class="language-Java">package com.example;
+
+import com.example.entity.User;
+import com.example.service.UserService;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringbootMybatisApplicationTests {
+
+    @Autowired
+    private UserService service;
+
+    @Test
+    public void addUser(){
+        User user = new User();
+        user.setUserName("John");
+        user.setAge(24);
+        user.setAddress("BUPT");
+        service.insertUser(user);
+    }
+
+    @Test
+    public void findUser(){
+        System.out.println(service.findUserById(1));
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>首先执行 addUser() 方法，执行成功后查询数据表，得到如下信息：</p>
+<p><img src="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/technology/MyBatis/select.png" alt></p>
+<p>然后执行 findUser() 方法，执行结果如下：</p>
+<p><img src="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/technology/MyBatis/select_test.png" alt></p>
+<p>至此，SpringBoot 整合 MyBatis 测试成功！</p>
+<h2 id="MyBatis-设置别名的方式"><a href="#MyBatis-设置别名的方式" class="headerlink" title="MyBatis 设置别名的方式"></a>MyBatis 设置别名的方式</h2><p><strong>方式一</strong>：在配置文件 application.yml 中添加配置。</p>
+<p>yml 文件的配置内容如下：</p>
+<pre class="line-numbers language-yml"><code class="language-yml">mybatis:
+  type-aliases-package: com.example.entity<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>本实验采用此种方式设置别名，默认情况下实体类的别名为其类名，严格来说是首字母小写的非限定类名，由于别名不区分大小写，所以 <code>User</code>、<code>user</code>、<code>uSer</code> 的效果都是相同的。</p>
+<p>MyBatis 也支持自定义别名，我们只需要在实体类上添加 @Alias 注解，就可以为其设置别名：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>entity<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> lombok<span class="token punctuation">.</span>Data<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>ibatis<span class="token punctuation">.</span>type<span class="token punctuation">.</span>Alias<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Date<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/**
+ * @Author john
+ * @Date 2021/11/14
+ */</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@Alias</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">long</span> id<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String userName<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String address<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> Date createTime<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> Date updateTime<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上述代码中，我们将 User 类的别名设置为了 <code>hello</code>。注意，若要使 @Alias 注解生效，必须配置 <code>type-aliases-package</code> 来指定实体类的包路径。另外，@Alias 会使默认的别名变得无效，例如在本实验中，User 类的别名只能是 <code>hello</code>，而不能是 <code>User</code> 或 <code>user</code> 等。 </p>
+<p><strong>方式二</strong>：使用 MyBatis 的配置文件 filename.xml。</p>
+<p>首先在 yml 文件中设置 MyBatis 配置文件 filename.xml（filename 是配置文件的名称）的路径：</p>
+<pre class="line-numbers language-YML"><code class="language-YML"># 配置MyBatis
+mybatis:
+  mapper-locations: classpath:mapper/*
+  config-location: classpath:mybatis/mybatis-config.xml #MyBatis配置文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后在 resource 文件夹下创建 MyBatis 的配置文件 mapper/mybatis-config.xml（路径和文件名在 config-location 中设置），配置文件内容如下：</p>
+<pre class="line-numbers language-XML"><code class="language-XML"><?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <package name="com.example.entity"/>
+    </typeAliases>
+
+</configuration><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>几个重要标签的含义为：</p>
+<ul>
+<li><p><code>&lt;setting&gt;</code> 标签：用于开启驼峰命名映射，其效果与在 yml 文件中配置 <code>map-underscore-to-camel-case: true</code> 是相同的。</p>
+</li>
+<li><p><code>&lt;typeAliases&gt;</code> 标签：用于配置别名，子标签 <code>&lt;package&gt;</code> 可以让 MyBatis 扫描指定包下的实体类，其效果与在 yml 文件中配置 <code>type-aliases-package: com.example.entity</code> 是相同的。</p>
+</li>
+</ul>
+<p>在方式一中，我们可以使用 @Alias 注解自定义别名，而在方式二中，我们可以通过<code>&lt;typeAliases&gt;</code> 的子标签 <code>&lt;typeAlias&gt;</code> 来设置别名：</p>
+<pre class="line-numbers language-XML"><code class="language-XML"><?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <typeAlias type="com.example.entity.User" alias="hello"/>
+    </typeAliases>
+
+</configuration><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>&lt;typeAlias&gt;</code> 标签不需要配置 <code>type-aliases-package</code> 就可以生效，且该标签与 <code>&lt;package&gt;</code> 标签并不冲突，也就是说如果我们添加了 <code>&lt;package name=&quot;com.example.entity&quot;/&gt;</code>，那么 User 类的别名既可以是 <code>hello</code>，也可以是 <code>User</code> 或 <code>user</code> 等。当然，方式二中也可以添加 @Alias 注解，但添加了该注解后，User 类的别名只能为 <code>hello</code> 或 @Alias 注解指定的别名。</p>
 
             </div>
             <hr />
@@ -645,9 +1038,9 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《MVC 和三层架构》
+                    《Spring Boot 整合 MyBatis》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/mvc-he-san-ceng-jia-gou.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2022/0340561.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 John同学
             </a> 采用
@@ -828,24 +1221,24 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/liao-yi-liao-guo-lu-qi-yu-lan-jie-qi.html">
+                <a href="/2022/036441.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/74.jpg" class="responsive-img" alt="聊一聊过滤器与拦截器">
+                        <img src="/medias/featureimages/31.jpg" class="responsive-img" alt="MyBatis 结果映射总结">
                         
-                        <span class="card-title">聊一聊过滤器与拦截器</span>
+                        <span class="card-title">MyBatis 结果映射总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            过滤器 Filter 和拦截器 Interceptor 是 Web 开发中常用的两个组件，二者主要用于对客户端的请求和响应做自定义的预处理和后处理，本文主要介绍 Filter 和 Interceptor 的实现原理、创建过程、应用场景以及主要区别。
+                            结果映射指的是 MyBatis 的一个强大特性，它可以帮助我们自动填充实体对象的属性，本文会结合一些常见的应用场景，并通过简单的示例来介绍 MyBatis 中不同的结果映射方法，希望对大家有所帮助。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-05-11
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-03-17
                         </span>
                         <span class="publish-author">
                             
@@ -862,12 +1255,20 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/后端/" target="_blank">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
                     <a href="/tags/Java/" target="_blank">
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/Web/" target="_blank">
-                        <span class="chip bg-color">Web</span>
+                    <a href="/tags/Spring-Boot/" target="_blank">
+                        <span class="chip bg-color">Spring Boot</span>
+                    </a>
+                    
+                    <a href="/tags/MyBatis/" target="_blank">
+                        <span class="chip bg-color">MyBatis</span>
                     </a>
                     
                 </div>
@@ -881,31 +1282,31 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/java-yu-yan-shi-xian-jian-yi-sao-ma-deng-lu.html">
+                <a href="/2020/0632512.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/59.jpg" class="responsive-img" alt="Java 语言实现简易版扫码登录">
+                        <img src="/medias/featureimages/29.jpg" class="responsive-img" alt="Git 常用指令（持续更新）">
                         
-                        <span class="card-title">Java 语言实现简易版扫码登录</span>
+                        <span class="card-title">Git 常用指令（持续更新）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            相信大家对二维码都不陌生，生活中到处充斥着扫码登录的场景，如登录网页版微信、支付宝等。最近学习了一下扫码登录的原理，感觉蛮有趣的，于是自己实现了一个简易版扫码登录的 Demo，以此记录一下学习过程。
+                            Git 是目前最流行的版本控制工具，熟练使用 Git 是每个程序员必备的技能。奈何自己非科班出身，对 Git 的使用少之又少，因此撰写本篇博文来记录常用的 Git 指令，以作备忘。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-04-10
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/系统设计/" class="post-category" target="_blank">
-                                    系统设计
+                            <a href="/categories/工具使用/" class="post-category" target="_blank">
+                                    工具使用
                                 </a>
                             
                             
@@ -915,16 +1316,12 @@ View：视图层，负责界面的展示，与用户直接交互。用户可在�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
                     <a href="/tags/后端/" target="_blank">
                         <span class="chip bg-color">后端</span>
                     </a>
                     
-                    <a href="/tags/Spring-Boot/" target="_blank">
-                        <span class="chip bg-color">Spring Boot</span>
+                    <a href="/tags/Git/" target="_blank">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>

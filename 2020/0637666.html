@@ -4,12 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="动态规划算法题解, 每天进步一点点！">
+    <meta name="keywords" content="后端开发知识点合集, 每天进步一点点！">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="926. 将字符串翻转到单调递增（Medium）Leetcode / 力扣
-题目描述：如果一个二进制字符串，是以一些 0（可能没有 0）后面跟着一些 1（也可能没有 1）的形式组成的，那么该字符串是 单调递增 的。给你一个二进制字符串 s，">
+    <meta name="description" content="仓库简介🎓本人毕业于北京邮电大学信息与通信工程学院，研二下半学期自学转码，作为 “半路出家” 的非科班程序员，我深切体会到了扎实基础的重要性，故打算利用空闲时间维护一个 Git 仓库来记录后端开发的常用知识点，该仓库涵盖了 Java 编程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>动态规划算法题解 | John&#39;s Blog</title>
+    <title>后端开发知识点合集 | John&#39;s Blog</title>
 
     <!-- <link rel="icon" href="#">  --> 
     <link rel="icon" type="image/png" href="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/hexo/favicon.png">
@@ -304,14 +303,14 @@
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')"> -->
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')"> -->
 <div class="bg-cover pd-header post-cover">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="center-align post-title">
-                        动态规划算法题解
+                        后端开发知识点合集
                     </div>
                 </div>
             </div>
@@ -422,12 +421,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Java/" target="_blank">
-                            <span class="chip bg-color">Java</span>
+                        <a href="/tags/后端/" target="_blank">
+                            <span class="chip bg-color">后端</span>
                         </a>
                         
-                        <a href="/tags/LeetCode/" target="_blank">
-                            <span class="chip bg-color">LeetCode</span>
+                        <a href="/tags/开发/" target="_blank">
+                            <span class="chip bg-color">开发</span>
                         </a>
                         
                     </div>
@@ -438,8 +437,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/算法/" class="post-category" target="_blank">
-                            算法
+                        <a href="/categories/后端/" class="post-category" target="_blank">
+                            后端
                         </a>
                         
                     </div>
@@ -450,7 +449,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-11
+                    2020-06-05
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -464,14 +463,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    543
+                    144
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
                 
@@ -487,54 +486,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="926-将字符串翻转到单调递增（Medium）"><a href="#926-将字符串翻转到单调递增（Medium）" class="headerlink" title="926. 将字符串翻转到单调递增（Medium）"></a>926. 将字符串翻转到单调递增（Medium）</h2><p><a href="https://leetcode.com/problems/flip-string-to-monotone-increasing/" target="_blank" rel="noopener">Leetcode</a> / <a href="https://leetcode.cn/problems/flip-string-to-monotone-increasing/" target="_blank" rel="noopener">力扣</a></p>
-<p>题目描述：如果一个二进制字符串，是以一些 <code>0</code>（可能没有 <code>0</code>）后面跟着一些 <code>1</code>（也可能没有 <code>1</code>）的形式组成的，那么该字符串是 <code>单调递增</code> 的。给你一个二进制字符串 <code>s</code>，你可以将任何 <code>0</code> 翻转为 <code>1</code> 或者将 <code>1</code> 翻转为 <code>0</code>，返回使 <code>s</code> 单调递增的最小翻转次数。</p>
-<pre class="line-numbers language-html"><code class="language-html">Input：s = "00110"
-Output：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>解法一（模拟）：假设下标 <code>i</code> 为递增字符串中字符 <code>0</code> 和字符 <code>1</code> 的分界线，即下标位于 <code>[0, i - 1]</code> 的所有字符均为 <code>0</code>，之后的所有字符均为 <code>1</code>，<code>i</code> 可能是 <code>0</code> 到 <code>s.length() - 1</code> 的任何值。在字符串 <code>s</code> 中，计算从下标 <code>0</code> 到下标 <code>i - 1</code> 的所有字符 <code>0</code> 的个数，记为 <code>count0</code>；计算从下标 <code>i</code> 到下标 <code>s.length() - 1</code> 的所有字符 <code>1</code> 的个数，记为 <code>count1</code>。<code>s.length() - count0 - count1</code> 就是需要翻转的次数，通过比较 <code>i</code> 取不同值时的次数便可得出答案。</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minFlipsMonoIncr</span><span class="token punctuation">(</span>String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> n <span class="token operator">=</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> countsZero <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> countsOne <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> count0 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> count1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            count0<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>n <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'1'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            count1<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        countsZero<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> count0<span class="token punctuation">;</span>
-        countsOne<span class="token punctuation">[</span>n <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> count1<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">int</span> ans <span class="token operator">=</span> n<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        ans <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span> n <span class="token operator">-</span> countsZero<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> countsOne<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>时间复杂度：<code>O(n)</code>，空间复杂度：<code>O(n)</code>。</p>
-<p>解法二（动态规划）：令 <code>dp[i]</code> 表示将子串 <code>s[0 : i]</code>转化为递增子串所需的翻转次数，如果 <code>s[i]</code> 为 <code>1</code>，那么该字符不会影响翻转次数，即 <code>dp[i] = dp[i - 1]</code>。若 <code>s[i]</code> 为 <code>0</code>，则需要分两种情况：</p>
-<ol>
-<li><p>将 <code>s[i]</code> 由 <code>0</code> 翻转到 <code>1</code>。</p>
-</li>
-<li><p>将子串 <code>s[0 : i - 1]</code> 中的所有 <code>1</code> 翻转到 <code>0</code>。</p>
-</li>
-</ol>
-<p><code>dp[i]</code> 为两种情况取较小值，故有 <code>dp[i] = min{dp[i - 1] + 1, oneCount}</code>，因此我们需要记录字符 <code>1</code> 的数量。</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minFlipsMonoIncr</span><span class="token punctuation">(</span>String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> dp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'1'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token operator">++</span>cnt<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            dp <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>dp <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> cnt<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> dp<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>时间复杂度：<code>O(n)</code>，空间复杂度：<code>O(1)</code>。</p>
+                <h2 id="仓库简介"><a href="#仓库简介" class="headerlink" title="仓库简介"></a>仓库简介</h2><p>🎓本人毕业于<a href="https://www.bupt.edu.cn/" target="_blank" rel="noopener">北京邮电大学</a>信息与通信工程学院，研二下半学期自学转码，作为 “半路出家” 的非科班程序员，我深切体会到了扎实基础的重要性，故打算利用空闲时间维护一个 Git 仓库来记录后端开发的常用知识点，该仓库涵盖了 Java 编程、计网、操作系统、数据库、框架、中间件、数据结构与算法等相关内容，希望对大家有所帮助。</p>
+<h2 id="仓库地址"><a href="#仓库地址" class="headerlink" title="仓库地址"></a>仓库地址</h2><p>😁欢迎访问：<a href="https://johnlearning.gitee.io/" target="_blank" rel="noopener">JohnLearning</a>📚。</p>
 
             </div>
             <hr />
@@ -653,9 +606,9 @@ Output：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《动态规划算法题解》
+                    《后端开发知识点合集》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/leetcode-shua-ti-bi-ji.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/0637666.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 John同学
             </a> 采用
@@ -836,7 +789,60 @@ Output：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/jian-dan-zhi-shi-dian-bei-wang.html">
+                <a href="/2020/0632512.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/29.jpg" class="responsive-img" alt="Git 常用指令（持续更新）">
+                        
+                        <span class="card-title">Git 常用指令（持续更新）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Git 是目前最流行的版本控制工具，熟练使用 Git 是每个程序员必备的技能。奈何自己非科班出身，对 Git 的使用少之又少，因此撰写本篇博文来记录常用的 Git 指令，以作备忘。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/工具使用/" class="post-category" target="_blank">
+                                    工具使用
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/后端/" target="_blank">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
+                    <a href="/tags/Git/" target="_blank">
+                        <span class="chip bg-color">Git</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/0660486.html">
                     <div class="card-image">
                         
                         
@@ -852,9 +858,9 @@ Output：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -876,60 +882,6 @@ Output：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                     
                     <a href="/tags/知识点/" target="_blank">
                         <span class="chip bg-color">知识点</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/leetcode-shua-ti-bi-ji.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="动态规划算法题解">
-                        
-                        <span class="card-title">动态规划算法题解</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            本文涵盖了 Java 语言的常见知识点，包括 Java 的基本语法、数据类型、数据结构、面向对象的相关理论、多线程编程、垃圾回收机制、I/O 流等。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-11
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/LeetCode/" target="_blank">
-                        <span class="chip bg-color">LeetCode</span>
                     </a>
                     
                 </div>

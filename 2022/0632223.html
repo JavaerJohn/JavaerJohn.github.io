@@ -4,11 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="简单知识点备忘, 每天进步一点点！">
+    <meta name="keywords" content="FastJson、JackJson 以及 Gson 的区别, 每天进步一点点！">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="带宽的单位是 Hz 还是 bps 严格来讲带宽的单位确实是 Hz，带宽指的是介质能够传输的信号的频带范围，所以其单位为赫兹（Hz），Hz 通常在模拟通信系统中（传输波形信号）使用。实际应用中，介质的带宽值和单位时间内传输的数据量（即速率，b">
+    <meta name="description" content="基本介绍FastJson、JackJson 以及 Gson 是 Java 生态圈中三种常用的 Json 解析器，它们均可将 Java 对象序列化为 Json 格式的字符串，也可将 Json 字符串反序列化为 Java 对象。下面我们讨论一下">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>简单知识点备忘 | John&#39;s Blog</title>
+    <title>FastJson、JackJson 以及 Gson 的区别 | John&#39;s Blog</title>
 
     <!-- <link rel="icon" href="#">  --> 
     <link rel="icon" type="image/png" href="https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/hexo/favicon.png">
@@ -303,14 +303,14 @@
 
 
 
-<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')"> -->
+<!-- <div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')"> -->
 <div class="bg-cover pd-header post-cover">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="center-align post-title">
-                        简单知识点备忘
+                        FastJson、JackJson 以及 Gson 的区别
                     </div>
                 </div>
             </div>
@@ -425,8 +425,12 @@
                             <span class="chip bg-color">后端</span>
                         </a>
                         
-                        <a href="/tags/知识点/" target="_blank">
-                            <span class="chip bg-color">知识点</span>
+                        <a href="/tags/Json/" target="_blank">
+                            <span class="chip bg-color">Json</span>
+                        </a>
+                        
+                        <a href="/tags/Java/" target="_blank">
+                            <span class="chip bg-color">Java</span>
                         </a>
                         
                     </div>
@@ -437,8 +441,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/杂记/" class="post-category" target="_blank">
-                            杂记
+                        <a href="/categories/随笔/" class="post-category" target="_blank">
+                            随笔
                         </a>
                         
                     </div>
@@ -449,7 +453,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-12
+                    2022-06-01
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -463,14 +467,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    200
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
                 
@@ -486,7 +490,132 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="带宽的单位是-Hz-还是-bps"><a href="#带宽的单位是-Hz-还是-bps" class="headerlink" title="带宽的单位是 Hz 还是 bps"></a>带宽的单位是 Hz 还是 bps</h2><p> 严格来讲带宽的单位确实是 Hz，带宽指的是介质能够传输的信号的频带范围，所以其单位为赫兹（Hz），Hz 通常在模拟通信系统中（传输波形信号）使用。实际应用中，介质的带宽值和单位时间内传输的数据量（即速率，bps）是有一定比例关系的，就像马路的宽度和通过的车的数量有关系一样，bps 通常在数字通信系统中（传输数字信号）使用。另外，现在的模拟系统通过调制技术也可以传输数字信号，因此现在基本上都是用 bps 来描述带宽，以此来表明信道的数据的传输能力。</p>
+                <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>FastJson、JackJson 以及 Gson 是 Java 生态圈中三种常用的 Json 解析器，它们均可将 Java 对象序列化为 Json 格式的字符串，也可将 Json 字符串反序列化为 Java 对象。下面我们讨论一下三者在序列化和反序列化操作中的一些区别。 </p>
+<blockquote>
+<p>Spring Boot 默认使用 JackJson 作为 Json 解析器。 </p>
+</blockquote>
+<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>FastJson 和 JackJson 会根据 getter 方法（如 getXXX）或 is 方法（如 isXXX）获取属性名（XXX），然后调用 getter 方法或 is 方法获取属性值，最终将属性和属性值添加到 Json 字符串中。而 Gson 则是通过遍历实体类中的所有属性并直接获取属性值（未调用 getter 方法）来完成序列化操作。</p>
+<blockquote>
+<p>isXXX 方法生效的前提条件是其返回值的类型为 boolean 或 Boolean。</p>
+</blockquote>
+<p>引入 FashJson 和 Gson 的依赖：</p>
+<pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>fastjson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.2.58<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.google.code.gson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>gson<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.8.9<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>创建实体类 User：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> Integer id<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setId</span><span class="token punctuation">(</span>Integer id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>测试：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> JsonProcessingException <span class="token punctuation">{</span>
+        User user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        user<span class="token punctuation">.</span><span class="token function">setId</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        user<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"John同学"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// FastJson 序列化</span>
+        String json1 <span class="token operator">=</span> JSONObject<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"FastJson 解析结果: "</span> <span class="token operator">+</span> json1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// Gson 序列化</span>
+        Gson gson <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String json2 <span class="token operator">=</span> gson<span class="token punctuation">.</span><span class="token function">toJson</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Gson 解析结果: "</span> <span class="token operator">+</span> json2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// JackJson 序列化</span>
+        ObjectMapper objectMapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String json3 <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"JackJson 解析结果: "</span> <span class="token operator">+</span> json3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>测试结果：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: <span class="token punctuation">{</span><span class="token punctuation">}</span>
+Gson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span><span class="token punctuation">}</span>
+Exception <span class="token keyword">in</span> thread <span class="token string">"main"</span> com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found <span class="token keyword">for</span> class com.example.test.User and no properties discovered to create BeanSerializer <span class="token punctuation">(</span>to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>在 User 类中，我们并未添加任何的 getter 方法，因此 FastJson 返回了一个 “空串”。由于 Gson 不依赖 getter，所以它可以解析出完整的属性以及属性值。默认情况下，若 JackJson 未获取到任何属性（通过 getter 方法），那么程序将抛出异常。根据提示，我们可以通过关闭 <code>SerializationFeature.FAIL_ON_EMPTY_BEANS</code> 来忽略该异常。</p>
+<p>关闭 <code>SerializationFeature.FAIL_ON_EMPTY_BEANS</code>：</p>
+<pre class="line-numbers language-java"><code class="language-java">ObjectMapper objectMapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+objectMapper<span class="token punctuation">.</span><span class="token function">disable</span><span class="token punctuation">(</span>SerializationFeature<span class="token punctuation">.</span>FAIL_ON_EMPTY_BEANS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+String json3 <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"JackJson 解析结果: "</span> <span class="token operator">+</span> json3<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>测试结果：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: <span class="token punctuation">{</span><span class="token punctuation">}</span>
+Gson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span><span class="token punctuation">}</span>
+JackJson 解析结果: <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>下面我们为 User 类添加 getter 方法和 is 方法，再次测试序列化操作：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isRemoved</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> Integer <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>测试结果：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span>,<span class="token string">"removed"</span>:false<span class="token punctuation">}</span>
+Gson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span><span class="token punctuation">}</span>
+JackJson 解析结果: <span class="token punctuation">{</span><span class="token string">"id"</span>:1,<span class="token string">"name"</span><span class="token keyword">:</span><span class="token string">"John同学"</span>,<span class="token string">"removed"</span>:false<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>可见，FashJson 和 JackJson 均解析出了 removed 属性，虽然该属性并未在 User 类中定义，但由于我们添加了 isRemoved 方法且该方法的返回值类型为 boolean，因此 removed 会出现在 Json 串中。反观 Gson，其仅会将 User 类中定义的属性进行序列化。</p>
+<h2 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化"></a>反序列化</h2><p>FastJson 和 JackJson 会根据 Json 字符串中的属性，在实体类中查找对应的 setter 方法来为该属性赋值。若未查找到属性对应的 setter 方法，那么 FastJson 会忽略该属性，Jackson 则会抛出异常。相比之下，Gson 会根据 Json 串中的属性以及属性值来填充实体类中对应的属性。</p>
+<p>测试：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> JsonProcessingException <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// FastJson 反序列化</span>
+        String json <span class="token operator">=</span> <span class="token string">"{\"id\":1,\"name\":\"John同学\",\"removed\":false}"</span><span class="token punctuation">;</span>
+        User user1 <span class="token operator">=</span> JSONObject<span class="token punctuation">.</span><span class="token function">parseObject</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"FastJson 解析结果: "</span> <span class="token operator">+</span> user1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// Gson 反序列化</span>
+        Gson gson <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        User user2 <span class="token operator">=</span> gson<span class="token punctuation">.</span><span class="token function">fromJson</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Gson 解析结果: "</span> <span class="token operator">+</span> user2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// JackJson 反序列化</span>
+        ObjectMapper objectMapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        User user3 <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">readValue</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"JackJson 解析结果: "</span> <span class="token operator">+</span> user3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>测试结果：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
+Gson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
+Exception <span class="token keyword">in</span> thread <span class="token string">"main"</span> com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field <span class="token string">"removed"</span> <span class="token punctuation">(</span>class com.example.test.User<span class="token punctuation">)</span>, not marked as ignorable <span class="token punctuation">(</span>2 known properties: <span class="token string">"id"</span>, <span class="token string">"name"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>上述代码中，我们在 Json 串中添加了一个 User 类中没有的属性，即 removed。FastJson 和 Gson 均会将该属性忽略，而 JackJson 则抛出了异常，该异常提示 “removed 为不能识别的属性”。当然，我们也可以通过配置 ObjectMapper 来忽略该异常：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// JackJson 反序列化</span>
+ObjectMapper objectMapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+objectMapper<span class="token punctuation">.</span><span class="token function">configure</span><span class="token punctuation">(</span>DeserializationFeature<span class="token punctuation">.</span>FAIL_ON_UNKNOWN_PROPERTIES<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+User user3 <span class="token operator">=</span> objectMapper<span class="token punctuation">.</span><span class="token function">readValue</span><span class="token punctuation">(</span>json<span class="token punctuation">,</span> User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"JackJson 解析结果: "</span> <span class="token operator">+</span> user3<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>测试结果：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
+Gson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
+JackJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>虽然 FastJson 和 JackJson 在反序列化时均会依赖 setter 方法，但二者之间也存在一些区别。如果我们在实体类中未添加某个属性的 setter 方法，那么 FastJson 将不会为该属性赋值，而 JackJson 则会进一步查找同名的属性，接着完成赋值操作。下面我们注释掉 User 类中的 setName 方法：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//    public void setName(String name) {</span>
+<span class="token comment" spellcheck="true">//        this.name = name;</span>
+<span class="token comment" spellcheck="true">//    }</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>再次测试反序列化操作：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">FastJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'null'</span><span class="token punctuation">}</span>
+Gson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span>
+JackJson 解析结果: User<span class="token punctuation">{</span>id<span class="token operator">=</span>1, name<span class="token operator">=</span><span class="token string">'John同学'</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -605,9 +734,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《简单知识点备忘》
+                    《FastJson、JackJson 以及 Gson 的区别》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/jian-dan-zhi-shi-dian-bei-wang.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2022/0632223.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 John同学
             </a> 采用
@@ -784,41 +913,43 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/hou-duan-kai-fa-zhi-shi-dian-he-ji.html">
+                <a href="/2022/0632223.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="后端开发知识点合集">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="FastJson、JackJson 以及 Gson 的区别">
                         
-                        <span class="card-title">后端开发知识点合集</span>
+                        <span class="card-title">FastJson、JackJson 以及 Gson 的区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            John 同学的后端开发知识体系，涵盖了 Java 编程、计网、操作系统、数据库、框架、中间件、数据结构与算法等相关内容。
+                            FastJson、JackJson 以及 Gson 是 Java 生态圈中三种常用的 Json 解析器，它们均可将 Java 对象序列化为 Json 格式的字符串，也可将 Json 字符串反序列化为 Java 对象。下面我们讨论一下三者在序列化和反序列化操作中的一些区别。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-06-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/后端/" class="post-category" target="_blank">
-                                    后端
+                            <a href="/categories/随笔/" class="post-category" target="_blank">
+                                    随笔
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -826,8 +957,12 @@
                         <span class="chip bg-color">后端</span>
                     </a>
                     
-                    <a href="/tags/开发/" target="_blank">
-                        <span class="chip bg-color">开发</span>
+                    <a href="/tags/Json/" target="_blank">
+                        <span class="chip bg-color">Json</span>
+                    </a>
+                    
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
@@ -841,31 +976,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/leetcode-shua-ti-bi-ji.html">
+                <a href="/2022/054508.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="动态规划算法题解">
+                        <img src="/medias/featureimages/74.jpg" class="responsive-img" alt="聊一聊过滤器与拦截器">
                         
-                        <span class="card-title">动态规划算法题解</span>
+                        <span class="card-title">聊一聊过滤器与拦截器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文涵盖了 Java 语言的常见知识点，包括 Java 的基本语法、数据类型、数据结构、面向对象的相关理论、多线程编程、垃圾回收机制、I/O 流等。
+                            过滤器 Filter 和拦截器 Interceptor 是 Web 开发中常用的两个组件，二者主要用于对客户端的请求和响应做自定义的预处理和后处理，本文主要介绍 Filter 和 Interceptor 的实现原理、创建过程、应用场景以及主要区别。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-05-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
+                            <a href="/categories/技术学习/" class="post-category" target="_blank">
+                                    技术学习
                                 </a>
                             
                             
@@ -879,8 +1014,8 @@
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/LeetCode/" target="_blank">
-                        <span class="chip bg-color">LeetCode</span>
+                    <a href="/tags/Web/" target="_blank">
+                        <span class="chip bg-color">Web</span>
                     </a>
                     
                 </div>
