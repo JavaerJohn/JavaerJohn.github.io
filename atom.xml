@@ -5,9 +5,9 @@
   <subtitle>John同学的Blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://mrjohnzh.github.io.git/"/>
-  <updated>2022-06-01T15:25:52.301Z</updated>
-  <id>https://mrjohnzh.github.io.git/</id>
+  <link href="http://www.johnlearning.cn/"/>
+  <updated>2022-06-27T07:47:39.384Z</updated>
+  <id>http://www.johnlearning.cn/</id>
   
   <author>
     <name>John同学</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>FastJson、JackJson 以及 Gson 的区别</title>
-    <link href="https://mrjohnzh.github.io.git/fastjson-jackjson-yi-ji-gson-de-qu-bie.html"/>
-    <id>https://mrjohnzh.github.io.git/fastjson-jackjson-yi-ji-gson-de-qu-bie.html</id>
+    <link href="http://www.johnlearning.cn/fastjson-jackjson-yi-ji-gson-de-qu-bie.html"/>
+    <id>http://www.johnlearning.cn/fastjson-jackjson-yi-ji-gson-de-qu-bie.html</id>
     <published>2022-06-01T15:22:15.000Z</published>
-    <updated>2022-06-01T15:25:52.301Z</updated>
+    <updated>2022-06-27T07:47:39.384Z</updated>
     
     <summary type="html">
     
@@ -35,23 +35,23 @@
     
     </summary>
     
-      <category term="随笔" scheme="https://mrjohnzh.github.io.git/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://www.johnlearning.cn/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="Json" scheme="http://www.johnlearning.cn/tags/Json/"/>
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
-      <category term="Json" scheme="https://mrjohnzh.github.io.git/tags/Json/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>聊一聊过滤器与拦截器</title>
-    <link href="https://mrjohnzh.github.io.git/liao-yi-liao-guo-lu-qi-yu-lan-jie-qi.html"/>
-    <id>https://mrjohnzh.github.io.git/liao-yi-liao-guo-lu-qi-yu-lan-jie-qi.html</id>
+    <link href="http://www.johnlearning.cn/liao-yi-liao-guo-lu-qi-yu-lan-jie-qi.html"/>
+    <id>http://www.johnlearning.cn/liao-yi-liao-guo-lu-qi-yu-lan-jie-qi.html</id>
     <published>2022-05-11T04:05:21.000Z</published>
-    <updated>2022-06-05T08:30:54.482Z</updated>
+    <updated>2022-06-27T07:47:39.429Z</updated>
     
     <summary type="html">
     
@@ -65,21 +65,21 @@
     
     </summary>
     
-      <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="技术学习" scheme="http://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
-      <category term="Web" scheme="https://mrjohnzh.github.io.git/tags/Web/"/>
+      <category term="Web" scheme="http://www.johnlearning.cn/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>MVC 和三层架构</title>
-    <link href="https://mrjohnzh.github.io.git/mvc-he-san-ceng-jia-gou.html"/>
-    <id>https://mrjohnzh.github.io.git/mvc-he-san-ceng-jia-gou.html</id>
+    <link href="http://www.johnlearning.cn/mvc-he-san-ceng-jia-gou.html"/>
+    <id>http://www.johnlearning.cn/mvc-he-san-ceng-jia-gou.html</id>
     <published>2022-05-02T04:13:31.000Z</published>
-    <updated>2022-06-05T08:34:17.007Z</updated>
+    <updated>2022-06-27T07:47:39.391Z</updated>
     
     <summary type="html">
     
@@ -93,21 +93,21 @@
     
     </summary>
     
-      <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="技术学习" scheme="http://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
-      <category term="Web" scheme="https://mrjohnzh.github.io.git/tags/Web/"/>
+      <category term="Web" scheme="http://www.johnlearning.cn/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>Java 语言实现简易版扫码登录</title>
-    <link href="https://mrjohnzh.github.io.git/java-yu-yan-shi-xian-jian-yi-sao-ma-deng-lu.html"/>
-    <id>https://mrjohnzh.github.io.git/java-yu-yan-shi-xian-jian-yi-sao-ma-deng-lu.html</id>
+    <link href="http://www.johnlearning.cn/java-yu-yan-shi-xian-jian-yi-sao-ma-deng-lu.html"/>
+    <id>http://www.johnlearning.cn/java-yu-yan-shi-xian-jian-yi-sao-ma-deng-lu.html</id>
     <published>2022-04-10T01:03:45.000Z</published>
-    <updated>2022-05-29T04:19:54.127Z</updated>
+    <updated>2022-06-27T07:47:39.387Z</updated>
     
     <summary type="html">
     
@@ -121,23 +121,23 @@
     
     </summary>
     
-      <category term="系统设计" scheme="https://mrjohnzh.github.io.git/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+      <category term="系统设计" scheme="http://www.johnlearning.cn/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
+      <category term="Spring Boot" scheme="http://www.johnlearning.cn/tags/Spring-Boot/"/>
     
   </entry>
   
   <entry>
     <title>利用 Nginx 实现动静分离</title>
-    <link href="https://mrjohnzh.github.io.git/nginx-shi-xian-dong-jing-fen-chi.html"/>
-    <id>https://mrjohnzh.github.io.git/nginx-shi-xian-dong-jing-fen-chi.html</id>
+    <link href="http://www.johnlearning.cn/nginx-shi-xian-dong-jing-fen-chi.html"/>
+    <id>http://www.johnlearning.cn/nginx-shi-xian-dong-jing-fen-chi.html</id>
     <published>2022-03-31T07:35:29.000Z</published>
-    <updated>2022-06-05T08:33:23.241Z</updated>
+    <updated>2022-06-27T07:47:39.397Z</updated>
     
     <summary type="html">
     
@@ -151,21 +151,21 @@
     
     </summary>
     
-      <category term="计算机网络" scheme="https://mrjohnzh.github.io.git/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://www.johnlearning.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="Nginx" scheme="https://mrjohnzh.github.io.git/tags/Nginx/"/>
+      <category term="Nginx" scheme="http://www.johnlearning.cn/tags/Nginx/"/>
     
-      <category term="计网" scheme="https://mrjohnzh.github.io.git/tags/%E8%AE%A1%E7%BD%91/"/>
+      <category term="计网" scheme="http://www.johnlearning.cn/tags/%E8%AE%A1%E7%BD%91/"/>
     
   </entry>
   
   <entry>
     <title>Nginx 快速入门</title>
-    <link href="https://mrjohnzh.github.io.git/nginx-kuai-su-ru-men.html"/>
-    <id>https://mrjohnzh.github.io.git/nginx-kuai-su-ru-men.html</id>
+    <link href="http://www.johnlearning.cn/nginx-kuai-su-ru-men.html"/>
+    <id>http://www.johnlearning.cn/nginx-kuai-su-ru-men.html</id>
     <published>2022-03-27T03:13:31.000Z</published>
-    <updated>2022-06-05T08:24:50.922Z</updated>
+    <updated>2022-06-27T07:47:39.423Z</updated>
     
     <summary type="html">
     
@@ -179,21 +179,21 @@
     
     </summary>
     
-      <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="技术学习" scheme="http://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Nginx" scheme="https://mrjohnzh.github.io.git/tags/Nginx/"/>
+      <category term="Nginx" scheme="http://www.johnlearning.cn/tags/Nginx/"/>
     
-      <category term="计网" scheme="https://mrjohnzh.github.io.git/tags/%E8%AE%A1%E7%BD%91/"/>
+      <category term="计网" scheme="http://www.johnlearning.cn/tags/%E8%AE%A1%E7%BD%91/"/>
     
   </entry>
   
   <entry>
     <title>MyBatis 实现分页查询的三种方式</title>
-    <link href="https://mrjohnzh.github.io.git/mybatis-fen-ye-cha-xun.html"/>
-    <id>https://mrjohnzh.github.io.git/mybatis-fen-ye-cha-xun.html</id>
+    <link href="http://www.johnlearning.cn/mybatis-fen-ye-cha-xun.html"/>
+    <id>http://www.johnlearning.cn/mybatis-fen-ye-cha-xun.html</id>
     <published>2022-03-19T03:23:32.000Z</published>
-    <updated>2022-05-29T03:24:11.801Z</updated>
+    <updated>2022-06-27T07:47:39.389Z</updated>
     
     <summary type="html">
     
@@ -207,25 +207,25 @@
     
     </summary>
     
-      <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="技术学习" scheme="http://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
+      <category term="Spring Boot" scheme="http://www.johnlearning.cn/tags/Spring-Boot/"/>
     
-      <category term="MyBatis" scheme="https://mrjohnzh.github.io.git/tags/MyBatis/"/>
+      <category term="MyBatis" scheme="http://www.johnlearning.cn/tags/MyBatis/"/>
     
   </entry>
   
   <entry>
     <title>MyBatis 动态 SQL</title>
-    <link href="https://mrjohnzh.github.io.git/mybatis-shi-xian-dong-tai-sql.html"/>
-    <id>https://mrjohnzh.github.io.git/mybatis-shi-xian-dong-tai-sql.html</id>
+    <link href="http://www.johnlearning.cn/mybatis-shi-xian-dong-tai-sql.html"/>
+    <id>http://www.johnlearning.cn/mybatis-shi-xian-dong-tai-sql.html</id>
     <published>2022-03-18T04:40:03.000Z</published>
-    <updated>2022-05-24T07:19:26.342Z</updated>
+    <updated>2022-06-27T07:47:39.395Z</updated>
     
     <summary type="html">
     
@@ -239,25 +239,25 @@
     
     </summary>
     
-      <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="技术学习" scheme="http://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
+      <category term="Spring Boot" scheme="http://www.johnlearning.cn/tags/Spring-Boot/"/>
     
-      <category term="MyBatis" scheme="https://mrjohnzh.github.io.git/tags/MyBatis/"/>
+      <category term="MyBatis" scheme="http://www.johnlearning.cn/tags/MyBatis/"/>
     
   </entry>
   
   <entry>
     <title>MyBatis 结果映射总结</title>
-    <link href="https://mrjohnzh.github.io.git/mybatis-jie-guo-ji-ying-she-zong-jie.html"/>
-    <id>https://mrjohnzh.github.io.git/mybatis-jie-guo-ji-ying-she-zong-jie.html</id>
+    <link href="http://www.johnlearning.cn/mybatis-jie-guo-ji-ying-she-zong-jie.html"/>
+    <id>http://www.johnlearning.cn/mybatis-jie-guo-ji-ying-she-zong-jie.html</id>
     <published>2022-03-17T02:32:43.000Z</published>
-    <updated>2022-06-05T08:32:18.793Z</updated>
+    <updated>2022-06-27T07:47:39.399Z</updated>
     
     <summary type="html">
     
@@ -271,25 +271,25 @@
     
     </summary>
     
-      <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="技术学习" scheme="http://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
+      <category term="Spring Boot" scheme="http://www.johnlearning.cn/tags/Spring-Boot/"/>
     
-      <category term="MyBatis" scheme="https://mrjohnzh.github.io.git/tags/MyBatis/"/>
+      <category term="MyBatis" scheme="http://www.johnlearning.cn/tags/MyBatis/"/>
     
   </entry>
   
   <entry>
     <title>Spring Boot 整合 MyBatis</title>
-    <link href="https://mrjohnzh.github.io.git/springboot-zheng-he-mybatis.html"/>
-    <id>https://mrjohnzh.github.io.git/springboot-zheng-he-mybatis.html</id>
+    <link href="http://www.johnlearning.cn/springboot-zheng-he-mybatis.html"/>
+    <id>http://www.johnlearning.cn/springboot-zheng-he-mybatis.html</id>
     <published>2022-03-17T02:32:43.000Z</published>
-    <updated>2022-06-05T08:34:03.959Z</updated>
+    <updated>2022-06-27T07:47:39.426Z</updated>
     
     <summary type="html">
     
@@ -303,25 +303,25 @@
     
     </summary>
     
-      <category term="技术学习" scheme="https://mrjohnzh.github.io.git/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="技术学习" scheme="http://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="Spring Boot" scheme="https://mrjohnzh.github.io.git/tags/Spring-Boot/"/>
+      <category term="Spring Boot" scheme="http://www.johnlearning.cn/tags/Spring-Boot/"/>
     
-      <category term="MyBatis" scheme="https://mrjohnzh.github.io.git/tags/MyBatis/"/>
+      <category term="MyBatis" scheme="http://www.johnlearning.cn/tags/MyBatis/"/>
     
   </entry>
   
   <entry>
     <title>Git 常用指令（持续更新）</title>
-    <link href="https://mrjohnzh.github.io.git/git-chang-yong-zhi-ling.html"/>
-    <id>https://mrjohnzh.github.io.git/git-chang-yong-zhi-ling.html</id>
+    <link href="http://www.johnlearning.cn/git-chang-yong-zhi-ling.html"/>
+    <id>http://www.johnlearning.cn/git-chang-yong-zhi-ling.html</id>
     <published>2020-06-23T13:53:45.000Z</published>
-    <updated>2022-06-26T11:33:13.155Z</updated>
+    <updated>2022-06-27T07:47:39.374Z</updated>
     
     <summary type="html">
     
@@ -335,21 +335,21 @@
     
     </summary>
     
-      <category term="工具使用" scheme="https://mrjohnzh.github.io.git/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+      <category term="工具使用" scheme="http://www.johnlearning.cn/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="Git" scheme="https://mrjohnzh.github.io.git/tags/Git/"/>
+      <category term="Git" scheme="http://www.johnlearning.cn/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>后端开发知识点合集</title>
-    <link href="https://mrjohnzh.github.io.git/hou-duan-kai-fa-zhi-shi-dian-he-ji.html"/>
-    <id>https://mrjohnzh.github.io.git/hou-duan-kai-fa-zhi-shi-dian-he-ji.html</id>
+    <link href="http://www.johnlearning.cn/hou-duan-kai-fa-zhi-shi-dian-he-ji.html"/>
+    <id>http://www.johnlearning.cn/hou-duan-kai-fa-zhi-shi-dian-he-ji.html</id>
     <published>2020-06-05T08:10:23.000Z</published>
-    <updated>2022-06-27T02:06:51.822Z</updated>
+    <updated>2022-06-27T07:47:39.428Z</updated>
     
     <summary type="html">
     
@@ -363,21 +363,21 @@
     
     </summary>
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/categories/%E5%90%8E%E7%AB%AF/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="开发" scheme="https://mrjohnzh.github.io.git/tags/%E5%BC%80%E5%8F%91/"/>
+      <category term="开发" scheme="http://www.johnlearning.cn/tags/%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
   <entry>
     <title>简单知识点备忘</title>
-    <link href="https://mrjohnzh.github.io.git/jian-dan-zhi-shi-dian-bei-wang.html"/>
-    <id>https://mrjohnzh.github.io.git/jian-dan-zhi-shi-dian-bei-wang.html</id>
+    <link href="http://www.johnlearning.cn/jian-dan-zhi-shi-dian-bei-wang.html"/>
+    <id>http://www.johnlearning.cn/jian-dan-zhi-shi-dian-bei-wang.html</id>
     <published>2019-06-12T11:30:31.000Z</published>
-    <updated>2022-06-26T11:33:35.675Z</updated>
+    <updated>2022-06-27T07:47:39.424Z</updated>
     
     <summary type="html">
     
@@ -391,21 +391,21 @@
     
     </summary>
     
-      <category term="杂记" scheme="https://mrjohnzh.github.io.git/categories/%E6%9D%82%E8%AE%B0/"/>
+      <category term="杂记" scheme="http://www.johnlearning.cn/categories/%E6%9D%82%E8%AE%B0/"/>
     
     
-      <category term="后端" scheme="https://mrjohnzh.github.io.git/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="知识点" scheme="https://mrjohnzh.github.io.git/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="知识点" scheme="http://www.johnlearning.cn/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
   </entry>
   
   <entry>
     <title>动态规划算法题解</title>
-    <link href="https://mrjohnzh.github.io.git/leetcode-shua-ti-bi-ji.html"/>
-    <id>https://mrjohnzh.github.io.git/leetcode-shua-ti-bi-ji.html</id>
+    <link href="http://www.johnlearning.cn/leetcode-shua-ti-bi-ji.html"/>
+    <id>http://www.johnlearning.cn/leetcode-shua-ti-bi-ji.html</id>
     <published>2019-06-11T02:48:34.000Z</published>
-    <updated>2022-06-11T04:01:11.725Z</updated>
+    <updated>2022-06-27T07:47:39.392Z</updated>
     
     <summary type="html">
     
@@ -419,12 +419,12 @@
     
     </summary>
     
-      <category term="算法" scheme="https://mrjohnzh.github.io.git/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://www.johnlearning.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="LeetCode" scheme="https://mrjohnzh.github.io.git/tags/LeetCode/"/>
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
-      <category term="Java" scheme="https://mrjohnzh.github.io.git/tags/Java/"/>
+      <category term="LeetCode" scheme="http://www.johnlearning.cn/tags/LeetCode/"/>
     
   </entry>
   
