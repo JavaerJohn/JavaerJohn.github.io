@@ -40,9 +40,9 @@
     
       <category term="后端" scheme="http://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="Json" scheme="http://www.johnlearning.cn/tags/Json/"/>
-    
       <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="Json" scheme="http://www.johnlearning.cn/tags/Json/"/>
     
   </entry>
   
@@ -422,9 +422,9 @@
       <category term="算法" scheme="http://www.johnlearning.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
-    
       <category term="LeetCode" scheme="http://www.johnlearning.cn/tags/LeetCode/"/>
+    
+      <category term="Java" scheme="http://www.johnlearning.cn/tags/Java/"/>
     
   </entry>
   
