@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>John&#39;s Blog</title>
+  
+  <subtitle>John同学的Blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.johnlearning.cn/"/>
+  <updated>2022-06-27T07:47:39.384Z</updated>
+  <id>https://www.johnlearning.cn/</id>
+  
+  <author>
+    <name>John同学</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FastJson、JackJson 以及 Gson 的区别</title>
+    <link href="https://www.johnlearning.cn/2022/0632223.html"/>
+    <id>https://www.johnlearning.cn/2022/0632223.html</id>
+    <published>2022-06-01T15:22:15.000Z</published>
+    <updated>2022-06-27T07:47:39.384Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;基本介绍&quot;&gt;&lt;a href=&quot;#基本介绍&quot; class=&quot;headerlink&quot; title=&quot;基本介绍&quot;&gt;&lt;/a&gt;基本介绍&lt;/h2&gt;&lt;p&gt;FastJson、JackJson 以及 Gson 是 Java 生态圈中三种常用的 Json 解析器，它们均可将
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.johnlearning.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="Json" scheme="https://www.johnlearning.cn/tags/Json/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>聊一聊过滤器与拦截器</title>
+    <link href="https://www.johnlearning.cn/2022/054508.html"/>
+    <id>https://www.johnlearning.cn/2022/054508.html</id>
+    <published>2022-05-11T04:05:21.000Z</published>
+    <updated>2022-06-27T07:47:39.429Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;过滤器-Filter&quot;&gt;&lt;a href=&quot;#过滤器-Filter&quot; class=&quot;headerlink&quot; title=&quot;过滤器 Filter&quot;&gt;&lt;/a&gt;过滤器
+        
+      
+    
+    </summary>
+    
+      <category term="技术学习" scheme="https://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="Web" scheme="https://www.johnlearning.cn/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MVC 和三层架构</title>
+    <link href="https://www.johnlearning.cn/2022/051052.html"/>
+    <id>https://www.johnlearning.cn/2022/051052.html</id>
+    <published>2022-05-02T04:13:31.000Z</published>
+    <updated>2022-06-27T07:47:39.391Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;MVC&quot;&gt;&lt;a href=&quot;#MVC&quot; class=&quot;headerlink&quot; title=&quot;MVC&quot;&gt;&lt;/a&gt;MVC&lt;/h2&gt;&lt;p&gt;MVC
+        
+      
+    
+    </summary>
+    
+      <category term="技术学习" scheme="https://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="Web" scheme="https://www.johnlearning.cn/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 语言实现简易版扫码登录</title>
+    <link href="https://www.johnlearning.cn/2022/0410823.html"/>
+    <id>https://www.johnlearning.cn/2022/0410823.html</id>
+    <published>2022-04-10T01:03:45.000Z</published>
+    <updated>2022-06-27T07:47:39.387Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;基本介绍&quot;&gt;&lt;a href=&quot;#基本介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="系统设计" scheme="https://www.johnlearning.cn/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="Spring Boot" scheme="https://www.johnlearning.cn/tags/Spring-Boot/"/>
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用 Nginx 实现动静分离</title>
+    <link href="https://www.johnlearning.cn/2022/032508.html"/>
+    <id>https://www.johnlearning.cn/2022/032508.html</id>
+    <published>2022-03-31T07:35:29.000Z</published>
+    <updated>2022-06-27T07:47:39.397Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;基本介绍&quot;&gt;&lt;a href=&quot;#基本介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="计算机网络" scheme="https://www.johnlearning.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="Nginx" scheme="https://www.johnlearning.cn/tags/Nginx/"/>
+    
+      <category term="计网" scheme="https://www.johnlearning.cn/tags/%E8%AE%A1%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx 快速入门</title>
+    <link href="https://www.johnlearning.cn/2022/0347606.html"/>
+    <id>https://www.johnlearning.cn/2022/0347606.html</id>
+    <published>2022-03-27T03:13:31.000Z</published>
+    <updated>2022-06-27T07:47:39.423Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;基本介绍&quot;&gt;&lt;a href=&quot;#基本介绍&quot; class=&quot;headerlink&quot; title=&quot;基本介绍&quot;&gt;&lt;/a&gt;基本介绍&lt;/h2&gt;&lt;p&gt;Nginx 是一个高性能的 HTTP 和反向代理 Web 服务器，同时它提供了 IMAP、POP3 以及 SMTP
+        
+      
+    
+    </summary>
+    
+      <category term="技术学习" scheme="https://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Nginx" scheme="https://www.johnlearning.cn/tags/Nginx/"/>
+    
+      <category term="计网" scheme="https://www.johnlearning.cn/tags/%E8%AE%A1%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MyBatis 实现分页查询的三种方式</title>
+    <link href="https://www.johnlearning.cn/2022/0318336.html"/>
+    <id>https://www.johnlearning.cn/2022/0318336.html</id>
+    <published>2022-03-19T03:23:32.000Z</published>
+    <updated>2022-06-27T07:47:39.389Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;分页查询是许多网站都具备的一个基本功能，其作用是将查询到的结果集做分页展示，例如每页显示 100
+        
+      
+    
+    </summary>
+    
+      <category term="技术学习" scheme="https://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Spring Boot" scheme="https://www.johnlearning.cn/tags/Spring-Boot/"/>
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="MyBatis" scheme="https://www.johnlearning.cn/tags/MyBatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MyBatis 动态 SQL</title>
+    <link href="https://www.johnlearning.cn/2022/0346848.html"/>
+    <id>https://www.johnlearning.cn/2022/0346848.html</id>
+    <published>2022-03-18T04:40:03.000Z</published>
+    <updated>2022-06-27T07:47:39.395Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;动态 SQL 是 MyBatis 的强大特性之一，它可以根据传入的属性值自动拼接 SQL 语句，同时还可以修正 SQL
+        
+      
+    
+    </summary>
+    
+      <category term="技术学习" scheme="https://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Spring Boot" scheme="https://www.johnlearning.cn/tags/Spring-Boot/"/>
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="MyBatis" scheme="https://www.johnlearning.cn/tags/MyBatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot 整合 MyBatis</title>
+    <link href="https://www.johnlearning.cn/2022/0340561.html"/>
+    <id>https://www.johnlearning.cn/2022/0340561.html</id>
+    <published>2022-03-17T02:32:43.000Z</published>
+    <updated>2022-06-27T07:47:39.426Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;MyBatis-简介&quot;&gt;&lt;a href=&quot;#MyBatis-简介&quot; class=&quot;headerlink&quot; title=&quot;MyBatis 简介&quot;&gt;&lt;/a&gt;MyBatis 简介&lt;/h2&gt;&lt;p&gt;MyBatis 是一款优秀的持久层框架，它支持自定义
+        
+      
+    
+    </summary>
+    
+      <category term="技术学习" scheme="https://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Spring Boot" scheme="https://www.johnlearning.cn/tags/Spring-Boot/"/>
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="MyBatis" scheme="https://www.johnlearning.cn/tags/MyBatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MyBatis 结果映射总结</title>
+    <link href="https://www.johnlearning.cn/2022/036441.html"/>
+    <id>https://www.johnlearning.cn/2022/036441.html</id>
+    <published>2022-03-17T02:32:43.000Z</published>
+    <updated>2022-06-27T07:47:39.399Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;结果映射指的是将数据表中的字段与实体类中的属性关联起来，这样 MyBatis
+        
+      
+    
+    </summary>
+    
+      <category term="技术学习" scheme="https://www.johnlearning.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Spring Boot" scheme="https://www.johnlearning.cn/tags/Spring-Boot/"/>
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="MyBatis" scheme="https://www.johnlearning.cn/tags/MyBatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git 常用指令（持续更新）</title>
+    <link href="https://www.johnlearning.cn/2020/0632512.html"/>
+    <id>https://www.johnlearning.cn/2020/0632512.html</id>
+    <published>2020-06-23T13:53:45.000Z</published>
+    <updated>2022-06-27T07:47:39.374Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;基本介绍&quot;&gt;&lt;a href=&quot;#基本介绍&quot; class=&quot;headerlink&quot; title=&quot;基本介绍&quot;&gt;&lt;/a&gt;基本介绍&lt;/h2&gt;&lt;p&gt;Git 是目前最流行的版本控制工具，熟练使用 Git 是每个程序员必备的技能。奈何自己非科班出身，对 Git
+        
+      
+    
+    </summary>
+    
+      <category term="工具使用" scheme="https://www.johnlearning.cn/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="Git" scheme="https://www.johnlearning.cn/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>后端开发知识点合集</title>
+    <link href="https://www.johnlearning.cn/2020/0637666.html"/>
+    <id>https://www.johnlearning.cn/2020/0637666.html</id>
+    <published>2020-06-05T08:10:23.000Z</published>
+    <updated>2022-06-27T07:47:39.428Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;仓库简介&quot;&gt;&lt;a href=&quot;#仓库简介&quot; class=&quot;headerlink&quot; title=&quot;仓库简介&quot;&gt;&lt;/a&gt;仓库简介&lt;/h2&gt;&lt;p&gt;🎓本人毕业于&lt;a href=&quot;https://www.bupt.edu.cn/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="开发" scheme="https://www.johnlearning.cn/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简单知识点备忘</title>
+    <link href="https://www.johnlearning.cn/2019/0660486.html"/>
+    <id>https://www.johnlearning.cn/2019/0660486.html</id>
+    <published>2019-06-12T11:30:31.000Z</published>
+    <updated>2022-06-27T07:47:39.424Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;带宽的单位是-Hz-还是-bps&quot;&gt;&lt;a href=&quot;#带宽的单位是-Hz-还是-bps&quot; class=&quot;headerlink&quot; title=&quot;带宽的单位是 Hz 还是 bps&quot;&gt;&lt;/a&gt;带宽的单位是 Hz 还是 bps&lt;/h2&gt;&lt;p&gt; 严格来讲带宽的单位确实是
+        
+      
+    
+    </summary>
+    
+      <category term="杂记" scheme="https://www.johnlearning.cn/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="知识点" scheme="https://www.johnlearning.cn/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>动态规划算法题解</title>
+    <link href="https://www.johnlearning.cn/2019/0663066.html"/>
+    <id>https://www.johnlearning.cn/2019/0663066.html</id>
+    <published>2019-06-11T02:48:34.000Z</published>
+    <updated>2022-06-27T07:47:39.392Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;926-将字符串翻转到单调递增（Medium）&quot;&gt;&lt;a href=&quot;#926-将字符串翻转到单调递增（Medium）&quot; class=&quot;headerlink&quot; title=&quot;926. 将字符串翻转到单调递增（Medium）&quot;&gt;&lt;/a&gt;926.
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://www.johnlearning.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="LeetCode" scheme="https://www.johnlearning.cn/tags/LeetCode/"/>
+    
+  </entry>
+  
+</feed>
