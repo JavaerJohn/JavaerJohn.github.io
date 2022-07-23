@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as r,a,b as c}from"./app.fc9783e2.js";const _={},o=a("h1",{id:"java-\u5E76\u53D1",tabindex:"-1"},[a("a",{class:"header-anchor",href:"#java-\u5E76\u53D1","aria-hidden":"true"},"#"),c(" Java \u5E76\u53D1")],-1),s=[o];function n(d,i){return t(),r("div",null,s)}var l=e(_,[["render",n],["__file","Java\u5E76\u53D1.html.vue"]]);export{l as default};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-4da16f72","path":"/guide/%E7%AE%97%E6%B3%95/DFS&BFS.html","title":"DFS&BFS","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"filePathRelative":"guide/\u7B97\u6CD5/DFS&BFS.md","git":{}}');export{e as data};

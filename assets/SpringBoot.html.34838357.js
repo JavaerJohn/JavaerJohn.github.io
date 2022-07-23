@@ -1,0 +1,1 @@
+import{_ as o,o as t,c as r,a as e,b as a}from"./app.fc9783e2.js";const n={},s=e("h1",{id:"spring-boot",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#spring-boot","aria-hidden":"true"},"#"),a(" Spring Boot")],-1),c=[s];function i(_,d){return t(),r("div",null,c)}var l=o(n,[["render",i],["__file","SpringBoot.html.vue"]]);export{l as default};
