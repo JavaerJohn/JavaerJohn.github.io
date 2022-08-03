@@ -40,9 +40,9 @@
     
       <category term="后端" scheme="https://www.johnlearning.cn/tags/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
-    
       <category term="Json" scheme="https://www.johnlearning.cn/tags/Json/"/>
+    
+      <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
     
   </entry>
   
@@ -51,7 +51,7 @@
     <link href="https://www.johnlearning.cn/2022/054508.html"/>
     <id>https://www.johnlearning.cn/2022/054508.html</id>
     <published>2022-05-11T04:05:21.000Z</published>
-    <updated>2022-06-27T07:47:39.429Z</updated>
+    <updated>2022-07-16T01:02:19.779Z</updated>
     
     <summary type="html">
     
@@ -253,11 +253,11 @@
   </entry>
   
   <entry>
-    <title>MyBatis 结果映射总结</title>
-    <link href="https://www.johnlearning.cn/2022/036441.html"/>
-    <id>https://www.johnlearning.cn/2022/036441.html</id>
+    <title>Spring Boot 整合 MyBatis</title>
+    <link href="https://www.johnlearning.cn/2022/0340561.html"/>
+    <id>https://www.johnlearning.cn/2022/0340561.html</id>
     <published>2022-03-17T02:32:43.000Z</published>
-    <updated>2022-06-27T07:47:39.399Z</updated>
+    <updated>2022-06-27T07:47:39.426Z</updated>
     
     <summary type="html">
     
@@ -265,7 +265,7 @@
       
         
         
-          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;结果映射指的是将数据表中的字段与实体类中的属性关联起来，这样 MyBatis
+          &lt;h2 id=&quot;MyBatis-简介&quot;&gt;&lt;a href=&quot;#MyBatis-简介&quot; class=&quot;headerlink&quot; title=&quot;MyBatis 简介&quot;&gt;&lt;/a&gt;MyBatis 简介&lt;/h2&gt;&lt;p&gt;MyBatis 是一款优秀的持久层框架，它支持自定义
         
       
     
@@ -285,11 +285,11 @@
   </entry>
   
   <entry>
-    <title>Spring Boot 整合 MyBatis</title>
-    <link href="https://www.johnlearning.cn/2022/0340561.html"/>
-    <id>https://www.johnlearning.cn/2022/0340561.html</id>
+    <title>MyBatis 结果映射总结</title>
+    <link href="https://www.johnlearning.cn/2022/036441.html"/>
+    <id>https://www.johnlearning.cn/2022/036441.html</id>
     <published>2022-03-17T02:32:43.000Z</published>
-    <updated>2022-06-27T07:47:39.426Z</updated>
+    <updated>2022-06-27T07:47:39.399Z</updated>
     
     <summary type="html">
     
@@ -297,7 +297,7 @@
       
         
         
-          &lt;h2 id=&quot;MyBatis-简介&quot;&gt;&lt;a href=&quot;#MyBatis-简介&quot; class=&quot;headerlink&quot; title=&quot;MyBatis 简介&quot;&gt;&lt;/a&gt;MyBatis 简介&lt;/h2&gt;&lt;p&gt;MyBatis 是一款优秀的持久层框架，它支持自定义
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;结果映射指的是将数据表中的字段与实体类中的属性关联起来，这样 MyBatis
         
       
     
@@ -422,9 +422,9 @@
       <category term="算法" scheme="https://www.johnlearning.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="LeetCode" scheme="https://www.johnlearning.cn/tags/LeetCode/"/>
-    
       <category term="Java" scheme="https://www.johnlearning.cn/tags/Java/"/>
+    
+      <category term="LeetCode" scheme="https://www.johnlearning.cn/tags/LeetCode/"/>
     
   </entry>
   
